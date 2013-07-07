@@ -2,9 +2,9 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://MasterScrat.github.io
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
+url: http://masterscrat.github.io
+title: Title 
+subtitle: 
 author: Florian Laurent
 simple_search: http://google.com/search
 description:
