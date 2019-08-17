@@ -1,5 +1,6 @@
 ---
 layout: default
+permalink: /blog/
 ---
 
 <div class="header-bar">
