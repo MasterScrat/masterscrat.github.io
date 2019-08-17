@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: 
-
-Sitemap: http://masterscrat.github.io/sitemap.xml 
