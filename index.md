@@ -1,9 +1,13 @@
 ---
 layout: page
-title: Florian LAURENT
+title: about me
 ---
 
+### Florian LAURENT
+
 <img class="col one right" src="https://coteries.com/wp-content/uploads/2018/03/florian-laurent.jpg">
+
+I am an EPFL Computer Scientist who worked at CERN, in the banking industry, and is now working as an independent developer.
 
 Write your biography here. Tell the world about yourself. Link to your favorite <a href="http://reddit.com" target="blank">subreddit</a>. You can put a picture in, too. The code is already in, just name your picture "prof_pic.jpg" and put it in the img folder.
 
@@ -14,11 +18,11 @@ Test more text
 ---
 
 <span class="contacticon center">
-	<a href="mailto:you@example.com"><i class="fa fa-envelope-square"></i></a>
-	<a href="https://github.com" target="_blank"><i class="fa fa-github-square"></i></a>
-	<a href="http://reddit.com" target="_blank"><i class="fa fa-reddit-square"></i></a>
-	<a href="https://twitter.com" target="_blank"><i class="fa fa-twitter-square"></i></a>
-	<a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+	<a href="mailto:name.surname@gmail.com"><i class="fa fa-envelope-square"></i></a>
+	<a href="https://github.com/MasterScrat" target="_blank"><i class="fa fa-github-square"></i></a>
+	<a href="https://www.reddit.com/user/MasterScrat/" target="_blank"><i class="fa fa-reddit-square"></i></a>
+	<a href="https://twitter.com/MasterScrat" target="_blank"><i class="fa fa-twitter-square"></i></a>
+	<a href="https://www.linkedin.com/in/florianlaurent/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
 </span>
 
 <!--<div class="col three caption">
