@@ -3,7 +3,7 @@ layout: page
 title: about me
 ---
 
-<img class="col one right" src="https://coteries.com/wp-content/uploads/2018/03/florian-laurent.jpg">
+<img class="col one right" src="img/florian-laurent.jpg">
 
 #### Florian LAURENT
 
