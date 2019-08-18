@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: page
 permalink: /blog/
+title: Blog
 ---
 
 <div class="header-bar">
