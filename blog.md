@@ -3,10 +3,12 @@ layout: default
 permalink: /blog/
 ---
 
-# blog
-{: .header-bar}
-
----
+<div class="header-bar">
+    <h1>blog</h1>
+    <br/>
+    <hr>
+    <br/>
+</div>
 
 <ul class="post-list">
     {% for post in site.posts %}
