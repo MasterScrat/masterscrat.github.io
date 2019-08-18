@@ -117,7 +117,8 @@
  * Page content   **********************************************************
  */
 .page-content {
-  padding: 100px 0; /* VERTICAL PADDING FOR TITLE ON EVERY PAGE */
+  /* VERTICAL PADDING FOR TITLE ON EVERY PAGE */
+  padding: 100px 0 50px; // was 100px 0
 }
 
 .page-heading {
@@ -161,7 +162,9 @@
 
 .post-content {
   h2 {
-    font-size: 42px;
+    font-size: 30px; // was 42
+    padding-bottom: 10px;
+    padding-top: 10px;
     @include media-query($on-laptop) {
       font-size: 28px;
     }
