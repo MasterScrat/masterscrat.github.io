@@ -45,7 +45,7 @@ If I assign tasks to myself I see them appear in the “My Tasks” view, tagged
 
 And now there are two sections under My Tasks: “New Tasks” and “Upcoming”, where I can drag and drop tasks. Great! Now let’s add some new sections to fit my needs.
 
-![Screen Shot 2016-01-02 at 15.49.34](http://lumakey.net/wp-content/uploads/2016/01/Screen-Shot-2016-01-02-at-15.49.34-1024x446.png)]{:width="700px"}
+![Screen Shot 2016-01-02 at 15.49.34](http://lumakey.net/wp-content/uploads/2016/01/Screen-Shot-2016-01-02-at-15.49.34-1024x446.png){:width="700px"}
 
 Mmh. How exactly do I create a new section? I have to google it. I end up on their [documentation](https://asana.com/guide/help/projects/sections):
 
