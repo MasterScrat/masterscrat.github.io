@@ -19,7 +19,7 @@ var moofm = new MooFm('b25b959554ed76058ac220b7b2e0a026');
 
 var callback = function(resp) {
    // will output "Nevermind"
-   alert(resp.topalbums.album\[0\].name);
+   alert(resp.topalbums.album[0].name);
 };
 
 // methods' name and params are the same as in last.fm doc
