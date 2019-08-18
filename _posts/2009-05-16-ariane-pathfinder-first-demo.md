@@ -1,6 +1,8 @@
 ---
+layout: post
 title: "First demo of Ariane, my JS pathfinder"
 date: "2009-05-16"
+description: Here is the first demo of Ariane, my JavaScript pathfinding tool.
 ---
 
 Here is the **[first demo of Ariane](http://lumakey.net/labs/ariane/)**, my JavaScript pathfinding tool.
