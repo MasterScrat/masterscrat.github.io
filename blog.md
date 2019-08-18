@@ -3,7 +3,9 @@ layout: default
 permalink: /blog/
 ---
 
-# blog {: .header-bar}
+# blog
+{: .header-bar}
+
 ---
 
 <ul class="post-list">
