@@ -1,13 +1,10 @@
 ---
-layout: page
+layout: default
 permalink: /blog/
-title: Blog
 ---
 
 <div class="header-bar">
     <h1>blog</h1>
-    <br/>
-    <hr>
     <br/>
 </div>
 
