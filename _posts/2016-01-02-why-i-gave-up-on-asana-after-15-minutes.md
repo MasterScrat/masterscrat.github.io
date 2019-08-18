@@ -17,7 +17,7 @@ Moving on.
 
 There’s a bright, eye-catching, uppercase “WHO’S MISSING FROM YOUR TEAM” notification in the sidebar. I intend to use it as a personal tool so I’m not missing anyone, let’s get rid of this.
 
-![Screen Shot 2016-01-02 at 12.46.24.png](https://lh4.googleusercontent.com/-reYsx7UojluhusWcAZ32OpKvbrEtbaaY-I5aPsb4D6I66wkan2jcfHFYP9rJ417rY1lylCmJcV7hzuHCUjynJjHEipyVWFHBEp1PgAchghNwL9DKGJpP_LvwpGBWJxz_b3cJ9AY)
+![Screen Shot 2016-01-02 at 12.46.24.png](https://lh4.googleusercontent.com/-reYsx7UojluhusWcAZ32OpKvbrEtbaaY-I5aPsb4D6I66wkan2jcfHFYP9rJ417rY1lylCmJcV7hzuHCUjynJjHEipyVWFHBEp1PgAchghNwL9DKGJpP_LvwpGBWJxz_b3cJ9AY){:width="700px"}
 
 So, how do I do that? no “close” icon anywhere. Maybe if I click on the plus sign then add no one? Ok that works …for about 3 seconds. **Then the notification shows up again**. Oh god.
 
