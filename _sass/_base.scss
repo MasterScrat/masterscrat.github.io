@@ -80,7 +80,7 @@ hr {
 
 
 /**
- * Figures
+ * Figures (TODO check if used?)
  */
 figure > img {
   display: block;
@@ -89,7 +89,6 @@ figure > img {
 figcaption {
   font-size: $small-font-size;
 }
-
 
 /**
  * Lists
@@ -138,6 +137,14 @@ article a {
   &:hover {
     text-decoration: none;
   }
+}
+
+/**
+ * Images
+ */
+
+article > img {
+  max-width: 100%;
 }
 
 
