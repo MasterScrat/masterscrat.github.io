@@ -5,6 +5,9 @@ title: Florian Laurent
 
 ![Florian Laurent](img/florian-laurent.jpg){:class="col one right"}
 
+Hey there! I'm Florian, a Machine Learning engineer and entrepreneur. I work on Generative AI and Reinforcement Learning. I'm based in 
+French-speaking Switzerland.
+
 **Florian Laurent is a Machine Learning engineer and entrepreneur. He works on Generative AI and Reinforcement Learning. He is based in Switzerland.**
 
 **General Intuition (2025 - current)** Founding member of the [General Intuition](http://generalintuition.ai/) research lab dedicated to video games and beyond. 
