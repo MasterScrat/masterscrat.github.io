@@ -1,13 +1,13 @@
 ---
 interface Props {
-  kind: string; // tag shown above the title: "Project", "Work", "Post"…
+  kind?: string; // tag shown above the title: "Project" (default), "Work", "Post"…
   href: string;
   title: string;
   meta: string;
   text: string;
   image?: string;
 }
-const { kind, href, title, meta, text, image } = Astro.props;
+const { kind = 'Project', href, title, meta, text, image } = Astro.props;
 ---
 <article class="tile">
   {image && <img src={image} alt="" loading="lazy" />}
