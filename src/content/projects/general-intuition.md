@@ -3,7 +3,6 @@ title: General Intuition
 summary: Founding member of the General Intuition research lab dedicated to video games and beyond.
 years: 2025–present
 role: Founding member
-label: Work
 image: /img/projects/general-intuition.jpg
 links:
   - { label: Website, url: "http://generalintuition.ai/" }
