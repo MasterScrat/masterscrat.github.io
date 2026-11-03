@@ -15,10 +15,10 @@ imageAlt: Florian Laurent
 We trained and deployed [Cedille](https://github.com/coteries/cedille-ai), the largest language model for French at the time (6B), released under MIT license. For a couple of months we were beating OpenAI's best models on French benchmarks! 
 
 **AIcrowd (2019 - 2021)**
-I was the lead researcher of the [Flatland project](https://flatland.aicrowd.com/intro.html). We investigated the use of ML (specifically Deep Reinforcement Learning) for railway planning, in partnership with the national railway companies from Switzerland, Germany and France (SBB, Deutsche Bahn, SNCF). I co-organized the [Flatland 2020 NeurIPS Challenge](https://www.aicrowd.com/challenges/flatland).
+I was the lead researcher of the [Flatland project](https://flatland.aicrowd.com/intro.html). We investigated the use of Reinforcement Learning for railway planning, in partnership with the national railway companies from Switzerland, Germany and France (SBB, Deutsche Bahn, SNCF). I co-organized the [Flatland 2020 NeurIPS Challenge](https://www.aicrowd.com/challenges/flatland).
 
 **MSc Thesis at CERN (2014)**
-I built a web-based data visualization system for the ATLAS experiment. My tool was designed to ingest >1M events per second per node and summarize them in dashboards to be used by experts. It was my [EPFL Master thesis](/documents/Florian_Laurent_CERN_Master_Thesis.pdf) and received maximal grade.
+I built a web-based data visualization system for the ATLAS experiment. My tool was designed to ingest 1M+ events per second per node and summarize them in dashboards to be used by experts. It was my [EPFL Master thesis](/documents/Florian_Laurent_CERN_Master_Thesis.pdf) and received maximal grade.
 
 *Last updated November 3 2026*
 
