@@ -17,6 +17,7 @@ const { Content } = await render(post);
       <h1>{post.data.title}</h1>
       <p>{formatDate(post.data.date)}</p>
     </hgroup>
+    {post.data.image && post.data.cover && <img class="cover" src={post.data.image} alt="" />}
     <Content />
     <p><a href="/blog">← All posts</a></p>
   </article>

@@ -9,7 +9,7 @@ export async function getStaticPaths() {
 }
 
 const { project } = Astro.props as { project: Project };
-const { title, summary, years, role, links, image } = project.data;
+const { title, summary, years, role, links, image, cover } = project.data;
 const { Content } = await render(project);
 ---
 <Base title={title} description={summary} image={image}>
@@ -18,13 +18,13 @@ const { Content } = await render(project);
       <h1>{title}</h1>
       <p>{summary}</p>
     </hgroup>
+    {image && cover && <img class="cover" src={image} alt="" />}
     <p class="meta">{[years, role].filter(Boolean).join(' · ')}</p>
     {links.length > 0 && (
       <p class="project-links">
         {links.map((l) => <a href={l.url} class="button">{l.label}</a>)}
       </p>
     )}
-    {image && <img src={image} alt="" />}
     <Content />
     <p><a href="/projects/">← All projects</a></p>
   </article>

@@ -187,6 +187,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 3rem 0; }
 .prose hgroup h1 { margin-bottom: 0.5rem; }
 .prose hgroup p,
 .meta { margin: 0; color: var(--muted); }
+.prose .cover { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; margin: 0 0 2rem; }
 
 /* About: text column at a readable width, photo in its own column on the right. */
 .with-aside {
