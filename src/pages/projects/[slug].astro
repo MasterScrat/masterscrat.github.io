@@ -18,7 +18,7 @@ const { Content } = await render(project);
       <h1>{title}</h1>
       <p>{summary}</p>
     </hgroup>
-    {image && cover && <img class="cover" src={image} alt="" />}
+    {image && cover !== false && <img class="cover" src={image} alt="" />}
     <p class="meta">{[years, role].filter(Boolean).join(' · ')}</p>
     {links.length > 0 && (
       <p class="project-links">
