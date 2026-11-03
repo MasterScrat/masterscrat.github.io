@@ -21,7 +21,7 @@ const { Content } = await render(project);
     <p class="meta">{[years, role].filter(Boolean).join(' · ')}</p>
     {links.length > 0 && (
       <p class="project-links">
-        {links.map((l) => <a href={l.url} role="button" class="outline">{l.label}</a>)}
+        {links.map((l) => <a href={l.url} class="button">{l.label}</a>)}
       </p>
     )}
     {image && <img src={image} alt="" />}

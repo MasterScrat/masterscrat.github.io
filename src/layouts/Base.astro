@@ -1,5 +1,8 @@
 ---
-import '@picocss/pico/css/pico.min.css';
+import '@fontsource/montserrat/700.css';
+import '@fontsource/lato/400.css';
+import '@fontsource/lato/400-italic.css';
+import '@fontsource/lato/700.css';
 import '../styles/global.css';
 
 interface Props { title?: string; description?: string }
@@ -20,11 +23,10 @@ const isCurrent = (href: string) =>
     : path.startsWith(href.replace(/\/$/, '')) || (href === '/blog' && /^\/\d{4}\//.test(path));
 ---
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="light">
     <title>{title ? `${title} · ${siteTitle}` : siteTitle}</title>
     <meta name="description" content={description}>
 
@@ -37,29 +39,25 @@ const isCurrent = (href: string) =>
     </script>
   </head>
   <body>
-    <header class="container">
+    <header class="site-header wrap">
+      <a href="/" class="site-title">{siteTitle}</a>
       <nav>
-        <ul><li><a href="/" class="site-title">{siteTitle}</a></li></ul>
-        <ul>
-          {nav.map(({ href, label }) => (
-            <li><a href={href} aria-current={isCurrent(href) ? 'page' : undefined}>{label}</a></li>
-          ))}
-        </ul>
+        {nav.map(({ href, label }) => (
+          <a href={href} aria-current={isCurrent(href) ? 'page' : undefined}>{label}</a>
+        ))}
       </nav>
     </header>
 
-    <main class="container">
+    <main class="wrap">
       <slot />
     </main>
 
-    <footer class="container">
-      <nav>
-        <ul>
-          <li><a href="https://github.com/MasterScrat">GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/florianlaurent/">LinkedIn</a></li>
-          <li><a href="https://twitter.com/MasterScrat">Twitter</a></li>
-          <li><a href="https://www.reddit.com/user/MasterScrat/">Reddit</a></li>
-        </ul>
+    <footer class="site-footer">
+      <nav class="wrap">
+        <a href="https://github.com/MasterScrat">GitHub</a>
+        <a href="https://www.linkedin.com/in/florianlaurent/">LinkedIn</a>
+        <a href="https://twitter.com/MasterScrat">Twitter</a>
+        <a href="https://www.reddit.com/user/MasterScrat/">Reddit</a>
       </nav>
     </footer>
   </body>
