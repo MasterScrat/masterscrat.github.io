@@ -1,0 +1,278 @@
+/* Bold, simple style: heavy Montserrat headings, grey Lato text, one red accent. */
+
+:root {
+  --heading: 'Montserrat', sans-serif;
+  --body: 'Lato', sans-serif;
+  --black: #111;
+  --text: #555;
+  --muted: #999;
+  --line: #eee;
+  --accent: #ff3636;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font: 17px/1.75 var(--body);
+  color: var(--text);
+  background: #fff;
+}
+
+.wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--heading);
+  font-weight: 700;
+  color: var(--black);
+  line-height: 1.25;
+  margin: 2rem 0 1rem;
+}
+h1 { font-size: 3rem; letter-spacing: -2px; margin-top: 0; }
+h2 { font-size: 1.75rem; letter-spacing: -0.5px; }
+h3 { font-size: 1.25rem; }
+
+a { color: var(--accent); }
+a:hover { color: var(--black); }
+
+img { max-width: 100%; }
+
+/* Images with a caption (e.g. Reddit gallery descriptions). */
+figure { margin: 2rem 0; }
+figure img { display: block; }
+figcaption { margin-top: 0.5rem; font-size: 14px; color: var(--muted); }
+
+/* Embedded videos: full width, 16:9, never wider than the screen. */
+iframe { max-width: 100%; }
+.prose iframe { width: 100%; height: auto; aspect-ratio: 16 / 9; }
+
+hr { border: 0; border-top: 1px solid var(--line); margin: 3rem 0; }
+
+/* Small uppercase labels: nav, buttons, tags, footer */
+
+.site-header nav a,
+.button,
+.tile-kind,
+.site-footer a {
+  font: 700 12px var(--heading);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+/* Header */
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.site-title {
+  font: 700 1.75rem var(--heading);
+  letter-spacing: -1px;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.site-header nav { display: flex; gap: 1.5rem; }
+.site-header nav a { color: #888; }
+.site-header nav a:hover,
+.site-header nav a[aria-current='page'] { color: var(--black); }
+
+/* Footer: dark band */
+
+.site-footer {
+  margin-top: 6rem;
+  padding: 3rem 0;
+  background: var(--black);
+}
+.site-footer nav { display: flex; flex-wrap: wrap; gap: 0.75rem 1.5rem; }
+.site-footer a { color: #888; }
+.site-footer a:hover { color: #fff; }
+
+/* Buttons: black, square, uppercase */
+
+.button {
+  display: inline-block;
+  padding: 0 1.5rem;
+  line-height: 42px;
+  color: #fff;
+  background: var(--black);
+  font-size: 14px;
+}
+.button:hover { color: #fff; background: var(--accent); }
+
+.more { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 3rem; }
+
+/* Home intro */
+
+.intro {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center; /* photo vertically centered against the text */
+  margin-bottom: 4rem;
+}
+.intro .avatar-link { flex-shrink: 0; line-height: 0; }
+.intro > div > :first-child { margin-top: 0; }
+.intro > div > :last-child { margin-bottom: 0; }
+.intro .avatar {
+  width: 160px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+@media (max-width: 600px) {
+  h1 { font-size: 2.25rem; }
+  .intro { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+  .intro .avatar { width: 110px; }
+  .intro .avatar-link { align-self: center; }
+}
+
+/* Tiles (projects and posts) */
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+}
+.tile:hover { border-color: var(--black); }
+
+/* Drafts (only visible in `npm run dev`): faint diagonal stripes. */
+.tile-draft {
+  background: repeating-linear-gradient(
+    -45deg,
+    #fff 0 12px,
+    #f6f6f6 12px 24px
+  );
+}
+
+.tile img {
+  margin: -1.5rem -1.5rem 1.25rem;
+  max-width: none;
+  width: calc(100% + 3rem);
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.tile-kind { margin: 0; color: var(--accent); }
+.tile-kind-post { color: var(--muted); }
+.tile-meta { color: var(--muted); }
+
+.tile h3 { margin: 0.5rem 0; }
+.tile h3 a { color: var(--black); text-decoration: none; }
+/* Make the whole tile clickable via its title link. */
+.tile h3 a::after { content: ''; position: absolute; inset: 0; }
+
+.tile-text {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  /* At most 4 lines, so post and project tiles stay the same height. */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  overflow: hidden;
+}
+.tile footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Draft badge (only rendered in `npm run dev`). */
+.tile-status { display: flex; gap: 0.35rem; }
+.status {
+  font: 700 10px var(--heading);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.2em 0.6em;
+  border-radius: 999px;
+  color: #fff;
+  background: var(--muted);
+}
+.status-draft { background: var(--black); }
+
+/* Long-form text: readable line length. */
+
+.prose { max-width: 720px; }
+
+/* Post and project pages: title, links, then a full-width cover (cropped if it would get too tall), then the text. */
+.page h1 { margin-bottom: 1.25rem; }
+.page hgroup { margin-bottom: 1.5rem; }
+.page hgroup h1 { margin-bottom: 0.5rem; }
+.page hgroup p { margin: 0; color: var(--muted); }
+.page-links { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 0 0 2rem; }
+.page-cover {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 420px;
+  object-fit: cover;
+  margin: 0 0 2rem;
+}
+
+/* About: text column at a readable width, photo in its own column on the right. */
+.with-aside {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 3rem;
+  align-items: start;
+}
+.with-aside > article { max-width: 640px; }
+.with-aside > img { width: 100%; }
+
+@media (max-width: 760px) {
+  .with-aside { grid-template-columns: 1fr; gap: 1.5rem; }
+  .with-aside > img { order: -1; width: 180px; justify-self: center; }
+}
+
+/* Code */
+
+code {
+  font-size: 0.875em;
+  background: #f5f5f5;
+  padding: 0.1em 0.3em;
+}
+pre.astro-code {
+  padding: 1.25rem;
+  line-height: 1.5;
+  overflow-x: auto;
+  background-color: #f7f7f7 !important;
+  border-left: 3px solid var(--accent);
+}
+pre code { background: none; padding: 0; }
+
+blockquote {
+  margin: 1.5rem 0;
+  padding-left: 1.25rem;
+  border-left: 3px solid var(--line);
+  font-style: italic;
+}
+
+/* Social icons (Home intro) */
+
+.social { display: flex; gap: 0.75rem; margin: 0 0 1rem; }
+.social a { color: var(--accent); line-height: 0; }
+.social a:hover { color: var(--accent); }
+.social svg { height: 44px; width: auto; }

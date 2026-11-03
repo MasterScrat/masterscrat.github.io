@@ -1,0 +1,86 @@
+---
+import '@fontsource/montserrat/700.css';
+import '@fontsource/lato/400.css';
+import '@fontsource/lato/400-italic.css';
+import '@fontsource/lato/700.css';
+// Preloaded so text renders in the right font straight away, without a visible swap.
+import montserrat700 from '@fontsource/montserrat/files/montserrat-latin-700-normal.woff2?url';
+import lato400 from '@fontsource/lato/files/lato-latin-400-normal.woff2?url';
+import lato700 from '@fontsource/lato/files/lato-latin-700-normal.woff2?url';
+import '../styles/global.css';
+
+interface Props { title?: string; description?: string; image?: string }
+const siteTitle = 'Florian Laurent';
+const { title, description = 'Personal website of Florian Laurent.', image = '/img/og.jpg' } = Astro.props;
+// Link previews (Slack, LinkedIn, X, iMessage…): absolute URLs on the live domain.
+const pageTitle = title ? `${title} · ${siteTitle}` : siteTitle;
+const pageUrl = new URL(Astro.url.pathname, Astro.site);
+const imageUrl = new URL(image, Astro.site);
+
+const nav = [
+  { href: '/', label: 'Home' },
+  { href: '/projects/', label: 'Projects' },
+  { href: '/blog/', label: 'Blog' },
+  { href: '/about', label: 'About' },
+];
+// Highlight the current section; posts live under /YYYY/... so count them as Blog.
+const path = Astro.url.pathname;
+const isCurrent = (href: string) =>
+  href === '/'
+    ? path === '/' || path === '/index.html'
+    : path.startsWith(href.replace(/\/$/, '')) || (href === '/blog/' && /^\/\d{4}\//.test(path));
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {[montserrat700, lato400, lato700].map((font) => (
+      <link rel="preload" href={font} as="font" type="font/woff2" crossorigin />
+    ))}
+    <title>{pageTitle}</title>
+    <meta name="description" content={description}>
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content={siteTitle}>
+    <meta property="og:title" content={pageTitle}>
+    <meta property="og:description" content={description}>
+    <meta property="og:url" content={pageUrl}>
+    <meta property="og:image" content={imageUrl}>
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-E05E523KWW"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-E05E523KWW');
+    </script>
+  </head>
+  <body>
+    <header class="site-header wrap">
+      <a href="/" class="site-title">{siteTitle}</a>
+      <nav>
+        {nav.map(({ href, label }) => (
+          <a href={href} aria-current={isCurrent(href) ? 'page' : undefined}>{label}</a>
+        ))}
+      </nav>
+    </header>
+
+    <main class="wrap">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <nav class="wrap">
+        <a href="https://github.com/MasterScrat" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/florianlaurent/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://twitter.com/MasterScrat" target="_blank" rel="noopener">Twitter</a>
+        <a href="https://www.reddit.com/user/MasterScrat/" target="_blank" rel="noopener">Reddit</a>
+        <a href="https://scholar.google.com/citations?user=0zZuohMAAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a>
+      </nav>
+    </footer>
+  </body>
+</html>

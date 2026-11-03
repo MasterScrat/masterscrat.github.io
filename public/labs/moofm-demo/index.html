@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+<title>MooFm Demo</title>
+
+<link rel="stylesheet" type="text/css" href="lib/mooflow.css" />
+<link rel="stylesheet" type="text/css" href="demo.css" />
+<script type="text/javascript" src="lib/mootools-1.2-core.js"></script>
+<script type="text/javascript" src="lib/mootools-1.2-more.js"></script>
+<script type="text/javascript" src="lib/mooflow.js"></script>
+<script type="text/javascript" src="lib/moofm.js"></script>
+
+<script type="text/javascript">
+	var nbToLoad = 0;
+	var nbLoaded = 0;
+	
+	window.onload = function(){
+		moofm = new MooFm('a9e4d0e3e03c6bf44511e9481143ad61');
+		loadArtistInfo('Hans Zimmer');
+	}
+	
+	var loadArtistInfo = function(artist) {
+		$('info').innerHTML = 'Loading...';
+		$('similar').empty();
+		$('tags').empty();
+		
+		var r = {'artist':artist};
+		moofm.artist.getTopAlbums	(r, albumsLoaded);
+		moofm.artist.getInfo		(r, infoLoaded);
+		moofm.artist.getTopTags		(r, tagsLoaded);
+	};
+	
+	var albumsLoaded = function(data) {
+		$('MooFlow').empty();
+		$('MooFlow').style.visibility = 'hidden';
+		nbToLoad = 0;
+		nbLoaded = 0;
+		
+		for (var i = 0; i < 12; ++i) {
+			if ($defined(data.topalbums.album[i])) {
+				nbToLoad++;
+				preloadImage(data.topalbums.album[i].image[2]['#text'], data.topalbums.album[i].name);
+			}
+		}
+		
+	}
+	
+	var preloadImage = function(src, title) {
+		var img = new Image();
+		img.src = src;
+		
+		checkIfDone = function(){
+			nbLoaded++;
+			if(nbToLoad == nbLoaded) {
+				renderMooFlow(nbLoaded);
+				$('MooFlow').style.visibility = 'visible';
+			}
+		};
+		
+		img.onerror = function() {
+			checkIfDone();
+		};
+		
+		img.onload = function() {
+			$('MooFlow').innerHTML += '<span><img src="' + src + '" title="' + title + '"/></span>';
+			checkIfDone();
+		};
+	};
+	
+	var tagsLoaded = function(data){
+		var ord = [4,2,0,1,3];
+		
+		for(var i=0; i<5; ++i) {
+			var c = data.toptags.tag[ord[i]].count*2 - (-55);
+			$('tags').innerHTML += '<span style="color: rgb('+c+', '+c+', '+c+')">'+data.toptags.tag[ord[i]].name+'</span> ';
+		}
+	}
+	
+	var infoLoaded = function(data) {
+		$('title').innerHTML = data.artist.name;
+		$('info').innerHTML = data.artist.bio.summary;
+		
+		$('similar').innerHTML = 'Similar to ';
+		for(var i=0; i<5; ++i) {
+			$('similar').innerHTML += '<a href="javascript:loadArtistInfo(\''+data.artist.similar.artist[i].name+'\');">'+data.artist.similar.artist[i].name+'</a>';
+			if(i!=4) $('similar').innerHTML += ', ';
+		}
+	}
+	
+	var renderMooFlow = function(nbDisplayed) {
+		var mf = new MooFlow($('MooFlow'), {
+			startIndex: nbDisplayed/2,
+			useSlider: false,
+			useAutoPlay: false,
+			useCaption: true,
+			useResize: false,
+			useMouseWheel: true,
+			useKeyInput: true,
+			bgColor: 'transparent',
+			reflection: 0.5
+		});
+	};
+</script>
+</head>
+
+<body>
+	<h1 id="title"></h1>
+	<div align="center">
+		<div id="tags"></div>
+		<div style="width: 500px; left: 0px; position: relative;">
+			<div id="MooFlow"></div>
+		</div>
+		<div id="info"></div>
+		<div id="similar"></div>
+		<div id="footer">This is a demo for the mootools plugin <a href="/2009/03/02/introducing-moofm.html">MooFm</a>.</div>
+	</div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+---
+import Base from '../../layouts/Base.astro';
+import Tile from '../../components/Tile.astro';
+import { getProjects, projectUrl } from '../../lib/projects';
+
+const projects = await getProjects();
+---
+<Base title="Projects">
+  <div class="tiles">
+    {projects.map((p) => (
+      <Tile draft={p.data.draft} kind={p.data.label} href={projectUrl(p)} title={p.data.title}
+            text={p.data.summary} image={p.data.image} />
+    ))}
+  </div>
+</Base>

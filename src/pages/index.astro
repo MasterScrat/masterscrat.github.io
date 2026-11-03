@@ -1,0 +1,54 @@
+---
+import Base from '../layouts/Base.astro';
+import Tile from '../components/Tile.astro';
+import SocialIcons from '../components/SocialIcons.astro';
+import { getEntry } from 'astro:content';
+import { postUrl, formatDate, excerpt } from '../lib/posts';
+import { projectUrl } from '../lib/projects';
+
+// The 6 tiles on Home, in order: project ids (file names in src/content/projects/)
+// or post ids (file names in src/content/posts/). Drafts aren't allowed: the build fails instead
+// of Home silently showing fewer tiles.
+const featured = [
+  ['projects', 'general-intuition'],
+  ['projects', 'dreamlook'],
+  ['posts', '2026-03-23-strava-spotify-lyrics'],
+  ['projects', 'cedille'],
+  ['projects', 'flatland'],
+  ['posts', '2025-12-08-photogrammetry-game-maps'],
+] as const;
+
+const entries = await Promise.all(featured.map(async ([collection, id]) => {
+  const entry = await getEntry(collection, id);
+  if (!entry) throw new Error(`Featured tile not found: ${collection}/${id}`);
+  if (entry.data.draft) throw new Error(`Featured tile is a draft: ${collection}/${id}`);
+  return entry;
+}));
+const tiles = entries.map((entry) =>
+  entry.collection === 'projects'
+    ? { draft: entry.data.draft, kind: entry.data.label, href: projectUrl(entry), title: entry.data.title,
+        text: entry.data.summary, image: entry.data.image }
+    : { draft: entry.data.draft, kind: 'Post', href: postUrl(entry), title: entry.data.title,
+        meta: formatDate(entry.data.date), text: excerpt(entry), image: entry.data.image });
+---
+<Base>
+  <section class="intro">
+    <a href="/about" class="avatar-link"><img src="/img/florian-laurent-avatar.jpg" alt="About Florian Laurent" class="avatar" /></a>
+    <div>
+      <p>
+        Hey there! I'm Florian, a Machine Learning Engineer with an entrepreneurial bent, passionate about building systems that push the boundaries of applied AI. I'm based in French-speaking Switzerland.
+        I'm a founding member of General Intuition, where we build models to act in video games and beyond. <a href="/about">More about me →</a></p>
+      <SocialIcons />
+    </div>
+  </section>
+
+  <section>
+    <div class="tiles">
+      {tiles.map((t) => <Tile {...t} />)}
+    </div>
+    <p class="more">
+      <a href="/projects/" class="button">All projects</a>
+      <a href="/blog/" class="button">All posts</a>
+    </p>
+  </section>
+</Base>
