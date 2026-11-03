@@ -5,12 +5,8 @@ import Base from './Base.astro';
 const { frontmatter } = Astro.props;
 ---
 <Base title={frontmatter.title}>
-  <div class="post">
-    <header class="post-header">
-      <h1 class="post-title">{frontmatter.title}</h1>
-    </header>
-    <article class="post-content">
-      <slot />
-    </article>
-  </div>
+  <article class="prose">
+    <h1>{frontmatter.title}</h1>
+    <slot />
+  </article>
 </Base>

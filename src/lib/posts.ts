@@ -25,3 +25,16 @@ export function formatDate(date: Date) {
     month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC',
   });
 }
+
+// Plain-text preview of a post's Markdown, for tiles and lists.
+export function excerpt(post: Post, length = 160) {
+  const text = (post.body ?? '')
+    .replace(/```[\s\S]*?```/g, ' ')         // code blocks
+    .replace(/<[^>]+>/g, ' ')                // HTML tags
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, ' ')   // images
+    .replace(/\[([^\]]*)\]\([^)]*\)/g, '$1') // links -> link text
+    .replace(/[*_`>#]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+  return text.length > length ? text.slice(0, length).replace(/\s+\S*$/, '') + '…' : text;
+}

@@ -1,0 +1,18 @@
+---
+interface Props {
+  kind: 'Project' | 'Post';
+  href: string;
+  title: string;
+  meta: string;
+  text: string;
+  image?: string;
+}
+const { kind, href, title, meta, text, image } = Astro.props;
+---
+<article class="tile">
+  {image && <img src={image} alt="" loading="lazy" />}
+  <p class={`tile-kind tile-kind-${kind.toLowerCase()}`}>{kind}</p>
+  <h3><a href={href}>{title}</a></h3>
+  <p class="tile-text">{text}</p>
+  <footer><small>{meta}</small></footer>
+</article>

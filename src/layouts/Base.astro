@@ -1,18 +1,31 @@
 ---
+import '@picocss/pico/css/pico.min.css';
 import '../styles/global.css';
 
-interface Props { title?: string }
-const { title } = Astro.props;
+interface Props { title?: string; description?: string }
 const siteTitle = 'Florian Laurent';
+const { title, description = 'Personal website of Florian Laurent.' } = Astro.props;
+
+const nav = [
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
+  { href: '/projects/', label: 'Projects' },
+  { href: '/blog', label: 'Blog' },
+];
+// Highlight the current section; posts live under /YYYY/... so count them as Blog.
+const path = Astro.url.pathname;
+const isCurrent = (href: string) =>
+  href === '/'
+    ? path === '/' || path === '/index.html'
+    : path.startsWith(href.replace(/\/$/, '')) || (href === '/blog' && /^\/\d{4}\//.test(path));
 ---
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{title ?? siteTitle}</title>
-    <meta name="description" content="Personal website of Florian Laurent.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>{title ? `${title} · ${siteTitle}` : siteTitle}</title>
+    <meta name="description" content={description}>
 
     <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-E05E523KWW"></script>
     <script is:inline>
@@ -23,19 +36,26 @@ const siteTitle = 'Florian Laurent';
     </script>
   </head>
   <body>
-    <header class="site-header">
-      <div class="wrapper">
-        <nav class="site-nav">
-          <a class="page-link" href="/">about me</a>
-          <a class="page-link" href="/blog">blog</a>
-        </nav>
-      </div>
+    <header class="container">
+      <nav>
+        <ul><li><a href="/" class="site-title">{siteTitle}</a></li></ul>
+        <ul>
+          {nav.map(({ href, label }) => (
+            <li><a href={href} aria-current={isCurrent(href) ? 'page' : undefined}>{label}</a></li>
+          ))}
+        </ul>
+      </nav>
     </header>
 
-    <div class="page-content">
-      <div class="wrapper">
-        <slot />
-      </div>
-    </div>
+    <main class="container">
+      <slot />
+    </main>
+
+    <footer class="container site-footer">
+      <a href="https://github.com/MasterScrat">GitHub</a>
+      <a href="https://www.linkedin.com/in/florianlaurent/">LinkedIn</a>
+      <a href="https://twitter.com/MasterScrat">Twitter</a>
+      <a href="https://www.reddit.com/user/MasterScrat/">Reddit</a>
+    </footer>
   </body>
 </html>

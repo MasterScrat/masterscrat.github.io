@@ -1,6 +1,6 @@
 ---
 layout: ../layouts/Page.astro
-title: Florian Laurent
+title: About me
 ---
 
 <img src="/img/florian-laurent.jpg" alt="Florian Laurent" class="portrait">
@@ -45,11 +45,3 @@ I built a web-based data visualization system for the ATLAS experiment. My tool 
 
 *Last updated October 16 2025*
 
----
-
-<span class="contacticon center">
-	<a href="https://github.com/MasterScrat" target="_blank"><i class="fa fa-github-square"></i></a>
-	<a href="https://www.reddit.com/user/MasterScrat/" target="_blank"><i class="fa fa-reddit-square"></i></a>
-	<a href="https://twitter.com/MasterScrat" target="_blank"><i class="fa fa-twitter-square"></i></a>
-	<a href="https://www.linkedin.com/in/florianlaurent/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-</span>

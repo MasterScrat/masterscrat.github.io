@@ -1,20 +1,17 @@
 ---
 import Base from '../layouts/Base.astro';
-import { getPosts, postUrl, formatDate } from '../lib/posts';
+import { getPosts, postUrl, formatDate, excerpt } from '../lib/posts';
 
 const posts = await getPosts();
-const wordCount = (text = '') => text.split(/\s+/).filter(Boolean).length;
 ---
-<Base title="blog">
-  <div class="header-bar">
-    <h1>blog</h1>
-  </div>
-
+<Base title="Blog">
+  <h1>Blog</h1>
   <ul class="post-list">
     {posts.map((post) => (
       <li>
-        <h2><a class="post-list-title" href={postUrl(post)}>{post.data.title}</a></h2>
-        <p class="post-meta">{formatDate(post.data.date)} - {wordCount(post.body)} words</p>
+        <small class="meta">{formatDate(post.data.date)}</small>
+        <h3><a href={postUrl(post)}>{post.data.title}</a></h3>
+        <p>{excerpt(post)}</p>
       </li>
     ))}
   </ul>
