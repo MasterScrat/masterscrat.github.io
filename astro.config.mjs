@@ -5,4 +5,5 @@ export default defineConfig({
   // Emit /blog.html and /2016/01/02/slug.html, matching the old Jekyll URLs.
   build: { format: 'file' },
   trailingSlash: 'never',
+  devToolbar: { enabled: false },
 });
