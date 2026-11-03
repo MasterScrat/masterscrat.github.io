@@ -2,6 +2,7 @@
 import { render } from 'astro:content';
 import Base from '../../../../layouts/Base.astro';
 import { getPosts, postParams, formatDate, excerpt, type Post } from '../../../../lib/posts';
+import { linkAttrs } from '../../../../lib/links';
 
 export async function getStaticPaths() {
   const posts = await getPosts();
@@ -17,6 +18,11 @@ const { Content } = await render(post);
       <h1>{post.data.title}</h1>
       <p>{formatDate(post.data.date)}</p>
     </hgroup>
+    {post.data.links.length > 0 && (
+      <p class="project-links post-links">
+        {post.data.links.map((l) => <a href={l.url} class="button" {...linkAttrs(l.url)}>{l.label}</a>)}
+      </p>
+    )}
     {post.data.image && post.data.cover !== false && <img class="cover" src={post.data.image} alt="" />}
     <Content />
     <p><a href="/blog">← All posts</a></p>

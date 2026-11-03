@@ -213,6 +213,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 3rem 0; }
 /* Project pages: title, links, then a full-width cover (cropped if it would get too tall), then the text. */
 .project h1 { margin-bottom: 1.25rem; }
 .project .project-links { margin: 0 0 2rem; }
+.post-links { margin: 0 0 2rem; }
 .project-cover {
   display: block;
   width: 100%;

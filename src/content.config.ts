@@ -8,6 +8,7 @@ const posts = defineCollection({
     date: z.coerce.date(),
     image: z.string().optional(), // path under public/, shown on the tile and at the top of the post
     cover: z.boolean().default(true), // false: don't repeat the image at the top of the post
+    links: z.array(z.object({ label: z.string(), url: z.string() })).default([]), // buttons under the title
     draft: z.boolean().default(false), // shown in `npm run dev` only, not on the live site
   }),
 });
