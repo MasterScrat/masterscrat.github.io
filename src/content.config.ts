@@ -19,6 +19,7 @@ const projects = defineCollection({
     role: z.string().optional(),
     links: z.array(z.object({ label: z.string(), url: z.string() })).default([]),
     image: z.string().optional(),    // path under public/, shown on the tile
+    label: z.string().default('Project'), // tile tag, e.g. "Work" for an employer
     draft: z.boolean().default(false), // shown in `npm run dev` only, not on the live site
   }),
 });

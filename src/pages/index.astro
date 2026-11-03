@@ -25,9 +25,9 @@ const entries = await Promise.all(featured.map(async ([collection, id]) => {
 // Drafts only show up in `npm run dev`, like everywhere else.
 const tiles = entries.filter((e) => !(import.meta.env.PROD && e.data.draft)).map((entry) =>
   entry.collection === 'projects'
-    ? { kind: 'Project' as const, href: projectUrl(entry), title: entry.data.title,
+    ? { kind: entry.data.label, href: projectUrl(entry), title: entry.data.title,
         meta: entry.data.years, text: entry.data.summary, image: entry.data.image }
-    : { kind: 'Post' as const, href: postUrl(entry), title: entry.data.title,
+    : { kind: 'Post', href: postUrl(entry), title: entry.data.title,
         meta: formatDate(entry.data.date), text: excerpt(entry) });
 ---
 <Base>
@@ -39,7 +39,7 @@ const tiles = entries.filter((e) => !(import.meta.env.PROD && e.data.draft)).map
         and Reinforcement Learning. I'm based in French-speaking Switzerland.
       </p>
       <SocialIcons />
-      <p>[TODO write what I'm up to right now] <a href="/about">More about me →</a></p>
+      <p>I'm a founding member of General Intuition, where we build models to act in video games and beyond. <a href="/about">More about me →</a></p>
     </div>
   </section>
 

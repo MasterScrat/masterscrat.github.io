@@ -10,9 +10,6 @@ Draft files already contain your original Reddit text verbatim, under a `[TODO a
 
 ## Writing: published pages
 
-Home (`src/pages/index.astro`)
-- [ ] What I'm up to right now (second intro paragraph)
-
 Project summaries (the `summary:` line, shown on tiles)
 - [ ] Battleground Engine (`src/content/projects/battleground.md`)
 - [ ] Ariane (`src/content/projects/ariane.md`)

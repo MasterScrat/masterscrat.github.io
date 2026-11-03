@@ -152,8 +152,8 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 3rem 0; }
   object-fit: cover;
 }
 
-.tile-kind { margin: 0; color: var(--muted); }
-.tile-kind-project { color: var(--accent); }
+.tile-kind { margin: 0; color: var(--accent); }
+.tile-kind-post { color: var(--muted); }
 
 .tile h3 { margin: 0.5rem 0; }
 .tile h3 a { color: var(--black); text-decoration: none; }
