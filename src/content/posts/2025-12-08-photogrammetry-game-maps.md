@@ -18,17 +18,35 @@ My goal is to build maps by importing the meshes into Unreal Engine, creating fo
 
 But I'm still very much figuring out the basics with UE, so I gave a first shot at styling the maps using Google's Nano Banana AI model. It doesn't look exactly as I'd want, and writing prompts feels like a terrible way to create images, but it still gives me hope a more deliberate UE workflow could give me good final results!
 
-![](/img/posts/photogrammetry/1.jpg)
+<figure>
+  <img src="/img/posts/photogrammetry/1.jpg" alt="Saint-Beat chapel - Fribourg">
+  <figcaption>Saint-Beat chapel - Fribourg</figcaption>
+</figure>
 
-![](/img/posts/photogrammetry/2.jpg)
+<figure>
+  <img src="/img/posts/photogrammetry/2.jpg" alt="Clearly missing some shots of the roof front!">
+  <figcaption>Clearly missing some shots of the roof front!</figcaption>
+</figure>
 
-![](/img/posts/photogrammetry/3.jpg)
+<figure>
+  <img src="/img/posts/photogrammetry/3.jpg" alt="Wireframe">
+  <figcaption>Wireframe</figcaption>
+</figure>
 
-![](/img/posts/photogrammetry/4.jpg)
+<figure>
+  <img src="/img/posts/photogrammetry/4.jpg" alt="First barebone styled render">
+  <figcaption>First barebone styled render</figcaption>
+</figure>
 
-![](/img/posts/photogrammetry/5.jpg)
+<figure>
+  <img src="/img/posts/photogrammetry/5.jpg" alt="Adding a river">
+  <figcaption>Adding a river</figcaption>
+</figure>
 
-![](/img/posts/photogrammetry/6.jpg)
+<figure>
+  <img src="/img/posts/photogrammetry/6.jpg" alt="Closer to Baldur&#x27;s Gate style, and more faithful side wall">
+  <figcaption>Closer to Baldur's Gate style, and more faithful side wall</figcaption>
+</figure>
 
 <!-- research
 

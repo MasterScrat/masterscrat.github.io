@@ -61,5 +61,5 @@ Not added yet. Tell me which ones you were involved in (descriptions there are M
 
 ## Fixes
 
-- [ ] **Self-host images and media.** Draft files list their media URLs (imgur, i.redd.it, Reddit galleries, lumakey.net) in their research block; download them to `public/img/` and embed.
+- [ ] **Self-host images and media.** Draft files list their media URLs (imgur, i.redd.it, Reddit galleries, lumakey.net) in their research block; download them to `public/img/` and embed. Reddit galleries have per-image captions (`gallery_data.items[].caption` in `~/Projects/reddit-history-masterscrat/posts.jsonl`): show them as `<figure>` + `<figcaption>`.
 - [ ] **Self-host the Asana post images** (post unpublished for now, `draft: true`). `src/content/posts/2016-01-02-why-i-gave-up-on-asana-after-15-minutes.md` hotlinks 8 images: 7 from `lh*.googleusercontent.com` (Google Docs image links, not meant for embedding, some browsers don't show them) and 1 from `http://lumakey.net` (plain HTTP). Download them to `public/img/posts/asana/` and point the post at the local copies.
