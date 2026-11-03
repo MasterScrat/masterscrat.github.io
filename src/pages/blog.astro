@@ -1,17 +1,16 @@
 ---
 import Base from '../layouts/Base.astro';
+import Tile from '../components/Tile.astro';
 import { getPosts, postUrl, formatDate, excerpt } from '../lib/posts';
 
 const posts = await getPosts();
 ---
 <Base title="Blog">
-  <ul class="post-list">
+  <div class="tiles">
     {posts.map((post) => (
-      <li>
-        <small class="meta">{formatDate(post.data.date)}{post.data.draft && ' · DRAFT'}</small>
-        <h3><a href={postUrl(post)}>{post.data.title}</a></h3>
-        <p>{excerpt(post)}</p>
-      </li>
+      <Tile kind="Post" href={postUrl(post)} title={post.data.title}
+            meta={post.data.draft ? `${formatDate(post.data.date)} · DRAFT` : formatDate(post.data.date)}
+            text={excerpt(post)} image={post.data.image} />
     ))}
-  </ul>
+  </div>
 </Base>

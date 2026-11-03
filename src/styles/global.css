@@ -190,15 +190,6 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 3rem 0; }
   .with-aside > img { order: -1; width: 180px; }
 }
 
-/* Blog list */
-
-.post-list { list-style: none; padding: 0; }
-.post-list li { margin-bottom: 2.5rem; }
-.post-list h3 { margin: 0.25rem 0 0.5rem; }
-.post-list h3 a { color: var(--black); text-decoration: none; }
-.post-list h3 a:hover { color: var(--accent); }
-.post-list p { margin: 0; }
-
 /* Code */
 
 code {
