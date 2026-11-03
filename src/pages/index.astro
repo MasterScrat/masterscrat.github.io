@@ -11,21 +11,24 @@ import { projectUrl } from '../lib/projects';
 const featured = [
   ['projects', 'general-intuition'],
   ['projects', 'dreamlook'],
+  ['posts', '2026-03-23-strava-spotify-lyrics'],
   ['projects', 'cedille'],
-  ['projects', 'ariane'],
-  ['posts', '2014-10-13-lemans-shores-timelapse-around-the-lake'],
   ['projects', 'chatistics'],
+  ['posts', '2025-12-08-photogrammetry-game-maps'],
 ] as const;
 
-const tiles = await Promise.all(featured.map(async ([collection, id]) => {
+const entries = await Promise.all(featured.map(async ([collection, id]) => {
   const entry = await getEntry(collection, id);
   if (!entry) throw new Error(`Featured tile not found: ${collection}/${id}`);
-  return entry.collection === 'projects'
+  return entry;
+}));
+// Drafts only show up in `npm run dev`, like everywhere else.
+const tiles = entries.filter((e) => !(import.meta.env.PROD && e.data.draft)).map((entry) =>
+  entry.collection === 'projects'
     ? { kind: 'Project' as const, href: projectUrl(entry), title: entry.data.title,
         meta: entry.data.years, text: entry.data.summary, image: entry.data.image }
     : { kind: 'Post' as const, href: postUrl(entry), title: entry.data.title,
-        meta: formatDate(entry.data.date), text: excerpt(entry) };
-}));
+        meta: formatDate(entry.data.date), text: excerpt(entry) });
 ---
 <Base>
   <section class="intro">
