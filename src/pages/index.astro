@@ -15,11 +15,11 @@ const postTiles = recent.map((p) => ({
   kind: 'Post' as const, href: postUrl(p), title: p.data.title,
   meta: formatDate(p.data.date), text: excerpt(p),
 }));
-// Alternate project / post tiles, at most 3 on Home.
+// Alternate project / post tiles, at most 6 on Home.
 const tiles = Array.from({ length: Math.max(projectTiles.length, postTiles.length) })
   .flatMap((_, i) => [projectTiles[i], postTiles[i]])
   .filter(Boolean)
-  .slice(0, 3);
+  .slice(0, 6);
 ---
 <Base>
   <section class="intro">

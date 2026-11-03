@@ -3,6 +3,10 @@ import '@fontsource/montserrat/700.css';
 import '@fontsource/lato/400.css';
 import '@fontsource/lato/400-italic.css';
 import '@fontsource/lato/700.css';
+// Preloaded so text renders in the right font straight away, without a visible swap.
+import montserrat700 from '@fontsource/montserrat/files/montserrat-latin-700-normal.woff2?url';
+import lato400 from '@fontsource/lato/files/lato-latin-400-normal.woff2?url';
+import lato700 from '@fontsource/lato/files/lato-latin-700-normal.woff2?url';
 import '../styles/global.css';
 
 interface Props { title?: string; description?: string }
@@ -11,9 +15,9 @@ const { title, description = 'Personal website of Florian Laurent.' } = Astro.pr
 
 const nav = [
   { href: '/', label: 'Home' },
-  { href: '/about', label: 'About' },
   { href: '/projects/', label: 'Projects' },
   { href: '/blog', label: 'Blog' },
+  { href: '/about', label: 'About' },
 ];
 // Highlight the current section; posts live under /YYYY/... so count them as Blog.
 const path = Astro.url.pathname;
@@ -27,6 +31,9 @@ const isCurrent = (href: string) =>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {[montserrat700, lato400, lato700].map((font) => (
+      <link rel="preload" href={font} as="font" type="font/woff2" crossorigin />
+    ))}
     <title>{title ? `${title} · ${siteTitle}` : siteTitle}</title>
     <meta name="description" content={description}>
 
