@@ -41,6 +41,10 @@ a:hover { color: var(--black); }
 
 img { max-width: 100%; }
 
+/* Embedded videos: full width, 16:9, never wider than the screen. */
+iframe { max-width: 100%; }
+.prose iframe { width: 100%; height: auto; aspect-ratio: 16 / 9; }
+
 hr { border: 0; border-top: 1px solid var(--line); margin: 3rem 0; }
 
 /* Small uppercase labels: nav, buttons, tags, footer */
@@ -86,7 +90,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 3rem 0; }
   padding: 3rem 0;
   background: var(--black);
 }
-.site-footer nav { display: flex; gap: 1.5rem; }
+.site-footer nav { display: flex; flex-wrap: wrap; gap: 0.75rem 1.5rem; }
 .site-footer a { color: #888; }
 .site-footer a:hover { color: #fff; }
 
@@ -187,7 +191,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 3rem 0; }
 
 @media (max-width: 760px) {
   .with-aside { grid-template-columns: 1fr; gap: 1.5rem; }
-  .with-aside > img { order: -1; width: 180px; }
+  .with-aside > img { order: -1; width: 180px; justify-self: center; }
 }
 
 /* Code */
