@@ -5,7 +5,6 @@ years: 2022–present
 role: Co-founder, NyxAI
 links:
   - { label: Website, url: "https://dreamlook.ai/" }
-featured: true
 ---
 
 Co-founder of a Generative AI startup providing state-of-the-art tooling for image generation.

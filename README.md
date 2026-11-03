@@ -8,9 +8,9 @@ npm run dev      # http://localhost:4321
 npm run build    # static output in dist/
 ```
 
-- Home: `src/pages/index.astro` (intro text + featured projects and recent posts)
+- Home: `src/pages/index.astro` (intro text + the `featured` list of project/post tiles)
 - About: `src/pages/about.md`
-- Projects: `src/content/projects/<slug>.md` (served at `/projects/<slug>`; set `featured: true` to show on Home)
+- Projects: `src/content/projects/<slug>.md` (served at `/projects/<slug>`)
 - Blog posts: `src/content/posts/YYYY-MM-DD-slug.md` (served at `/YYYY/MM/DD/slug.html`)
 - Static files (images, PDFs): `public/`
 - Styling: `src/styles/global.css` (Montserrat + Lato, self-hosted via Fontsource)

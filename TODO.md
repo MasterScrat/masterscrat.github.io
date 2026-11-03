@@ -23,6 +23,7 @@ Project write-ups (page body, under the existing bio text)
 - [ ] CERN ATLAS project (`src/content/projects/cern-atlas.md`)
 - [ ] Battleground Engine (`src/content/projects/battleground.md`)
 - [ ] Ariane (`src/content/projects/ariane.md`)
+- [ ] Chatistics (`src/content/projects/chatistics.md`)
 
 ## Fixes
 

@@ -2,25 +2,30 @@
 import Base from '../layouts/Base.astro';
 import Tile from '../components/Tile.astro';
 import SocialIcons from '../components/SocialIcons.astro';
-import { getPosts, postUrl, formatDate, excerpt } from '../lib/posts';
-import { getProjects, projectUrl } from '../lib/projects';
+import { getEntry } from 'astro:content';
+import { postUrl, formatDate, excerpt } from '../lib/posts';
+import { projectUrl } from '../lib/projects';
 
-const featured = (await getProjects()).filter((p) => p.data.featured);
-const recent = (await getPosts()).slice(0, 4);
+// Tiles shown on Home, in order: project ids (file names in src/content/projects/)
+// or post ids (file names in src/content/posts/).
+const featured = [
+  ['projects', 'general-intuition'],
+  ['projects', 'dreamlook'],
+  ['projects', 'cedille'],
+  ['projects', 'ariane'],
+  ['posts', '2014-10-13-lemans-shores-timelapse-around-the-lake'],
+  ['projects', 'chatistics'],
+] as const;
 
-const projectTiles = featured.map((p) => ({
-  kind: 'Project' as const, href: projectUrl(p), title: p.data.title,
-  meta: p.data.years, text: p.data.summary, image: p.data.image,
+const tiles = await Promise.all(featured.map(async ([collection, id]) => {
+  const entry = await getEntry(collection, id);
+  if (!entry) throw new Error(`Featured tile not found: ${collection}/${id}`);
+  return entry.collection === 'projects'
+    ? { kind: 'Project' as const, href: projectUrl(entry), title: entry.data.title,
+        meta: entry.data.years, text: entry.data.summary, image: entry.data.image }
+    : { kind: 'Post' as const, href: postUrl(entry), title: entry.data.title,
+        meta: formatDate(entry.data.date), text: excerpt(entry) };
 }));
-const postTiles = recent.map((p) => ({
-  kind: 'Post' as const, href: postUrl(p), title: p.data.title,
-  meta: formatDate(p.data.date), text: excerpt(p),
-}));
-// Alternate project / post tiles, at most 6 on Home.
-const tiles = Array.from({ length: Math.max(projectTiles.length, postTiles.length) })
-  .flatMap((_, i) => [projectTiles[i], postTiles[i]])
-  .filter(Boolean)
-  .slice(0, 6);
 ---
 <Base>
   <section class="intro">

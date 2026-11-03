@@ -17,7 +17,6 @@ const projects = defineCollection({
     years: z.string(),               // e.g. "2021–2022", "2025–present"
     role: z.string().optional(),
     links: z.array(z.object({ label: z.string(), url: z.string() })).default([]),
-    featured: z.boolean().default(false), // show on Home
     image: z.string().optional(),    // path under public/, shown on the tile
   }),
 });

@@ -5,7 +5,6 @@ years: 2025–present
 role: Founding member
 links:
   - { label: Website, url: "http://generalintuition.ai/" }
-featured: true
 ---
 
 Founding member of the [General Intuition](http://generalintuition.ai/) research lab dedicated to video games and beyond.

@@ -5,7 +5,6 @@ years: 2021–2022
 role: ML engineer at Coteries
 links:
   - { label: GitHub, url: "https://github.com/coteries/cedille-ai" }
-featured: true
 ---
 
 Trained and deployed [Cedille](https://github.com/coteries/cedille-ai), the largest language model for French at the time (6B), released under an open-source license (MIT), with a free and public playground.
