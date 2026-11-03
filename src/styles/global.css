@@ -1,4 +1,4 @@
-/* Bold, simple style: heavy Montserrat headings, grey Lato text, one teal accent. */
+/* Bold, simple style: heavy Montserrat headings, grey Lato text, one red accent. */
 
 :root {
   --heading: 'Montserrat', sans-serif;
@@ -7,7 +7,7 @@
   --text: #555;
   --muted: #999;
   --line: #eee;
-  --accent: #1abc9c;
+  --accent: #ff3636;
 }
 
 * { box-sizing: border-box; }
