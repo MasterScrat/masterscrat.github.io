@@ -1,6 +1,6 @@
 ---
 title: dreamlook.ai
-summary: Fast, affordable Stable Diffusion finetuning on TPUs.
+summary: Our product dreamlook.ai allows users to finetune Stable Diffusion text-to-image models faster and cheaper by using TPUs.
 years: 2022–present
 role: Co-founder, NyxAI
 links:
@@ -8,6 +8,7 @@ links:
 featured: true
 ---
 
-In 2022 I co-founded NyxAI, a Generative AI startup providing state-of-the-art tooling for image generation.
+Co-founder of a Generative AI startup providing state-of-the-art tooling for image generation.
+Our product [dreamlook.ai](https://dreamlook.ai/) allows users to finetune Stable Diffusion text-to-image models faster and cheaper by using TPUs.
 
-Our product, [dreamlook.ai](https://dreamlook.ai/), lets users finetune Stable Diffusion text-to-image models faster and cheaper than the alternatives by running training on TPUs.
+[TODO write about dreamlook.ai]

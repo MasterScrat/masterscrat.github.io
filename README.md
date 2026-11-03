@@ -15,3 +15,5 @@ npm run build    # static output in dist/
 - Static files (images, PDFs): `public/`
 - Styling: [Pico CSS](https://picocss.com) + `src/styles/global.css`
 - No lockfile is committed: each build installs the latest Astro matching `package.json`.
+
+AI assistants working on this repo must follow [`CLAUDE.md`](CLAUDE.md): no AI-written prose, only verbatim reuse or `[TODO …]` placeholders.

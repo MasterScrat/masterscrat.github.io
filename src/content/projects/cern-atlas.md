@@ -1,12 +1,12 @@
 ---
-title: ATLAS data visualization at CERN
-summary: A web-based system summarizing over a million events per second per node into expert dashboards.
+title: Visualization of operational monitoring data for the ATLAS experiment
+summary: I built a web-based data visualization system for the ATLAS experiment.
 years: "2014"
-role: Software engineering intern, CERN
+role: CERN Software Engineering Intern
 links:
   - { label: Master thesis (PDF), url: "/documents/Florian_Laurent_CERN_Master_Thesis.pdf" }
 ---
 
-During my internship at CERN, I built a web-based data visualization system for the ATLAS experiment. It was designed to ingest more than one million events per second per node and summarize them in dashboards used by experts.
+I built a web-based data visualization system for the ATLAS experiment. My tool was designed to ingest >1M events per second per node and summarize them in dashboards to be used by experts. It was my [EPFL Master thesis](/documents/Florian_Laurent_CERN_Master_Thesis.pdf) and received maximal grade.
 
-This was my EPFL Master thesis, which received the maximum grade.
+[TODO write about the CERN ATLAS project]
