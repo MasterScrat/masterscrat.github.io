@@ -1,6 +1,7 @@
 ---
 title: "Why I gave up on Asana after 15 minutes"
 date: "2016-01-02"
+draft: true  # unpublished
 ---
 
 **So, let’s go to [asana.com](https://app.asana.com/) and give it a try.**

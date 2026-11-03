@@ -1,6 +1,7 @@
 ---
 title: "MetaCoding: Hello World!"
 date: "2007-11-20"
+image: /img/posts/metacoding.jpg
 ---
 
 _Unfortunately this project has been [aborted](http://lumakey.net/labs/metacoding/). You can still see a [limited demo of our work here](http://lumakey.net/labs/metacoding/Editor/Demo.htm). Don't hesitate to contact us if you have any interest._

@@ -1,6 +1,7 @@
 ---
 title: "Battleground Engine: First Demo!"
 date: "2012-12-01"
+draft: true  # folded into the Battleground project page
 ---
 
 [![](/img/screenshot-demo1.png "screenshot-demo1")](http://lumakey.net/labs/battleground/demo1)

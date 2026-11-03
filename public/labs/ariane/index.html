@@ -1,0 +1,292 @@
+<html>
+	<head>
+		<title>Ariane - JavaScript Pathfinder</title>
+		
+		<style>
+		body {
+			background: white;
+			font-family:	"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Verdana,Arial,sans-serif;
+			font-size:		11px;
+			
+		}
+			
+		* {
+			font-size:	11px;
+			color:		black;
+		}
+		
+		a {
+			margin-left: 2px;
+		}
+		
+		a:hover {
+		}
+		
+		a.homelink {
+			background:transparent url(http://images.gravytea.com/favicon.ico) no-repeat scroll left center;
+			padding:0px 0px 2px 18px;
+		}
+		</style>
+		
+		<script>
+		var pathfinder, mapData, path1;
+		var ctx;
+		
+		var mapSize = [400,400];
+		
+		window.onload = function() {
+			pathfinder = new Ariane();
+			
+			var searchMap = new SearchMap(mapData);
+			
+			ctx = $('canvas').getContext('2d');
+			ctx.canvas.width = mapSize[0];
+			ctx.canvas.height = mapSize[1];
+			
+			generateMap(0.95);
+		}
+		
+		function renderCompletedPath(path, color) {
+			var path = path.order();
+			
+			ctx.fillStyle = color;
+			for(var i=0; i<path.length; ++i) {
+				ctx.fillRect(path[i][0], path[i][1], 1, 1);
+			}
+		}
+		
+		function startSearch() {
+			searching = true;
+			searchInterval = setInterval(update, 15);
+		}
+		
+		function stopSearch() {
+			searching = false;
+			clearInterval(searchInterval);
+		}
+		
+		function generateMap(noise) {
+			//stopSearch();
+			ctx.clearRect(0,0,mapSize[0],mapSize[1]);
+			
+			mapData = [];
+			ctx.fillStyle = 'rgb(200,200,200)';
+			for(var i=0; i<mapSize[0]; ++i) {
+				mapData[i] = [];
+				for (var j = 0; j < mapSize[1]; ++j) {
+					mapData[i][j] = 0;
+					
+					if(Math.random()>noise) {
+						mapData[i][j] = 255;
+						ctx.fillRect(i, j, 1, 1);
+					}
+				}
+			}
+			
+			ctx.fillStyle = 'red';
+			
+			if ($('vertic').checked) {
+				for(var i=0; i<250; ++i) {
+					mapData[100][i] = 255;
+					ctx.fillRect(100, i, 1, 1);
+					
+					mapData[300][i] = 255;
+					ctx.fillRect(300, i, 1, 1);
+				}
+				
+				for(var i=150; i<400; ++i) {
+					mapData[200][i] = 255;
+					ctx.fillRect(200, i, 1, 1);
+				}
+			}
+			
+			if($('horiz').checked) {
+				for(var i=150; i<250; ++i) {
+					mapData[i][200] = 255;
+					ctx.fillRect(i, 200, 1, 1);
+				}
+				
+				for(var i=50; i<350; ++i) {
+					mapData[i][300] = 255;
+					ctx.fillRect(i, 300, 1, 1);
+					
+					mapData[i][100] = 255;
+					ctx.fillRect(i, 100, 1, 1);
+				}
+			}
+			
+			mapData[395][395] = 0;
+			mapData[395][5] = 0;
+			
+			pathfinder.setMapData(mapData);
+			resetPath();
+		}
+		
+		function resetPath() {
+			//pathfinder.resetPath(path1);
+			//pathfinder.resetPath(path2);
+			
+			path1 = new Path([0,0], [395,395], 1, function() {renderCompletedPath(path1, 'cyan');});
+			path2 = new Path([0,395], [395,0], 2, function() {renderCompletedPath(path2, 'lime');});
+			
+			pathfinder.findPath(path1);
+			pathfinder.findPath(path2);
+		}
+		
+		function update() {
+			pathfinder.update();
+			
+			ctx.fillStyle = 'blue';
+			renderPath(path1, $('path1info'));
+			
+			ctx.fillStyle = 'green';
+			renderPath(path2, $('path2info'));
+		}
+		
+		function renderPath(path, infoDiv) {
+			ctx.fillRect(path.start[0], path.start[1], 5, 5);
+			ctx.fillRect(path.end[0], path.end[1], 5, 5);
+			
+			if (path.computed) {
+				if (path.success) {
+					infoDiv.innerHTML = 'done in '+path.nbIter+' iterations';
+				} else {
+					ctx.fillStyle = 'red';
+					infoDiv.innerHTML = 'no way ('+path.nbIter+' iterations)';
+				}
+			} else {
+				infoDiv.innerHTML = path.nbIter+' iterations';
+			}
+			
+			if($('showall').checked) {
+				path.close.each(function(k,v) {
+					var v = v.split(',');
+					
+					if(v[0]>=0 && v[1]>=0) {
+						ctx.fillRect(v[0]*1, v[1]*1, 1, 1);	
+					}
+					
+				});
+			} else {
+				var last = path.close.lastAdded;
+				ctx.fillRect(last[0], last[1], 2, 2);
+			}
+		}
+		
+		function changeEstimationMethod(method) {
+			pathfinder.setEstimationMethod(method);
+		}
+		
+		var searching = false;
+		function toggleSearch() {
+			if(searching) {
+				$('toggle').value = 'start';
+				stopSearch();
+			} else {
+				$('toggle').value = 'stop';
+				startSearch();
+			}
+		}
+		
+		function changePriority(path, priority) {
+			pathfinder.setPathPriority(path, priority)
+		}
+		
+		function changeNbIterPerStep(nb) {
+			pathfinder.setChunkSize(nb);
+		}
+		
+		function setAllowedMove() {
+			pathfinder.setAllowedMoves($('straight').checked, $('diag').checked);
+		}
+		</script>
+	</head>
+	
+	<body>
+		<table align="center" style="height: 100%" cellpadding="50">
+			<tr>
+				<td><canvas id="canvas" width="400" height="400" style="border: 1px solid black;"></canvas></td>
+				
+				<td valign="center">
+					<table align="center" cellspacing="10">
+							<tr>
+								<td align="center" valign="center" colspan="2">
+									<p><b>Ariane - JS Pathfinder</b>
+									</p>
+								</td>
+							</tr>
+						
+							<tr>
+								<td valign="top"><b>Blue Path</b></td>
+								<td>
+									<input type="text" value="1" size="1" onblur="changePriority(path1, this.value);"> priority<br>
+									<div id="path1info">idle</div>
+								</td>
+							</tr>
+							
+							<tr>
+								<td valign="top"><b>Green Path</b></td>
+								<td>
+									<input type="text" value="2" size="1" onblur="changePriority(path2, this.value);"> priority<br>
+									<div id="path2info">idle</div>
+								</td>
+							</tr>
+						
+						<tr>
+							<td valign="top"><b>Map</b></td>
+							<td>
+								<input type="text" id="noise" value="0.95" size="2"> noise (0 to 1)<br>
+								<input type="checkbox" id="vertic" checked="checked"> vertical
+								<input type="checkbox" id="horiz" checked="checked"> horizontal walls<br>
+								<input type="button" value="new map" onclick="generateMap($('noise').value);">
+							</td>
+						</tr>
+						
+						<tr>
+							<td valign="top"><b>Pathfinder</b></td>
+							<td>
+								<select onchange="changeEstimationMethod(this.value)">
+									<option>squared_euclidean</option>
+									<option selected="selected">euclidean</option>
+									<option>manhattan</option>
+									<option>random</option>
+									<option>fixed</option>
+								</select><br>
+								<!--
+								<input type="text" id="terperstep" value="100" size="2" onblur="changeNbIterPerStep(this.value);"> iterations per step<br>
+								<input type="checkbox" id="straight" onclick="setAllowedMove();"> straight
+								<input type="checkbox" id="diag" onclick="setAllowedMove();" checked="checked"> diagonal moves<br>
+								-->
+								<input type="checkbox" id="showall"> display all nodes (slow)
+							</td>
+						</tr>
+						
+						<tr>
+							<td colspan="2" align="center">
+								<input type="button" value="start" onclick="toggleSearch();" id="toggle" style="font-weight:bold">
+								<input type="button" value="step" onclick="update();">
+							</td>
+						</tr>
+						
+						<tr>
+							<td colspan="2" align="center">
+								<p>This is a demo for Ariane, a JavaScript pathfinder.<br>
+								It tries to find paths going from each corner to the opposite.<br>
+								Ariane uses a parallel & asynchronous <a href="http://en.wikipedia.org/wiki/A*_search_algorithm">A* implementation</a>.</p>
+								<p><a href="/2009/05/16/ariane-pathfinder-first-demo.html">Read more about this experiment here.</a></p>
+							</td>
+						</tr>
+					</table>
+				</td>
+				
+			</tr>
+		</table>
+		
+		<script type="text/javascript" src="mootools.js"></script>
+		<script type="text/javascript" src="ariane.js"></script>
+	</body>
+</html>
+
+
+
+

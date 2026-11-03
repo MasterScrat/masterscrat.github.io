@@ -1,16 +1,18 @@
 ---
 import Base from './Base.astro';
 
-// Used as the `layout` of Markdown pages, which pass their frontmatter.
+// Layout for Markdown pages (e.g. About). Same full width as the other nav
+// sections; the page title only goes in <title>, the nav shows where you are.
+// An optional `image` in the frontmatter is shown in a column on the right.
 const { frontmatter } = Astro.props;
 ---
 <Base title={frontmatter.title}>
-  <div class="post">
-    <header class="post-header">
-      <h1 class="post-title">{frontmatter.title}</h1>
-    </header>
-    <article class="post-content">
-      <slot />
-    </article>
-  </div>
+  {frontmatter.image ? (
+    <div class="with-aside">
+      <article><slot /></article>
+      <img src={frontmatter.image} alt={frontmatter.imageAlt ?? ""} />
+    </div>
+  ) : (
+    <article><slot /></article>
+  )}
 </Base>

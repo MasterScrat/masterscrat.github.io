@@ -1,7 +1,8 @@
 ---
 import { render } from 'astro:content';
 import Base from '../../../../layouts/Base.astro';
-import { getPosts, postParams, formatDate, type Post } from '../../../../lib/posts';
+import { getPosts, postParams, formatDate, excerpt, type Post } from '../../../../lib/posts';
+import { linkAttrs } from '../../../../lib/links';
 
 export async function getStaticPaths() {
   const posts = await getPosts();
@@ -10,15 +11,24 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props as { post: Post };
 const { Content } = await render(post);
+// `?? []`: a dev server started before `links` existed has cached entries without it.
+const links = post.data.links ?? [];
 ---
-<Base title={post.data.title}>
-  <div class="post">
-    <header class="post-header">
-      <h1 class="post-title">{post.data.title}</h1>
-      <p class="post-meta">{formatDate(post.data.date)}</p>
-    </header>
-    <article class="post-content">
+<Base title={post.data.title} description={excerpt(post)} image={post.data.image}>
+  <article class="page">
+    <hgroup>
+      <h1>{post.data.title}</h1>
+      <p>{formatDate(post.data.date)}</p>
+    </hgroup>
+    {links.length > 0 && (
+      <p class="page-links">
+        {links.map((l) => <a href={l.url} class="button" {...linkAttrs(l.url)}>{l.label}</a>)}
+      </p>
+    )}
+    {post.data.image && post.data.cover !== false && <img class="page-cover" src={post.data.image} alt="" />}
+    <div class="prose">
       <Content />
-    </article>
-  </div>
+      <p><a href="/blog/">← All posts</a></p>
+    </div>
+  </article>
 </Base>
