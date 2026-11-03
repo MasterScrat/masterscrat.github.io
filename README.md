@@ -11,3 +11,4 @@ npm run build    # static output in dist/
 - Homepage: `src/pages/index.md`
 - Blog posts: `src/content/posts/YYYY-MM-DD-slug.md` (served at `/YYYY/MM/DD/slug.html`)
 - Static files (images, PDFs): `public/`
+- No lockfile is committed: each build installs the latest Astro matching `package.json`.
