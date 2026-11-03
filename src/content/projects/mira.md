@@ -1,5 +1,6 @@
 ---
 title: "MIRA"
+progress: sourced
 summary: "Multiplayer Interactive World Models trained on Rocket League"
 years: "2026"
 role: "General Intuition"

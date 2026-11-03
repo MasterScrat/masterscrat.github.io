@@ -1,5 +1,6 @@
 ---
 title: "Correlation between my running pace and songs BPM"
+progress: sourced
 date: 2026-03-23
 draft: true
 # Sources:

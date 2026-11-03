@@ -1,5 +1,6 @@
 ---
 title: dreamlook.ai
+progress: stub
 summary: Our product dreamlook.ai allows users to finetune Stable Diffusion text-to-image models faster and cheaper by using TPUs.
 years: 2022–present
 image: /img/projects/dreamlook.jpg

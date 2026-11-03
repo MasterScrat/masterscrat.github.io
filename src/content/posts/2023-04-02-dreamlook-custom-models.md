@@ -1,5 +1,6 @@
 ---
 title: "[TODO title]"
+progress: stub
 date: 2023-04-02
 draft: true
 # Sources:

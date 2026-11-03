@@ -1,5 +1,6 @@
 ---
 title: "Arbiter"
+progress: sourced
 summary: "An app that lets you invite an anonymous person to act as a neutral third party when having an argument"
 years: "2018"
 draft: true

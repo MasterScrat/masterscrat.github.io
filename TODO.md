@@ -4,6 +4,8 @@ Not published: only `src/pages/` and `public/` end up on the site.
 
 Placeholders show up as `[TODO …]`. To list them: `grep -rn "\[TODO" src/`
 
+**Progress:** each item has `progress: stub | sourced | writing | done`, shown as a badge in `npm run dev`. Set `writing` when you start editing one, `done` when finished.
+
 **Drafts:** files with `draft: true` show up in `npm run dev` (marked DRAFT in the lists) but are left out of the live site. Remove the line to publish.
 
 Draft files already contain your original Reddit text verbatim, under a `[TODO adapt the Reddit text below]` marker, and list their sources and media in YAML comments at the top. Reddit titles and dates came from the [Arctic Shift](https://arctic-shift.photon-reddit.com) archive.

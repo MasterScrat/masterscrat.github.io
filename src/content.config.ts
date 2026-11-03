@@ -9,6 +9,8 @@ const posts = defineCollection({
     image: z.string().optional(), // path under public/, shown on the tile and at the top of the post
     cover: z.boolean().default(true), // false: don't repeat the image at the top of the post
     draft: z.boolean().default(false), // shown in `npm run dev` only, not on the live site
+    // How far along the content is (shown in `npm run dev` only): stub -> sourced -> writing -> done.
+    progress: z.enum(['stub', 'sourced', 'writing', 'done']).default('done'),
   }),
 });
 
@@ -24,6 +26,8 @@ const projects = defineCollection({
     cover: z.boolean().default(true), // false: don't repeat the image at the top of the page
     label: z.string().default('Project'), // tile tag, e.g. "Work" for an employer
     draft: z.boolean().default(false), // shown in `npm run dev` only, not on the live site
+    // How far along the content is (shown in `npm run dev` only): stub -> sourced -> writing -> done.
+    progress: z.enum(['stub', 'sourced', 'writing', 'done']).default('done'),
   }),
 });
 

@@ -1,5 +1,6 @@
 ---
 title: Flatland
+progress: stub
 summary: "Flatland challenge: Multi-Agent Reinforcement Learning on Trains"
 years: 2019–2021
 image: /img/projects/flatland.jpg

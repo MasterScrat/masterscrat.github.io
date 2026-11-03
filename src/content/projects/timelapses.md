@@ -1,5 +1,6 @@
 ---
 title: "Timelapses"
+progress: stub
 summary: "[TODO one-line summary of my timelapses]"
 years: "2013–2024"
 draft: true

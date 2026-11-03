@@ -1,5 +1,6 @@
 ---
 title: Ariane
+progress: stub
 summary: "[TODO one-line summary of Ariane]"
 years: "2009"
 image: /img/posts/ariane.jpg
