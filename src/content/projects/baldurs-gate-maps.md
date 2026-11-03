@@ -1,6 +1,5 @@
 ---
 title: "Adding perspective to Baldur's Gate maps + upscaling them"
-progress: sourced
 summary: "Upscaling BG2's assets using Machine Learning"
 years: "2019–2020"
 draft: true

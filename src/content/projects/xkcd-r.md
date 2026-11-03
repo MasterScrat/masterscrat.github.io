@@ -1,6 +1,5 @@
 ---
 title: "XKCD+R"
-progress: stub
 summary: "[TODO one-line summary of XKCD+R]"
 years: "[TODO years]"
 draft: true

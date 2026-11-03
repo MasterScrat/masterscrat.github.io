@@ -1,6 +1,5 @@
 ---
 title: Chatistics
-progress: stub
 summary: Python 3 scripts to convert chat logs from various messaging platforms into Pandas DataFrames.
 years: 2016–2020
 image: /img/projects/chatistics.jpg

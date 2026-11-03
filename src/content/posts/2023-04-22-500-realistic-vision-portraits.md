@@ -1,6 +1,5 @@
 ---
 title: "500 Realistic Vision portraits, eyes aligned, sorted by happiness"
-progress: stub
 date: 2023-04-22
 draft: true
 # Sources:

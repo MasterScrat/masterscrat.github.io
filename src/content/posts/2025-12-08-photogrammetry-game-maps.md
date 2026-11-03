@@ -1,6 +1,5 @@
 ---
 title: "First attempt at photogrammetry for game maps"
-progress: sourced
 date: 2025-12-08
 image: /img/posts/photogrammetry-game-maps.jpg
 draft: true

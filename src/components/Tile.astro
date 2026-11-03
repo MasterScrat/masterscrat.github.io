@@ -7,11 +7,10 @@ interface Props {
   text: string;
   image?: string;
   draft?: boolean; // shown with a striped background (dev only, drafts aren't published)
-  progress?: 'stub' | 'sourced' | 'writing' | 'done';
 }
-const { kind = 'Project', href, title, meta, text, image, draft = false, progress = 'done' } = Astro.props;
-// Work-in-progress badges, only in `npm run dev`.
-const showStatus = import.meta.env.DEV && (draft || progress !== 'done');
+const { kind = 'Project', href, title, meta, text, image, draft = false } = Astro.props;
+// Draft badge, only in `npm run dev` (drafts aren't published).
+const showStatus = import.meta.env.DEV && draft;
 ---
 <article class:list={["tile", { "tile-draft": draft }]}>
   {image && <img src={image} alt="" loading="lazy" />}
@@ -22,8 +21,7 @@ const showStatus = import.meta.env.DEV && (draft || progress !== 'done');
     <small>{meta}</small>
     {showStatus && (
       <small class="tile-status">
-        {draft && <span class="status status-draft">Draft</span>}
-        {progress !== 'done' && <span class={`status status-${progress}`}>{progress}</span>}
+        <span class="status status-draft">Draft</span>
       </small>
     )}
   </footer>

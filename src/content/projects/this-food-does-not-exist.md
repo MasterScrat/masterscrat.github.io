@@ -1,6 +1,5 @@
 ---
 title: "This Food Does Not Exist"
-progress: sourced
 summary: "[TODO one-line summary of This Food Does Not Exist]"
 years: "2022"
 draft: true

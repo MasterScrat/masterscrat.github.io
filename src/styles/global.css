@@ -178,7 +178,27 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 3rem 0; }
 .tile h3 a::after { content: ''; position: absolute; inset: 0; }
 
 .tile-text { flex-grow: 1; margin: 0 0 1rem; color: var(--muted); }
-.tile footer { color: var(--muted); font-size: 14px; }
+.tile footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Draft badge (only rendered in `npm run dev`). */
+.tile-status { display: flex; gap: 0.35rem; }
+.status {
+  font: 700 10px var(--heading);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.2em 0.6em;
+  border-radius: 999px;
+  color: #fff;
+  background: var(--muted);
+}
+.status-draft { background: var(--black); }
 
 /* Long-form pages: posts, projects, about */
 
@@ -188,6 +208,18 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 3rem 0; }
 .prose hgroup p,
 .meta { margin: 0; color: var(--muted); }
 .prose .cover { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; margin: 0 0 2rem; }
+
+/* Project pages: title, links, then a full-width cover (cropped if it would get too tall), then the text. */
+.project h1 { margin-bottom: 1.25rem; }
+.project .project-links { margin: 0 0 2rem; }
+.project-cover {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 420px;
+  object-fit: cover;
+  margin: 0 0 2rem;
+}
 
 /* About: text column at a readable width, photo in its own column on the right. */
 .with-aside {

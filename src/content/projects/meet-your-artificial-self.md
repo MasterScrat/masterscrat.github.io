@@ -1,6 +1,5 @@
 ---
 title: "Meet your Artificial Self: Generate text that sounds like you"
-progress: sourced
 summary: "Train a language model to talk like you using your chat logs (notebook)"
 years: "2020"
 draft: true
