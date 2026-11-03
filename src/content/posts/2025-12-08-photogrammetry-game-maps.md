@@ -2,16 +2,9 @@
 title: "First attempt at photogrammetry for game maps"
 date: 2025-12-08
 image: /img/posts/photogrammetry-game-maps.jpg
-draft: true
 # Sources:
 #   https://www.reddit.com/r/photogrammetry/comments/1pgxwf9/
-# Media to self-host (TODO):
-#   https://www.reddit.com/gallery/1pgxwf9
 ---
-
-[TODO write about my first attempt at photogrammetry for game maps]
-
-[TODO adapt the Reddit text below, from r/photogrammetry]
 
 This was much trickier than expected!
 
@@ -26,3 +19,15 @@ I moved to Metashape on macOS and it immediately got almost all images, and buil
 My goal is to build maps by importing the meshes into Unreal Engine, creating foliage etc then export pre-rendered isometric map tiles from there. 
 
 But I'm still very much figuring out the basics with UE, so I gave a first shot at styling the maps using Google's Nano Banana AI model. It doesn't look exactly as I'd want, and writing prompts feels like a terrible way to create images, but it still gives me hope a more deliberate UE workflow could give me good final results!
+
+![](/img/posts/photogrammetry/1.jpg)
+
+![](/img/posts/photogrammetry/2.jpg)
+
+![](/img/posts/photogrammetry/3.jpg)
+
+![](/img/posts/photogrammetry/4.jpg)
+
+![](/img/posts/photogrammetry/5.jpg)
+
+![](/img/posts/photogrammetry/6.jpg)

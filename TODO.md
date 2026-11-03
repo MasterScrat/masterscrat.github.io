@@ -37,10 +37,8 @@ Project write-ups (page body, under the existing bio text)
 
 ## Writing: draft posts (`src/content/posts/`)
 
-- [ ] First attempt at photogrammetry for game maps (`2025-12-08-photogrammetry-game-maps.md`)
 - [ ] dreamlook custom models, one consolidated post (`2023-04-02-dreamlook-custom-models.md`): title; Baldur's Gate maps, Sin City, Rick & Morty, origami guide, Realistic Vision comparison; **showcase Promptly** (internal tool, never released: add screenshots). Date is the first related Reddit post: adjust if you like.
 - [ ] 500 Realistic Vision portraits (`2023-04-22-500-realistic-vision-portraits.md`): add the tweet link
-- [ ] Strava + Spotify lyrics map (`2026-03-23-strava-spotify-lyrics.md`): two Reddit texts to merge
 - [ ] Running pace vs songs BPM (`2026-03-23-running-pace-and-songs-bpm.md`)
 - [ ] QR codes drawn with post-its and on a whiteboard (`2011-05-10-qr-codes.md`)
 

@@ -9,14 +9,13 @@ import { projectUrl } from '../lib/projects';
 // The 6 tiles on Home, in order: project ids (file names in src/content/projects/)
 // or post ids (file names in src/content/posts/). Drafts aren't allowed: the build fails instead
 // of Home silently showing fewer tiles.
-// Next swaps, once published: Strava lyrics + photogrammetry posts instead of Chatistics + Battleground.
 const featured = [
   ['projects', 'general-intuition'],
   ['projects', 'dreamlook'],
+  ['posts', '2026-03-23-strava-spotify-lyrics'],
   ['projects', 'cedille'],
-  ['projects', 'chatistics'],
   ['projects', 'flatland'],
-  ['projects', 'battleground'],
+  ['posts', '2025-12-08-photogrammetry-game-maps'],
 ] as const;
 
 const entries = await Promise.all(featured.map(async ([collection, id]) => {
