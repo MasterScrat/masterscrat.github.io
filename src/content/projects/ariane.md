@@ -1,7 +1,6 @@
 ---
 title: Ariane
 summary: "[TODO one-line summary of Ariane]"
-years: "2009"
 image: /img/posts/ariane.jpg
 draft: true  # only the 2009 blog post is published for now
 links:

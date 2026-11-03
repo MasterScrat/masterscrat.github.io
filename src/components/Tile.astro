@@ -3,7 +3,7 @@ interface Props {
   kind?: string; // tag shown above the title: "Project" (default), "Work", "Post"…
   href: string;
   title: string;
-  meta: string;
+  meta?: string; // e.g. a post's date
   text: string;
   image?: string;
   draft?: boolean; // shown with a striped background (dev only, drafts aren't published)
@@ -17,12 +17,12 @@ const showStatus = import.meta.env.DEV && draft;
   <p class={`tile-kind tile-kind-${kind.toLowerCase()}`}>{kind}</p>
   <h3><a href={href}>{title}</a></h3>
   <p class="tile-text">{text}</p>
-  <footer>
+  {(meta || showStatus) && <footer>
     <small>{meta}</small>
     {showStatus && (
       <small class="tile-status">
         <span class="status status-draft">Draft</span>
       </small>
     )}
-  </footer>
+  </footer>}
 </article>

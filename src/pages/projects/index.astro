@@ -9,7 +9,7 @@ const projects = await getProjects();
   <div class="tiles">
     {projects.map((p) => (
       <Tile draft={p.data.draft} kind={p.data.label} href={projectUrl(p)} title={p.data.title}
-            meta={p.data.years} text={p.data.summary} image={p.data.image} />
+            text={p.data.summary} image={p.data.image} />
     ))}
   </div>
 </Base>

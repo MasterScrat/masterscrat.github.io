@@ -27,7 +27,7 @@ Project write-ups (page body, under the existing bio text)
 ## Writing: draft projects (`src/content/projects/`)
 
 - [ ] Arbiter (`arbiter.md`): add the product screenshot from r/ArbiterApp
-- [ ] XKCD+R (`xkcd-r.md`): summary and years (the 2014 Reddit posts aren't in the archive)
+- [ ] XKCD+R (`xkcd-r.md`): summary (the 2014 Reddit posts aren't in the archive)
 - [ ] MIRA (`mira.md`): not featured, small role
 - [ ] This Food Does Not Exist (`this-food-does-not-exist.md`): summary
 - [ ] Baldur's Gate maps: perspective + upscaling (`baldurs-gate-maps.md`)

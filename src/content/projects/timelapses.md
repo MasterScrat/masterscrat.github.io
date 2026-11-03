@@ -1,7 +1,6 @@
 ---
 title: "Timelapses"
 summary: "[TODO one-line summary of my timelapses]"
-years: "2013–2024"
 draft: true
 links:
   - { label: "Leman's Shores: Timelapse Around The Lake", url: "/2014/10/13/lemans-shores-timelapse-around-the-lake.html" }

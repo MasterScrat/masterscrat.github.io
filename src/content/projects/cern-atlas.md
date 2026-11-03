@@ -1,7 +1,6 @@
 ---
 title: Visualization of operational monitoring data for the ATLAS experiment
 summary: I built a web-based data visualization system for the ATLAS experiment.
-years: "2014"
 image: /img/projects/cern-atlas.jpg
 role: CERN Software Engineering Intern
 links:

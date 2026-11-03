@@ -1,7 +1,6 @@
 ---
 title: "XKCD+R"
 summary: "[TODO one-line summary of XKCD+R]"
-years: "[TODO years]"
 draft: true
 links:
   - { label: "Reddit (r/xkcdcomic, proof of concept)", url: "https://www.reddit.com/r/xkcdcomic/comments/274thn/" }

@@ -1,7 +1,6 @@
 ---
 title: dreamlook.ai
 summary: Our product dreamlook.ai allows users to finetune Stable Diffusion text-to-image models faster and cheaper by using TPUs.
-years: 2022–2024
 image: /img/projects/dreamlook.jpg
 role: Co-founder, NyxAI
 links:

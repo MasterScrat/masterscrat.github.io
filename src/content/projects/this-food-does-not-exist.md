@@ -1,7 +1,6 @@
 ---
 title: "This Food Does Not Exist"
 summary: "[TODO one-line summary of This Food Does Not Exist]"
-years: "2022"
 draft: true
 links:
   - { label: "Website", url: "https://nyx-ai.github.io/stylegan2-flax-tpu" }

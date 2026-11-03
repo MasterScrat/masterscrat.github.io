@@ -1,7 +1,6 @@
 ---
 title: Battleground Engine
 summary: "Early demo of my upcoming isometric HTML5 game engine"
-years: "2012"
 image: /img/screenshot-demo1.png
 links:
   - { label: "Demo", url: "http://lumakey.net/labs/battleground/demo1/" }

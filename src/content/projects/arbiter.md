@@ -1,7 +1,6 @@
 ---
 title: "Arbiter"
 summary: "An app that lets you invite an anonymous person to act as a neutral third party when having an argument"
-years: "2018"
 draft: true
 links:
   - { label: "Reddit (r/CrazyIdeas)", url: "https://www.reddit.com/r/CrazyIdeas/comments/8ale8j/" }

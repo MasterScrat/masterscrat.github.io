@@ -2,7 +2,6 @@
 title: Cedille
 progress: sourced
 summary: "Cedille, the largest French language model (6b), released in open source"
-years: 2021–2022
 image: /img/projects/cedille.jpg
 role: ML engineer at Coteries
 links:

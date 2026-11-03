@@ -1,7 +1,6 @@
 ---
 title: "Meet your Artificial Self: Generate text that sounds like you"
 summary: "Train a language model to talk like you using your chat logs (notebook)"
-years: "2020"
 draft: true
 links:
   - { label: "GitHub", url: "https://github.com/mar-muel/artificial-self-AMLD-2020" }
