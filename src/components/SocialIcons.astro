@@ -1,0 +1,19 @@
+---
+// Font Awesome Free brand icons, inlined as SVG (license notice kept inside each file).
+import github from '@fortawesome/fontawesome-free/svgs/brands/square-github.svg?raw';
+import reddit from '@fortawesome/fontawesome-free/svgs/brands/square-reddit.svg?raw';
+import twitter from '@fortawesome/fontawesome-free/svgs/brands/square-twitter.svg?raw';
+import linkedin from '@fortawesome/fontawesome-free/svgs/brands/linkedin.svg?raw';
+
+const links = [
+  { label: 'GitHub', href: 'https://github.com/MasterScrat', icon: github },
+  { label: 'Reddit', href: 'https://www.reddit.com/user/MasterScrat/', icon: reddit },
+  { label: 'Twitter', href: 'https://twitter.com/MasterScrat', icon: twitter },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/florianlaurent/', icon: linkedin },
+];
+---
+<p class="social">
+  {links.map(({ label, href, icon }) => (
+    <a href={href} aria-label={label} title={label} set:html={icon} />
+  ))}
+</p>

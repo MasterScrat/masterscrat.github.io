@@ -204,3 +204,10 @@ blockquote {
   border-left: 3px solid var(--line);
   font-style: italic;
 }
+
+/* Social icons (Home intro) */
+
+.social { display: flex; gap: 0.75rem; margin: 0 0 1rem; }
+.social a { color: var(--accent); line-height: 0; }
+.social a:hover { color: var(--black); }
+.social svg { height: 44px; width: auto; }
