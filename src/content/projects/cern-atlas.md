@@ -10,5 +10,3 @@ links:
 ---
 
 I built a web-based data visualization system for the ATLAS experiment. My tool was designed to ingest >1M events per second per node and summarize them in dashboards to be used by experts. It was my [EPFL Master thesis](/documents/Florian_Laurent_CERN_Master_Thesis.pdf) and received maximal grade.
-
-[TODO write about the CERN ATLAS project]

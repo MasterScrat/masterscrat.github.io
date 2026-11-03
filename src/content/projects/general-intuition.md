@@ -10,5 +10,3 @@ links:
 ---
 
 Founding member of the [General Intuition](http://generalintuition.ai/) research lab dedicated to video games and beyond.
-
-[TODO write about General Intuition]

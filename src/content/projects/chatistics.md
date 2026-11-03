@@ -13,5 +13,3 @@ links:
 
 **Python 3 scripts to convert chat logs from various messaging platforms into Pandas DataFrames.**
 Can also generate histograms and word clouds from the chat logs.
-
-[TODO write about Chatistics]

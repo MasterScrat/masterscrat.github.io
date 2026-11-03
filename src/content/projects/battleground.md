@@ -1,11 +1,12 @@
 ---
 title: Battleground Engine
-summary: "[TODO one-line summary of the Battleground Engine]"
+summary: "Early demo of my upcoming isometric HTML5 game engine"
 years: "2012"
 image: /img/screenshot-demo1.png
 links:
+  - { label: "Demo", url: "http://lumakey.net/labs/battleground/demo1/" }
   - { label: "Reddit (r/javascript)", url: "https://www.reddit.com/r/javascript/comments/13y0ad/" }
   - { label: "Reddit (r/isometric)", url: "https://www.reddit.com/r/isometric/comments/1nqrzn/early_demo_of_my_upcoming_isometric_html5_game/" }
 ---
 
-[TODO write about the Battleground Engine]
+Here is the first public demo of my JavaScript game engine. Special thanks to the Reddit community for their great feedback.

@@ -16,5 +16,3 @@ Co-organizer of the associated Flatland 2020 NeurIPS Challenge.
 
 Workshop organizer:
 - "Flatland: Multi-Agent Reinforcement Learning on Trains" at TheWebConference 2021
-
-[TODO write about Flatland]

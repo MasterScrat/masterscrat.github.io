@@ -5,7 +5,7 @@ Personal website, built with [Astro](https://astro.build) and deployed to GitHub
 ```sh
 npm install
 npm run dev      # http://localhost:4321
-npm run build    # static output in dist/
+npm run build    # static output in dist/ (fails if a [TODO] placeholder is on a published page)
 ```
 
 - Home: `src/pages/index.astro` (intro text + the `featured` list of project/post tiles)
