@@ -20,10 +20,11 @@ const isCurrent = (href: string) =>
     : path.startsWith(href.replace(/\/$/, '')) || (href === '/blog' && /^\/\d{4}\//.test(path));
 ---
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
     <title>{title ? `${title} · ${siteTitle}` : siteTitle}</title>
     <meta name="description" content={description}>
 

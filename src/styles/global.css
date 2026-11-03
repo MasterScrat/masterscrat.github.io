@@ -83,12 +83,8 @@
   margin: 0 0 1rem 1.5rem;
 }
 
-/* Code blocks: Shiki emits both themes; switch to the dark one in dark mode. */
+/* Code blocks: use Pico's code background instead of the Shiki theme's white. */
 
-@media (prefers-color-scheme: dark) {
-  .astro-code,
-  .astro-code span {
-    color: var(--shiki-dark) !important;
-    background-color: var(--shiki-dark-bg) !important;
-  }
+pre.astro-code {
+  background-color: var(--pico-code-background-color) !important;
 }

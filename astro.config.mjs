@@ -7,7 +7,6 @@ export default defineConfig({
   build: { format: 'preserve' },
   devToolbar: { enabled: false },
   markdown: {
-    // Code blocks follow the visitor's light/dark preference (see global.css).
-    shikiConfig: { themes: { light: 'github-light', dark: 'github-dark' } },
+    shikiConfig: { theme: 'github-light' },
   },
 });
