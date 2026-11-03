@@ -6,11 +6,11 @@ Placeholders show up as `[TODO …]`. To list them: `grep -rn "\[TODO" src/`
 
 **Drafts:** files with `draft: true` show up in `npm run dev` (marked DRAFT in the lists) but are left out of the live site. Remove the line to publish.
 
-Draft files already contain your original Reddit text verbatim, under a `[TODO adapt the Reddit text below]` marker, and list their sources and media in YAML comments at the top. Reddit titles and dates came from the [Arctic Shift](https://arctic-shift.photon-reddit.com) archive.
+Draft files already contain your original Reddit text verbatim, under a `[TODO adapt the Reddit text below]` marker; sources and media lists are in the `<!-- research … -->` block at the bottom. Reddit titles and dates came from the [Arctic Shift](https://arctic-shift.photon-reddit.com) archive.
 
 ## Writing: published pages
 
-Shipped lean (bio text only). Full drafts with all my Reddit text, press list and reply analysis: `drafts/projects/cedille-full-draft.md`, `drafts/projects/battleground-full-draft.md`.
+Research (sources, reply analysis, full verbatim drafts) lives at the bottom of each file, in a `<!-- research … -->` block that never reaches the site.
 
 Project summaries (the `summary:` line, shown on tiles)
 - [ ] Battleground Engine (`src/content/projects/battleground.md`)
@@ -61,5 +61,5 @@ Not added yet. Tell me which ones you were involved in (descriptions there are M
 
 ## Fixes
 
-- [ ] **Self-host images and media.** Draft files list their media URLs (imgur, i.redd.it, Reddit galleries, lumakey.net) in YAML comments; download them to `public/img/` and embed.
+- [ ] **Self-host images and media.** Draft files list their media URLs (imgur, i.redd.it, Reddit galleries, lumakey.net) in their research block; download them to `public/img/` and embed.
 - [ ] **Self-host the Asana post images** (post unpublished for now, `draft: true`). `src/content/posts/2016-01-02-why-i-gave-up-on-asana-after-15-minutes.md` hotlinks 8 images: 7 from `lh*.googleusercontent.com` (Google Docs image links, not meant for embedding, some browsers don't show them) and 1 from `http://lumakey.net` (plain HTTP). Download them to `public/img/posts/asana/` and point the post at the local copies.

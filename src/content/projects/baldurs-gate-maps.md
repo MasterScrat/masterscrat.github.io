@@ -6,8 +6,6 @@ links:
   - { label: "Reddit (r/baldursgate)", url: "https://www.reddit.com/r/baldursgate/comments/aemu8u/" }
   - { label: "Reddit (r/baldursgate)", url: "https://www.reddit.com/r/baldursgate/comments/g0ftlv/" }
   - { label: "Reddit (r/GameUpscale)", url: "https://www.reddit.com/r/GameUpscale/comments/g0fr8j/" }
-# Media to self-host (TODO):
-#   https://imgur.com/a/iwkc1VJ
 ---
 
 [TODO write about the Baldur's Gate maps project]
@@ -39,3 +37,10 @@ Most of the animations actually use the [upscaled images I worked on last year](
 Here's the paper I used for 3D inpainting: https://shihmengli.github.io/3D-Photo-Inpainting/
 
 edit: thanks for the gold :D [a couple more](https://imgur.com/a/Mce9wTN)
+
+<!-- research
+
+Media to self-host (TODO):
+  https://imgur.com/a/iwkc1VJ
+
+-->

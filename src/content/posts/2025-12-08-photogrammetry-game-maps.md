@@ -2,8 +2,6 @@
 title: "First attempt at photogrammetry for game maps"
 date: 2025-12-08
 image: /img/posts/photogrammetry-game-maps.jpg
-# Sources:
-#   https://www.reddit.com/r/photogrammetry/comments/1pgxwf9/
 ---
 
 This was much trickier than expected!
@@ -31,3 +29,10 @@ But I'm still very much figuring out the basics with UE, so I gave a first shot 
 ![](/img/posts/photogrammetry/5.jpg)
 
 ![](/img/posts/photogrammetry/6.jpg)
+
+<!-- research
+
+Sources:
+  https://www.reddit.com/r/photogrammetry/comments/1pgxwf9/
+
+-->

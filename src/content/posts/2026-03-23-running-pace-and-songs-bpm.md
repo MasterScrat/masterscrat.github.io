@@ -2,10 +2,6 @@
 title: "Correlation between my running pace and songs BPM"
 date: 2026-03-23
 draft: true
-# Sources:
-#   https://www.reddit.com/r/dataisbeautiful/comments/1s1u962/
-# Media to self-host (TODO):
-#   https://i.redd.it/z362e99q4vqg1.png
 ---
 
 [TODO write about the correlation between my running pace and songs BPM]
@@ -28,3 +24,12 @@ To get to the bottom of this:
 I also tried with elevation-adjusted paces, same conclusion.
 
 Note that I don't change songs while running, I start a playlist when I start running and that's it. I was wondering if some specific tracks would "pump me up" - apparently not.
+
+<!-- research
+
+Sources:
+  https://www.reddit.com/r/dataisbeautiful/comments/1s1u962/
+Media to self-host (TODO):
+  https://i.redd.it/z362e99q4vqg1.png
+
+-->

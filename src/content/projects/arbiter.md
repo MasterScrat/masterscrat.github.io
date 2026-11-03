@@ -5,8 +5,6 @@ draft: true
 links:
   - { label: "Reddit (r/CrazyIdeas)", url: "https://www.reddit.com/r/CrazyIdeas/comments/8ale8j/" }
   - { label: "Reddit (r/ArbiterApp)", url: "https://www.reddit.com/r/ArbiterApp/comments/8uyq4t/" }
-# Media to self-host (TODO):
-#   https://imgur.com/a/fL3bm6r
 ---
 
 [TODO write about Arbiter]
@@ -20,3 +18,10 @@ links:
 ***Interested? Join the subreddit! /r/ArbiterApp/***
 
 ***Private Beta is ongoing, [read here how to join!](https://www.reddit.com/r/ArbiterApp/comments/8pv6yy/how_to_become_a_beta_tester/)***
+
+<!-- research
+
+Media to self-host (TODO):
+  https://imgur.com/a/fL3bm6r
+
+-->

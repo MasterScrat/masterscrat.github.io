@@ -9,4 +9,6 @@ All prose on this site is written by Florian. When editing content (pages, posts
 - Don't edit existing prose unless explicitly asked, and then only make the exact change requested.
 - Interface labels are fine to write: navigation, buttons, link text such as "All posts →", "Project" / "Post" tags.
 
+Research material (sources, verbatim drafts, notes on what others said) goes in a `<!-- research … -->` block at the bottom of the item's file: HTML comments are stripped from the build. Don't put `-->` inside that block.
+
 To list remaining placeholders: `grep -rn "\[TODO" src/`

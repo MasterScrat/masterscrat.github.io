@@ -2,9 +2,6 @@
 title: "Using Strava + Spotify data to map the lyrics I heard on my runs"
 date: 2026-03-23
 image: /img/posts/strava-spotify-lyrics.jpg
-# Sources:
-#   https://www.reddit.com/r/Strava/comments/1s1vuqn/
-#   https://www.reddit.com/r/dataisbeautiful/comments/1s11ns2/
 ---
 
 I extracted data from Strava and Spotify to figure out what lyrics I heard during my runs. Each line appears precisely where I heard it!
@@ -26,3 +23,11 @@ Each track's timestamp is then matched to the GPS stream, then each lyric line i
 ![](/img/posts/strava-lyrics/3.jpg)
 
 ![](/img/posts/strava-lyrics/4.jpg)
+
+<!-- research
+
+Sources:
+  https://www.reddit.com/r/Strava/comments/1s1vuqn/
+  https://www.reddit.com/r/dataisbeautiful/comments/1s11ns2/
+
+-->

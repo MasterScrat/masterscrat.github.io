@@ -30,6 +30,7 @@ export function formatDate(date: Date) {
 // Plain-text preview of a post's Markdown, for tiles and lists.
 export function excerpt(post: Post, length = 160) {
   const text = (post.body ?? '')
+    .replace(/<!--[\s\S]*?-->/g, ' ')         // HTML comments, incl. research notes
     .replace(/```[\s\S]*?```/g, ' ')         // code blocks
     .replace(/<[^>]+>/g, ' ')                // HTML tags
     .replace(/!\[[^\]]*\]\([^)]*\)/g, ' ')   // images
