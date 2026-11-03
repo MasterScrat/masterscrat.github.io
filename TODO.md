@@ -12,7 +12,6 @@ Draft files already contain your original Reddit text verbatim, under a `[TODO a
 
 Project summaries (the `summary:` line, shown on tiles)
 - [ ] Battleground Engine (`src/content/projects/battleground.md`)
-- [ ] Ariane (`src/content/projects/ariane.md`)
 
 Project write-ups (page body, under the existing bio text)
 - [ ] General Intuition (`general-intuition.md`)
@@ -21,7 +20,6 @@ Project write-ups (page body, under the existing bio text)
 - [ ] Flatland (`flatland.md`): reuse the r/MachineLearning and r/datascience post texts (linked on the page)
 - [ ] CERN ATLAS project (`cern-atlas.md`)
 - [ ] Battleground Engine (`battleground.md`)
-- [ ] Ariane (`ariane.md`)
 - [ ] **Chatistics (`chatistics.md`): make it a proper page.** Lots of material on https://masterscrat.github.io/Chatistics/ (incl. the social media posts), the r/MachineLearning 2020 post and the r/dataisbeautiful word clouds post.
 
 ## Writing: draft projects (`src/content/projects/`)
@@ -32,6 +30,7 @@ Project write-ups (page body, under the existing bio text)
 - [ ] This Food Does Not Exist (`this-food-does-not-exist.md`): summary
 - [ ] Baldur's Gate maps: perspective + upscaling (`baldurs-gate-maps.md`)
 - [ ] Meet your Artificial Self, AMLD 2020 workshop (`meet-your-artificial-self.md`)
+- [ ] Ariane (`ariane.md`): only the 2009 blog post is published for now
 - [ ] Timelapses (`timelapses.md`): summary, write-up, embed the timelapses (Snowy Fribourg is here rather than its own post)
 
 ## Writing: draft posts (`src/content/posts/`)
