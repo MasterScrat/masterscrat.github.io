@@ -11,6 +11,8 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props as { post: Post };
 const { Content } = await render(post);
+// `?? []`: a dev server started before `links` existed has cached entries without it.
+const links = post.data.links ?? [];
 ---
 <Base title={post.data.title} description={excerpt(post)} image={post.data.image}>
   <article class="page">
@@ -18,9 +20,9 @@ const { Content } = await render(post);
       <h1>{post.data.title}</h1>
       <p>{formatDate(post.data.date)}</p>
     </hgroup>
-    {post.data.links.length > 0 && (
+    {links.length > 0 && (
       <p class="page-links">
-        {post.data.links.map((l) => <a href={l.url} class="button" {...linkAttrs(l.url)}>{l.label}</a>)}
+        {links.map((l) => <a href={l.url} class="button" {...linkAttrs(l.url)}>{l.label}</a>)}
       </p>
     )}
     {post.data.image && post.data.cover !== false && <img class="page-cover" src={post.data.image} alt="" />}
