@@ -14,6 +14,6 @@ const links = [
 ---
 <p class="social">
   {links.map(({ label, href, icon }) => (
-    <a href={href} aria-label={label} set:html={icon} />
+    <a href={href} aria-label={label} target="_blank" rel="noopener" set:html={icon} />
   ))}
 </p>

@@ -1,4 +1,6 @@
 import { defineConfig } from 'astro/config';
+import { satteri } from '@astrojs/markdown-satteri';
+import { externalLinks } from './src/lib/external-links.mjs';
 
 export default defineConfig({
   site: 'https://florianlau.rent',
@@ -8,5 +10,7 @@ export default defineConfig({
   devToolbar: { enabled: false },
   markdown: {
     shikiConfig: { theme: 'github-light' },
+    // External links in posts/pages open in a new tab, so visitors keep the site open.
+    processor: satteri({ hastPlugins: [externalLinks] }),
   },
 });

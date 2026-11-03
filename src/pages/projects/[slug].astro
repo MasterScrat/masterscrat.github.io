@@ -2,6 +2,7 @@
 import { render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import { getProjects, type Project } from '../../lib/projects';
+import { linkAttrs } from '../../lib/links';
 
 export async function getStaticPaths() {
   const projects = await getProjects();
@@ -22,7 +23,7 @@ const { Content } = await render(project);
     <p class="meta">{[years, role].filter(Boolean).join(' · ')}</p>
     {links.length > 0 && (
       <p class="project-links">
-        {links.map((l) => <a href={l.url} class="button">{l.label}</a>)}
+        {links.map((l) => <a href={l.url} class="button" {...linkAttrs(l.url)}>{l.label}</a>)}
       </p>
     )}
     <Content />
