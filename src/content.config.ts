@@ -6,6 +6,7 @@ const posts = defineCollection({
   schema: z.object({
     title: z.string(),
     date: z.coerce.date(),
+    image: z.string().optional(), // path under public/, shown on the tile
     draft: z.boolean().default(false), // shown in `npm run dev` only, not on the live site
   }),
 });

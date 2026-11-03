@@ -1,4 +1,5 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
+import { isVisible } from './drafts';
 
 export type Post = CollectionEntry<'posts'>;
 
@@ -16,8 +17,7 @@ export function postUrl(post: Post) {
 }
 
 export async function getPosts() {
-  // Drafts only show up in `npm run dev`.
-  const posts = await getCollection('posts', (p) => !(import.meta.env.PROD && p.data.draft));
+  const posts = await getCollection('posts', isVisible);
   return posts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 }
 

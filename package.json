@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
+    "dev:published": "HIDE_DRAFTS=1 astro dev",
     "build": "astro build",
     "preview": "astro preview"
   },

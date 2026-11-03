@@ -5,6 +5,7 @@ import SocialIcons from '../components/SocialIcons.astro';
 import { getEntry } from 'astro:content';
 import { postUrl, formatDate, excerpt } from '../lib/posts';
 import { projectUrl } from '../lib/projects';
+import { isVisible } from '../lib/drafts';
 
 // Tiles shown on Home, in order: project ids (file names in src/content/projects/)
 // or post ids (file names in src/content/posts/).
@@ -22,13 +23,12 @@ const entries = await Promise.all(featured.map(async ([collection, id]) => {
   if (!entry) throw new Error(`Featured tile not found: ${collection}/${id}`);
   return entry;
 }));
-// Drafts only show up in `npm run dev`, like everywhere else.
-const tiles = entries.filter((e) => !(import.meta.env.PROD && e.data.draft)).map((entry) =>
+const tiles = entries.filter(isVisible).map((entry) =>
   entry.collection === 'projects'
     ? { kind: entry.data.label, href: projectUrl(entry), title: entry.data.title,
         meta: entry.data.years, text: entry.data.summary, image: entry.data.image }
     : { kind: 'Post', href: postUrl(entry), title: entry.data.title,
-        meta: formatDate(entry.data.date), text: excerpt(entry) });
+        meta: formatDate(entry.data.date), text: excerpt(entry), image: entry.data.image });
 ---
 <Base>
   <section class="intro">

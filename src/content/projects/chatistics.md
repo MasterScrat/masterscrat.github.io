@@ -2,7 +2,7 @@
 title: Chatistics
 summary: Python 3 scripts to convert chat logs from various messaging platforms into Pandas DataFrames.
 years: 2016–2020
-image: /img/projects/chatistics-cloud.png
+image: /img/projects/chatistics.jpg
 links:
   - { label: GitHub, url: "https://github.com/MasterScrat/Chatistics" }
   - { label: "Website", url: "https://masterscrat.github.io/Chatistics/" }
