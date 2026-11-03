@@ -1,7 +1,7 @@
 ---
-import Base from '../layouts/Base.astro';
-import Tile from '../components/Tile.astro';
-import { getPosts, postUrl, formatDate, excerpt } from '../lib/posts';
+import Base from '../../layouts/Base.astro';
+import Tile from '../../components/Tile.astro';
+import { getPosts, postUrl, formatDate, excerpt } from '../../lib/posts';
 
 const posts = await getPosts();
 ---

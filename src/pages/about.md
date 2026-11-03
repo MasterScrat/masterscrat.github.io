@@ -7,7 +7,7 @@ imageAlt: Florian Laurent
 
 **Hey there! I'm Florian, a Machine Learning Engineer with an entrepreneurial bent, passionate about building systems that push the boundaries of applied AI. I'm based in French-speaking Switzerland.**
 
-**General Intuition (2025 - current)** Founding member of [General Intuition](http://generalintuition.ai/), the research lab dedicated to video games and beyond. 
+**General Intuition (2025 - current)** Founding member of [General Intuition](https://www.generalintuition.com/), the research lab dedicated to video games and beyond. 
 
 **NyxAI (2022 - 2024)** Co-founder of [dreamlook.ai](https://dreamlook.ai/), which provided tooling to finetune text-to-image models faster and cheaper by using TPUs. We powered multiple applications featured in the iOS App Store charts, and took part in the training of some of the most popular open-source Stable Diffusion models (e.g. [Juggernaut XL](https://civitai.com/models/133005/juggernaut-xl)).
 

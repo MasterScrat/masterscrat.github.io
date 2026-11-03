@@ -20,7 +20,7 @@ const imageUrl = new URL(image, Astro.site);
 const nav = [
   { href: '/', label: 'Home' },
   { href: '/projects/', label: 'Projects' },
-  { href: '/blog', label: 'Blog' },
+  { href: '/blog/', label: 'Blog' },
   { href: '/about', label: 'About' },
 ];
 // Highlight the current section; posts live under /YYYY/... so count them as Blog.
@@ -28,7 +28,7 @@ const path = Astro.url.pathname;
 const isCurrent = (href: string) =>
   href === '/'
     ? path === '/' || path === '/index.html'
-    : path.startsWith(href.replace(/\/$/, '')) || (href === '/blog' && /^\/\d{4}\//.test(path));
+    : path.startsWith(href.replace(/\/$/, '')) || (href === '/blog/' && /^\/\d{4}\//.test(path));
 ---
 <!doctype html>
 <html lang="en">

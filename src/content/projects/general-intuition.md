@@ -1,10 +1,10 @@
 ---
 title: General Intuition
-summary: Founding member of the General Intuition research lab dedicated to video games and beyond.
+summary: "Founding member of General Intuition, the research lab dedicated to video games and beyond."
 role: Founding member
 image: /img/projects/general-intuition.jpg
 links:
-  - { label: Website, url: "http://generalintuition.ai/" }
+  - { label: Website, url: "https://www.generalintuition.com/" }
 ---
 
-Founding member of the [General Intuition](http://generalintuition.ai/) research lab dedicated to video games and beyond.
+Founding member of [General Intuition](https://www.generalintuition.com/), the research lab dedicated to video games and beyond.

@@ -35,4 +35,4 @@ To get started you'll need a recent version of [MooTools](http://mootools.net/do
 
 ## Demo time!
 
-Here is a [little demo](/labs/moofm-demo/) I put together as an example.
+Here is a [little demo](/labs/moofm-demo/index.html) I put together as an example.

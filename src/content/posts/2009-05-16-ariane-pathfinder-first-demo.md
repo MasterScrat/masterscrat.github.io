@@ -4,7 +4,7 @@ date: "2009-05-16"
 image: /img/posts/ariane.jpg
 ---
 
-Here is the **[first demo of Ariane](/labs/ariane/)**, my JavaScript pathfinding tool.
+Here is the **[first demo of Ariane](/labs/ariane/index.html)**, my JavaScript pathfinding tool.
 
 ## What's a pathfinder?
 
@@ -20,13 +20,13 @@ The simplest way to solve this problem would be for our creature to move directl
 
 We're going to use what is called [the A\* algorithm](http://en.wikipedia.org/wiki/A*_search_algorithm) (pronounced "A star"). This magic formula allows us to find a shortest path from point A to point B on our map, avoiding any obstacles in the way.
 
-Below is a cool animation from Wikipedia on this subject. ![a* algorithm](http://upload.wikimedia.org/wikipedia/commons/5/5d/AstarExample.gif)
+Below is a cool animation from Wikipedia on this subject. ![a* algorithm](https://upload.wikimedia.org/wikipedia/commons/5/5d/AstarExample.gif)
 
 Ok, I didn't understand it either.
 
 More seriously, Ariane uses an efficient implementation of this algorithm to quickly compute any reasonably-long path. I've also implemented two useful features: parallel processing (multiple characters can "think" at the same time) and path priorities (eg to make enemies on the player field of view more reactive than the one far away).
 
-## What am I seeing in [the demo](/labs/ariane/)?
+## What am I seeing in [the demo](/labs/ariane/index.html)?
 
 Here we ask Ariane to compute two paths: from the top left to bottom right (in blue), and from the bottom left to the top right (in green). The points appearing on the map are the locations being analyzed.
 

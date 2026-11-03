@@ -2,6 +2,8 @@
 title: "Photogrammetry for game maps"
 date: 2025-12-08
 image: /img/posts/photogrammetry-game-maps.jpg
+links:
+  - { label: "Reddit (r/photogrammetry)", url: "https://www.reddit.com/r/photogrammetry/comments/1pgxwf9/" }
 ---
 
 This was much trickier than expected!

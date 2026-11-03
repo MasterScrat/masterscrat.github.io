@@ -1,6 +1,6 @@
 ---
 title: Cedille
-summary: "Cedille, the largest French language model (6b), released in open source"
+summary: "The largest language model for French at the time (6B), released under MIT license."
 image: /img/projects/cedille.jpg
 role: ML engineer at Coteries
 links:
@@ -12,7 +12,7 @@ links:
   - { label: "Reddit (r/france)", url: "https://www.reddit.com/r/france/comments/qr1zxb/" }
 ---
 
-Trained and deployed [Cedille](https://github.com/coteries/cedille-ai), the largest language model for French at the time (6B), released under an open-source license (MIT), with a free and public playground.
+We trained and deployed [Cedille](https://github.com/coteries/cedille-ai), the largest language model for French at the time (6B), released under MIT license. We used TPUs (v3-128) through Google's TRC program. For a couple of months we were beating OpenAI's best model (GPT-3 `davinci`) on French benchmarks!
 
 ## Press
 
