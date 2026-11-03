@@ -16,7 +16,8 @@ export function postUrl(post: Post) {
 }
 
 export async function getPosts() {
-  const posts = await getCollection('posts');
+  // Drafts only show up in `npm run dev`.
+  const posts = await getCollection('posts', (p) => !(import.meta.env.PROD && p.data.draft));
   return posts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 }
 

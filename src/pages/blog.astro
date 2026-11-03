@@ -8,7 +8,7 @@ const posts = await getPosts();
   <ul class="post-list">
     {posts.map((post) => (
       <li>
-        <small class="meta">{formatDate(post.data.date)}</small>
+        <small class="meta">{formatDate(post.data.date)}{post.data.draft && ' · DRAFT'}</small>
         <h3><a href={postUrl(post)}>{post.data.title}</a></h3>
         <p>{excerpt(post)}</p>
       </li>
