@@ -1,6 +1,7 @@
 ---
 title: "Canvas Cheat Sheet"
 date: "2009-03-06"
+image: /img/posts/canvas-cheat-sheet.jpg
 ---
 
 Good news for everyone having fun with HTLM5 _canvas_ element: the prolific [Jacob Seidelin](https://github.com/jseidelin) (from Nihilogic) has put together a very nice cheat sheet:

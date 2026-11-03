@@ -1,6 +1,7 @@
 ---
 title: "Leman's Shores: Timelapse Around The Lake"
 date: "2014-10-13"
+image: /img/posts/lemans-shores.jpg
 ---
 
 <iframe width="848" height="394" src="//www.youtube.com/embed/reWBeU1_iEY" frameborder="0" allowfullscreen></iframe>
