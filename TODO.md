@@ -46,6 +46,7 @@ Project write-ups (page body, under the existing bio text)
 
 - [ ] **RL Insights** (https://masterscrat.github.io/rl-insights/): turn the few completed pages into blog posts, perhaps with a header explaining the overall RL-Insights project started when the COVID lockdown began.
 - [ ] **Top tweets** (https://twitter.com/MasterScrat): go through the most popular ones for projects or posts worth featuring.
+- [ ] **Old Medium articles**: bring the good ones over as blog posts (keep their original dates). Easiest source is Medium's export (Settings → Security and apps → Download your information), which gives every story as HTML with its images. Also listed in the old `drafts/2019-09-20-migrating-posts.md` (along with gravytea.com, lumakey.net and flaurent.com).
 
 ## To review: projects on martinmuller.me/projects
 
