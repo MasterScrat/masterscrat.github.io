@@ -37,9 +37,11 @@ const tiles = Array.from({ length: Math.max(projectTiles.length, postTiles.lengt
     <div class="tiles">
       {tiles.map((t) => <Tile {...t} />)}
     </div>
-    <p class="more-links">
-      <a href="/projects/">All projects →</a>
-      <a href="/blog">All posts →</a>
-    </p>
+    <nav>
+      <ul>
+        <li><a href="/projects/">All projects →</a></li>
+        <li><a href="/blog">All posts →</a></li>
+      </ul>
+    </nav>
   </section>
 </Base>
