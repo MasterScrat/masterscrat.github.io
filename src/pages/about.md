@@ -1,9 +1,9 @@
 ---
 layout: ../layouts/Page.astro
 title: About me
+image: /img/florian-laurent.jpg
+imageAlt: Florian Laurent
 ---
-
-<img src="/img/florian-laurent.jpg" alt="Florian Laurent" class="portrait">
 
 **Hey there! I'm Florian, a Machine Learning engineer and entrepreneur. I work on Generative AI and Reinforcement Learning. I'm based in 
 French-speaking Switzerland.**

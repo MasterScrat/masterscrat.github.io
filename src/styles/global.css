@@ -171,7 +171,20 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 3rem 0; }
 .prose hgroup p,
 .meta { margin: 0; color: var(--muted); }
 
-.portrait { float: right; width: 33%; margin: 0 0 1rem 1.5rem; }
+/* About: text column at a readable width, photo in its own column on the right. */
+.with-aside {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 3rem;
+  align-items: start;
+}
+.with-aside > article { max-width: 640px; }
+.with-aside > img { width: 100%; }
+
+@media (max-width: 760px) {
+  .with-aside { grid-template-columns: 1fr; gap: 1.5rem; }
+  .with-aside > img { order: -1; width: 180px; }
+}
 
 /* Blog list */
 
