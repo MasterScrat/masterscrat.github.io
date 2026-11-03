@@ -12,7 +12,7 @@ const { project } = Astro.props as { project: Project };
 const { title, summary, years, role, links, image } = project.data;
 const { Content } = await render(project);
 ---
-<Base title={title} description={summary}>
+<Base title={title} description={summary} image={image}>
   <article class="prose">
     <hgroup>
       <h1>{title}</h1>
