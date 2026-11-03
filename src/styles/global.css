@@ -176,7 +176,16 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 3rem 0; }
 /* Make the whole tile clickable via its title link. */
 .tile h3 a::after { content: ''; position: absolute; inset: 0; }
 
-.tile-text { flex-grow: 1; margin: 0 0 1rem; color: var(--muted); }
+.tile-text {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  /* At most 4 lines, so post and project tiles stay the same height. */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  overflow: hidden;
+}
 .tile footer {
   display: flex;
   justify-content: space-between;

@@ -1,5 +1,5 @@
 ---
-title: "Using Strava + Spotify data to map the lyrics I heard on my runs"
+title: "Using Strava & Spotify to map out run lyrics"
 date: 2026-03-23
 image: /img/posts/strava-spotify-lyrics.jpg
 links:
