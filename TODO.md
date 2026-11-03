@@ -42,6 +42,11 @@ Project write-ups (page body, under the existing bio text)
 - [ ] Running pace vs songs BPM (`2026-03-23-running-pace-and-songs-bpm.md`)
 - [ ] QR codes drawn with post-its and on a whiteboard (`2011-05-10-qr-codes.md`)
 
+## To review: more material
+
+- [ ] **RL Insights** (https://masterscrat.github.io/rl-insights/): turn the few completed pages into blog posts, perhaps with a header explaining the overall RL-Insights project started when the COVID lockdown began.
+- [ ] **Top tweets** (https://twitter.com/MasterScrat): go through the most popular ones for projects or posts worth featuring.
+
 ## To review: projects on martinmuller.me/projects
 
 Not added yet. Tell me which ones you were involved in (descriptions there are Martin's words):
