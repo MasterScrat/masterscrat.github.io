@@ -2,6 +2,7 @@
 title: Flatland
 summary: "Flatland challenge: Multi-Agent Reinforcement Learning on Trains"
 years: 2019–2021
+image: /img/projects/flatland.jpg
 role: Lead researcher, AIcrowd
 links:
   - { label: "Reddit (r/MachineLearning)", url: "https://www.reddit.com/r/MachineLearning/comments/jbn147/r_flatland_challenge_multiagent_reinforcement/" }
