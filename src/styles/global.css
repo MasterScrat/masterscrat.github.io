@@ -111,9 +111,11 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 3rem 0; }
 .intro {
   display: flex;
   gap: 2.5rem;
-  align-items: flex-start;
+  align-items: center; /* photo vertically centered against the text */
   margin-bottom: 4rem;
 }
+.intro > div > :first-child { margin-top: 0; }
+.intro > div > :last-child { margin-bottom: 0; }
 .intro .avatar {
   width: 160px;
   aspect-ratio: 1;
@@ -123,7 +125,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 3rem 0; }
 
 @media (max-width: 600px) {
   h1 { font-size: 2.25rem; }
-  .intro { flex-direction: column; gap: 1.5rem; }
+  .intro { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
   .intro .avatar { width: 110px; }
 }
 
