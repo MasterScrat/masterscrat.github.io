@@ -6,7 +6,6 @@ import { getProjects, projectUrl } from '../../lib/projects';
 const projects = await getProjects();
 ---
 <Base title="Projects">
-  <h1>Projects</h1>
   <div class="tiles">
     {projects.map((p) => (
       <Tile kind="Project" href={projectUrl(p)} title={p.data.title}
