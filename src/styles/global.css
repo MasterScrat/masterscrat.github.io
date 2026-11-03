@@ -114,6 +114,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 3rem 0; }
   align-items: center; /* photo vertically centered against the text */
   margin-bottom: 4rem;
 }
+.intro .avatar-link { flex-shrink: 0; line-height: 0; }
 .intro > div > :first-child { margin-top: 0; }
 .intro > div > :last-child { margin-bottom: 0; }
 .intro .avatar {
