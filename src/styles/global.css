@@ -106,9 +106,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 3rem 0; }
 }
 .button:hover { color: #fff; background: var(--accent); }
 
-.more,
-.project-links { display: flex; flex-wrap: wrap; gap: 0.75rem; }
-.more { margin-top: 3rem; }
+.more { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 3rem; }
 
 /* Home intro */
 
@@ -201,20 +199,17 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 3rem 0; }
 }
 .status-draft { background: var(--black); }
 
-/* Long-form pages: posts, projects, about */
+/* Long-form text: readable line length. */
 
 .prose { max-width: 720px; }
-.prose hgroup { margin-bottom: 2rem; }
-.prose hgroup h1 { margin-bottom: 0.5rem; }
-.prose hgroup p,
-.meta { margin: 0; color: var(--muted); }
-.prose .cover { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; margin: 0 0 2rem; }
 
-/* Project pages: title, links, then a full-width cover (cropped if it would get too tall), then the text. */
-.project h1 { margin-bottom: 1.25rem; }
-.project .project-links { margin: 0 0 2rem; }
-.post-links { margin: 0 0 2rem; }
-.project-cover {
+/* Post and project pages: title, links, then a full-width cover (cropped if it would get too tall), then the text. */
+.page h1 { margin-bottom: 1.25rem; }
+.page hgroup { margin-bottom: 1.5rem; }
+.page hgroup h1 { margin-bottom: 0.5rem; }
+.page hgroup p { margin: 0; color: var(--muted); }
+.page-links { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 0 0 2rem; }
+.page-cover {
   display: block;
   width: 100%;
   aspect-ratio: 16 / 9;

@@ -13,18 +13,20 @@ const { post } = Astro.props as { post: Post };
 const { Content } = await render(post);
 ---
 <Base title={post.data.title} description={excerpt(post)} image={post.data.image}>
-  <article class="prose">
+  <article class="page">
     <hgroup>
       <h1>{post.data.title}</h1>
       <p>{formatDate(post.data.date)}</p>
     </hgroup>
     {post.data.links.length > 0 && (
-      <p class="project-links post-links">
+      <p class="page-links">
         {post.data.links.map((l) => <a href={l.url} class="button" {...linkAttrs(l.url)}>{l.label}</a>)}
       </p>
     )}
-    {post.data.image && post.data.cover !== false && <img class="cover" src={post.data.image} alt="" />}
-    <Content />
-    <p><a href="/blog">← All posts</a></p>
+    {post.data.image && post.data.cover !== false && <img class="page-cover" src={post.data.image} alt="" />}
+    <div class="prose">
+      <Content />
+      <p><a href="/blog">← All posts</a></p>
+    </div>
   </article>
 </Base>
