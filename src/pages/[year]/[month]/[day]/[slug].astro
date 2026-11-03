@@ -1,0 +1,24 @@
+---
+import { render } from 'astro:content';
+import Base from '../../../../layouts/Base.astro';
+import { getPosts, postParams, formatDate, type Post } from '../../../../lib/posts';
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return posts.map((post) => ({ params: postParams(post), props: { post } }));
+}
+
+const { post } = Astro.props as { post: Post };
+const { Content } = await render(post);
+---
+<Base title={post.data.title}>
+  <div class="post">
+    <header class="post-header">
+      <h1 class="post-title">{post.data.title}</h1>
+      <p class="post-meta">{formatDate(post.data.date)}</p>
+    </header>
+    <article class="post-content">
+      <Content />
+    </article>
+  </div>
+</Base>

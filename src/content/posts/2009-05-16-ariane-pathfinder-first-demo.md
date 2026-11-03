@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "First demo of Ariane, my JS pathfinder"
 date: "2009-05-16"
 ---

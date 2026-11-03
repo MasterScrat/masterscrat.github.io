@@ -1,0 +1,193 @@
+/* Plain-CSS port of the parts of the old Jekyll "*folio" theme this site used. */
+
+:root {
+  --font: Helvetica, Arial, sans-serif;
+  --text: #444;
+  --grey: #828282;
+  --grey-light: #ddd;
+  --background: #fdfdfd;
+  --theme: #ff3636;
+  --small: 14px;
+  --hspace: 50px;
+  --vspace: 40px;
+  --nav-height: 56px;
+}
+
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.5em;
+  font-weight: 100;
+  color: var(--text);
+  background-color: var(--background);
+  -webkit-text-size-adjust: 100%;
+}
+
+p, blockquote, pre, ul, ol, dl, figure {
+  margin-bottom: calc(var(--vspace) / 2);
+}
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+ul, ol { margin-left: var(--hspace); }
+li > ul, li > ol { margin-bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 { font-weight: 100; }
+
+a {
+  color: var(--text);
+  text-decoration: none;
+}
+a:hover { color: var(--theme); }
+
+article a {
+  color: var(--theme);
+  font-weight: 100;
+}
+
+article img, article iframe { max-width: 100%; }
+
+blockquote {
+  color: var(--text);
+  border-left: 10px solid var(--grey-light);
+  padding-left: calc(var(--hspace) / 2);
+  font-size: 18px;
+  font-style: italic;
+}
+blockquote > :last-child { margin-bottom: 0; }
+
+code {
+  font-size: 15px;
+  border-radius: 3px;
+  background-color: var(--grey-light);
+  padding: 1px 5px;
+}
+
+pre {
+  font-size: 15px;
+  border-radius: 3px;
+  padding: 8px 12px;
+  overflow-x: auto;
+}
+pre > code {
+  background: none;
+  padding: 0;
+}
+
+/* Layout */
+
+.wrapper {
+  max-width: calc(800px - var(--hspace) * 2);
+  margin: 0 auto;
+  padding: 0 var(--hspace);
+}
+
+@media screen and (max-width: 800px) {
+  .wrapper {
+    max-width: calc(800px - var(--hspace));
+    padding: 0 15px;
+  }
+}
+
+.site-header {
+  border-bottom: 1px solid var(--grey-light);
+  background-color: #fff;
+  opacity: 0.75;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: var(--nav-height);
+  width: 100%;
+  z-index: 50;
+}
+
+.site-nav {
+  float: right;
+  line-height: var(--nav-height);
+}
+.site-nav .page-link:not(:first-child) { margin-left: 10px; }
+
+.page-content { padding: 100px 0 50px; }
+
+.header-bar {
+  text-align: center;
+  padding-top: 25px;
+  margin-bottom: var(--vspace);
+  line-height: 3em;
+  opacity: 0.75;
+}
+.header-bar h1 {
+  color: var(--theme);
+  font-size: 75px;
+}
+
+.post-list {
+  margin: 0;
+  list-style: none;
+}
+.post-list > li { margin-bottom: var(--vspace); }
+
+.post-list-title {
+  font-size: 24px;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.contacticon {
+  font-size: 60px;
+  display: block;
+  margin: 10px;
+}
+.center { text-align: center; }
+
+/* Posts */
+
+.post-header { margin-bottom: var(--vspace); }
+
+.post-title {
+  font-size: 42px;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.post-content h2 {
+  font-size: 30px;
+  padding: 10px 0;
+}
+.post-content h3 { font-size: 30px; }
+.post-content h4 { font-size: 20px; }
+
+.post-meta {
+  font-size: var(--small);
+  color: var(--grey);
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .post-title { font-size: 36px; }
+  .post-content h2 { font-size: 28px; }
+  .post-content h3 { font-size: 22px; }
+  .post-content h4 { font-size: 18px; }
+  .post-list-title { font-size: 16px; }
+}
+
+/* Homepage portrait (was `col one right` in the old theme) */
+
+.portrait {
+  float: right;
+  width: 33.33%;
+  padding: 5px;
+  box-sizing: border-box;
+}
