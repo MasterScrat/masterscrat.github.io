@@ -6,10 +6,11 @@ interface Props {
   meta: string;
   text: string;
   image?: string;
+  draft?: boolean; // shown with a striped background (dev only, drafts aren't published)
 }
-const { kind = 'Project', href, title, meta, text, image } = Astro.props;
+const { kind = 'Project', href, title, meta, text, image, draft = false } = Astro.props;
 ---
-<article class="tile">
+<article class:list={["tile", { "tile-draft": draft }]}>
   {image && <img src={image} alt="" loading="lazy" />}
   <p class={`tile-kind tile-kind-${kind.toLowerCase()}`}>{kind}</p>
   <h3><a href={href}>{title}</a></h3>

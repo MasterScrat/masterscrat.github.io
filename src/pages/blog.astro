@@ -8,7 +8,7 @@ const posts = await getPosts();
 <Base title="Blog">
   <div class="tiles">
     {posts.map((post) => (
-      <Tile kind="Post" href={postUrl(post)} title={post.data.title}
+      <Tile draft={post.data.draft} kind="Post" href={postUrl(post)} title={post.data.title}
             meta={post.data.draft ? `${formatDate(post.data.date)} · DRAFT` : formatDate(post.data.date)}
             text={excerpt(post)} image={post.data.image} />
     ))}

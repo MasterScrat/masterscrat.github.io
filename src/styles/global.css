@@ -152,6 +152,15 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 3rem 0; }
 }
 .tile:hover { border-color: var(--black); }
 
+/* Drafts (only visible in `npm run dev`): faint diagonal stripes. */
+.tile-draft {
+  background: repeating-linear-gradient(
+    -45deg,
+    #fff 0 12px,
+    #f6f6f6 12px 24px
+  );
+}
+
 .tile img {
   margin: -1.5rem -1.5rem 1.25rem;
   max-width: none;

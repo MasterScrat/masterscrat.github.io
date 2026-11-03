@@ -1,6 +1,7 @@
 ---
 title: "MooFm: Last.fm data at your fingertips"
 date: "2009-03-02"
+image: /img/posts/moofm.jpg
 ---
 
 I came across [some](http://www.leebyron.com/what/lastfm/) [very](http://lastgraph.aeracode.org/) [neat](http://sixdegrees.hu/last.fm/index.html) Last.fm stats visualizations some times ago, and wanted to try out some ideas in JavaScript (probably with [Processing.js](http://ejohn.org/blog/processingjs/)). I couldn't find any efficient way to use their API from JS, so I made MooFm...
@@ -30,8 +31,8 @@ Couldn't be simpler, right? All [Last.fm readonly methods](http://www.last.fm/ap
 
 ## Getting started
 
-To get started you'll need a recent version of [MooTools](http://mootools.net/download) (obviously), the [MooFm.js](http://lumakey.net/labs/moofm-demo/lib/moofm.js) library and [its proxy](http://lumakey.net/labs/moofm-demo/proxy.phps). Now get an [API key](http://www.last.fm/api/account) (free), and you're good to go.
+To get started you'll need a recent version of [MooTools](http://mootools.net/download) (obviously), the [MooFm.js](/labs/moofm-demo/lib/moofm.js) library and [its proxy](http://lumakey.net/labs/moofm-demo/proxy.phps). Now get an [API key](http://www.last.fm/api/account) (free), and you're good to go.
 
 ## Demo time!
 
-Here is a [little demo](http://lumakey.net/labs/moofm-demo) I put together as an example.
+Here is a [little demo](/labs/moofm-demo/) I put together as an example.

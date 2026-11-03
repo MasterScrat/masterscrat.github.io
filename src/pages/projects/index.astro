@@ -8,7 +8,7 @@ const projects = await getProjects();
 <Base title="Projects">
   <div class="tiles">
     {projects.map((p) => (
-      <Tile kind={p.data.label} href={projectUrl(p)} title={p.data.title}
+      <Tile draft={p.data.draft} kind={p.data.label} href={projectUrl(p)} title={p.data.title}
             meta={p.data.draft ? `${p.data.years} · DRAFT` : p.data.years} text={p.data.summary} image={p.data.image} />
     ))}
   </div>
