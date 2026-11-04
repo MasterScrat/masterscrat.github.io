@@ -1,7 +1,6 @@
 ---
 title: "Can You Make Swiss Trains Even More Punctual?"
 date: 2018-09-12
-draft: true  # Medium import, waiting for review
 image: /img/posts/can-you-make-swiss-trains-even-more-punctual.jpg
 cover: false  # the images are in the text
 links:
