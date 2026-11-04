@@ -10,6 +10,7 @@ const posts = defineCollection({
     cover: z.boolean().default(true), // false: don't repeat the image at the top of the post
     links: z.array(z.object({ label: z.string(), url: z.string() })).default([]), // buttons under the title
     original: z.string().optional(), // where the post first appeared, e.g. a Medium URL
+    summary: z.string().optional(), // tile text and link-preview description (default: start of the post)
     draft: z.boolean().default(false), // shown in `npm run dev` only, not on the live site
   }),
 });

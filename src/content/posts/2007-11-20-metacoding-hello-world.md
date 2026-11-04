@@ -2,6 +2,7 @@
 title: "MetaCoding: Hello World!"
 date: "2007-11-20"
 image: /img/posts/metacoding.jpg
+summary: "A year ago a friend came up with a brilliant idea: making an online IDE, where developers could write and compile their code from their browser."
 ---
 
 _Unfortunately this project has been [aborted](http://lumakey.net/labs/metacoding/). You can still see a [limited demo of our work here](http://lumakey.net/labs/metacoding/Editor/Demo.htm). Don't hesitate to contact us if you have any interest._
