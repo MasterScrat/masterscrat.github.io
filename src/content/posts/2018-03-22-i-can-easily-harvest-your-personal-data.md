@@ -9,9 +9,13 @@ original: https://medium.com/@florianlaurent/i-can-easily-harvest-your-personal-
 
 <aside class="callout">
 
-Millions of profiles of Facebook users have been harvested by a private company and used to influence them.
+*Update, 2026. Rereading this eight years later: the "tying it all together" step, is now the easy part. This year, [an LLM agent re-identified](https://arxiv.org/abs/2602.16800) pseudonymous Hacker News users from their posts alone, which would require hours of human investigator work. No stylometry framework needed!*
 
 </aside>
+
+> “We exploited Facebook to harvest millions of people’s profiles. And built models to exploit what we knew about them and target their inner demons. That was the basis the entire company was built on.”
+>
+> — Christopher Wylie, Cambridge Analytica whistleblower, [to the Observer](https://www.theguardian.com/news/2018/mar/17/cambridge-analytica-facebook-influence-us-election), March 2018
 
 ![](/img/posts/i-can-easily-harvest-your-personal-data/1.jpg)
 
