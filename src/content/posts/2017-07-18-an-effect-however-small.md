@@ -1,6 +1,7 @@
 ---
 title: "An Effect However Small"
 date: 2017-07-18
+draft: true  # Medium import, waiting for review
 image: /img/posts/an-effect-however-small.jpg
 cover: false  # the images are in the text
 original: https://medium.com/hackernoon/an-effect-however-small-c66d9b15f720

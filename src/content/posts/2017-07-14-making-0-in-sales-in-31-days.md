@@ -1,6 +1,7 @@
 ---
 title: "Making $0 In Sales In 31 Days"
 date: 2017-07-14
+draft: true  # Medium import, waiting for review
 image: /img/posts/zero-sales.jpg
 cover: false  # the screenshot is the first image in the text
 links:

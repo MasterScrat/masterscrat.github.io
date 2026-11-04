@@ -1,6 +1,7 @@
 ---
 title: "Updating an R710 PowerEdge Server"
 date: 2017-09-23
+draft: true  # Medium import, waiting for review
 image: /img/posts/updating-an-r710-poweredge-server.jpg
 cover: false  # the images are in the text
 links:

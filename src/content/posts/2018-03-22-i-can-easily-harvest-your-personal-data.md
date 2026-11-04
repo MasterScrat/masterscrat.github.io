@@ -1,6 +1,7 @@
 ---
 title: "I Can Easily Harvest Your Personal Data"
 date: 2018-03-22
+draft: true  # Medium import, waiting for review
 image: /img/posts/i-can-easily-harvest-your-personal-data.jpg
 cover: false  # the images are in the text
 original: https://medium.com/@florianlaurent/i-can-easily-harvest-your-personal-data-a1c662bd94c8
