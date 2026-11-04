@@ -10,7 +10,7 @@ links:
 original: https://medium.com/crowdai/can-you-make-swiss-trains-even-more-punctual-ec9aa73d6e35
 ---
 
-**crowdAI is running a [data science challenge](https://www.aicrowd.com/challenges/train-schedule-optimisation-challenge) in collaboration with [SBB](http://sbb.ch), the Swiss national railway company, to optimize the scheduling of their trains.**
+**crowdAI (since then renamed to AIcrowd) is running a [data science challenge](https://www.aicrowd.com/challenges/train-schedule-optimisation-challenge) in collaboration with [SBB](http://sbb.ch), the Swiss national railway company, to optimize the scheduling of their trains.**
 
 > Ever complained about late or too infrequent trains? Now is your chance to improve things!
 
@@ -44,11 +44,15 @@ Each problem comes with 4 inputs:
 
 **Your goal is to find a schedule for all of the trains that will comply with all of the constraints.** In some case it will be easy, in others it may be impossible.
 
-### Isn’t this backward?
+<aside class="callout">
+
+**Isn’t this backward?**
 
 It may be surprising to try to schedule trains while ***already*** having timing constraints. This is because we are considering cases where we want to make ***small modifications*** to a pre-existing schedule.
 
 For example if a major football match starts at 20:00, it would make sense to modify the usual schedule to have a train arrive close to the stadium no later than 19:00. Similarly, the departure of the train that brings the spectators back should have an earliest departure of maybe 22:30.
+
+</aside>
 
 ### The Railway Network
 
@@ -168,9 +172,3 @@ One hint though: a possible starting point would be to express the problems as a
 Last but not least: there is no known solution for [problem 9](https://github.com/crowdAI/train-schedule-optimisation-challenge-starter-kit/blob/master/documentation/instance_description.md#the-official-nine-problem-instances) that doesn’t incur delays. It is probable that such a solution exists, but the solver used by SBB couldn’t find one yet.
 
 > **So if you DO find such a solution, you will have effectively improved the efficiency of Swiss train scheduling! *😎***
-
-## Challenge Links
-
-- Challenge page: [https://www.aicrowd.com/challenges/train-schedule-optimisation-challenge](https://www.aicrowd.com/challenges/train-schedule-optimisation-challenge)
-- Starter kit: [https://github.com/crowdAI/train-schedule-optimisation-challenge-starter-kit/](https://github.com/crowdAI/train-schedule-optimisation-challenge-starter-kit/)
-- Gitter channel: [https://gitter.im/crowdAI/sbb-challenges](https://gitter.im/crowdAI/sbb-challenges)

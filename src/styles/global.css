@@ -41,6 +41,16 @@ a:hover { color: var(--black); }
 
 img { max-width: 100%; }
 
+/* Callout box in posts: <aside class="callout"> ... </aside> (Markdown inside, with blank lines). */
+.callout {
+  margin: 2rem 0;
+  padding: 1rem 1.25rem;
+  background: #f7f7f7;
+  border-left: 3px solid var(--accent);
+}
+.callout > :first-child { margin-top: 0; }
+.callout > :last-child { margin-bottom: 0; }
+
 /* Images with a caption (e.g. Reddit gallery descriptions). */
 figure { margin: 2rem 0; }
 figure img { display: block; }
