@@ -13,6 +13,9 @@ const { post } = Astro.props as { post: Post };
 const { Content } = await render(post);
 // `?? []`: a dev server started before `links` existed has cached entries without it.
 const links = post.data.links ?? [];
+// Optional notice above the cover, e.g. "this project was discontinued". Supports [text](url) links.
+const notice = post.data.notice?.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (_, text, url) =>
+  `<a href="${url}"${/^https?:\/\//.test(url) ? ' target="_blank" rel="noopener"' : ''}>${text}</a>`);
 // "Originally published on Medium ↗" for posts first published elsewhere.
 const original = post.data.original;
 const SITES: Record<string, string> = { 'medium.com': 'Medium', 'hackernoon.com': 'HackerNoon' };
@@ -34,6 +37,7 @@ const originalSite = original
         {links.map((l) => <a href={l.url} class="button" {...linkAttrs(l.url)}>{l.label}</a>)}
       </p>
     )}
+    {notice && <aside class="callout page-notice" set:html={notice} />}
     {post.data.image && post.data.cover !== false && <img class="page-cover" src={post.data.image} alt="" />}
     <div class="prose">
       <Content />
