@@ -7,6 +7,7 @@ links:
   - { label: "Reddit (r/javascript)", url: "https://www.reddit.com/r/javascript/comments/13y0ad/" }
   - { label: "Reddit (r/baldursgate)", url: "https://www.reddit.com/r/baldursgate/comments/1o3garo/webbased_baldurs_gate_renderer/" }
   - { label: "Reddit (r/isometric)", url: "https://www.reddit.com/r/isometric/comments/1nqrzn/early_demo_of_my_upcoming_isometric_html5_game/" }
+draft: true
 ---
 
 Here is the first public demo of my JavaScript game engine. Special thanks to the Reddit community for their great feedback.

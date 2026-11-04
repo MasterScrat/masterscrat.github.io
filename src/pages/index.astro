@@ -27,9 +27,9 @@ const entries = await Promise.all(featured.map(async ([collection, id]) => {
 const tiles = entries.map((entry) =>
   entry.collection === 'projects'
     ? { draft: entry.data.draft, kind: entry.data.label, href: projectUrl(entry), title: entry.data.title,
-        text: entry.data.summary, image: entry.data.image }
+        text: entry.data.summary, image: entry.data.image, animated: entry.data.imageAnimated }
     : { draft: entry.data.draft, kind: 'Post', href: postUrl(entry), title: entry.data.title,
-        meta: formatDate(entry.data.date), text: excerpt(entry), image: entry.data.image });
+        meta: formatDate(entry.data.date), text: excerpt(entry), image: entry.data.image, animated: entry.data.imageAnimated });
 ---
 <Base>
   <section class="intro">

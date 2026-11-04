@@ -10,7 +10,7 @@ const posts = await getPosts();
     {posts.map((post) => (
       <Tile draft={post.data.draft} kind="Post" href={postUrl(post)} title={post.data.title}
             meta={formatDate(post.data.date)}
-            text={excerpt(post)} image={post.data.image} />
+            text={excerpt(post)} image={post.data.image} animated={post.data.imageAnimated} />
     ))}
   </div>
 </Base>

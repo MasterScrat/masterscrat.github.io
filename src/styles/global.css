@@ -187,6 +187,7 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 3rem 0; }
   );
 }
 
+.tile picture { display: contents; }
 .tile img {
   margin: -1.5rem -1.5rem 1.25rem;
   max-width: none;
