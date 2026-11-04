@@ -32,12 +32,12 @@ Project write-ups (page body, under the existing bio text)
 - [ ] XKCD+R (`xkcd-r.md`): summary (the 2014 Reddit posts aren't in the archive)
 - [ ] MIRA (`mira.md`): not featured, small role
 - [ ] This Food Does Not Exist (`this-food-does-not-exist.md`): summary
-- [ ] Baldur's Gate maps: perspective + upscaling (`baldurs-gate-maps.md`)
 - [ ] Meet your Artificial Self, AMLD 2020 workshop (`meet-your-artificial-self.md`)
 - [ ] Timelapses (`timelapses.md`): summary, write-up, embed the timelapses (Snowy Fribourg is here rather than its own post)
 
 ## Writing: draft posts (`src/content/posts/`)
 
+- [ ] Adding perspective to Baldur's Gate maps + upscaling them (`2020-04-13-baldurs-gate-maps.md`): moved from projects
 - [ ] dreamlook custom models, one consolidated post (`2023-04-02-dreamlook-custom-models.md`): title; Baldur's Gate maps, Sin City, Rick & Morty, origami guide, Realistic Vision comparison; **showcase Promptly** (internal tool, never released: add screenshots). Date is the first related Reddit post: adjust if you like.
 - [ ] 500 Realistic Vision portraits (`2023-04-22-500-realistic-vision-portraits.md`): add the tweet link
 - [ ] Running pace vs songs BPM (`2026-03-23-running-pace-and-songs-bpm.md`)
