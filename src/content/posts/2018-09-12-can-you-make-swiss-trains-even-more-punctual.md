@@ -98,7 +98,7 @@ This is actually a simple route, but representing a graph as a JSON structure ma
 
 So this is route 111, on which our first train runs. Each of the five *route paths* represents a sequence of sections that follow each other. You can for example follow the sections of the first and longest route path, labelled 1, 4, 5, 6, 10, 13 and 14.
 
-The other route paths are then “glued” on top of this first one using route_alternative_marker_at_entry and route_alternative_marker_at_exit as points of reference. For example the second path adds a single section that ends at marker *M1*, while the fourth path adds 3 sections that fork from *M2* and reach another end.
+The other route paths are then “glued” on top of this first one using `route_alternative_marker_at_entry` and `route_alternative_marker_at_exit` as points of reference. For example the second path adds a single section that ends at marker *M1*, while the fourth path adds 3 sections that fork from *M2* and reach another end.
 
 <figure>
   <img src="/img/posts/can-you-make-swiss-trains-even-more-punctual/6.jpg" alt="Route 111 from sample_scenario.json">
@@ -132,12 +132,12 @@ Resources are “locks” that prevent groups of sections from being used at the
   <figcaption>Release time for each resource</figcaption>
 </figure>
 
+Now that we have an intuition of how basic routes look like, let’s check out a less trivial problem: `01_dummy.json`.
+
 <figure>
   <img src="/img/posts/can-you-make-swiss-trains-even-more-punctual/10.jpg" alt="01_dummy.json routes and resources">
   <figcaption><code>01_dummy.json</code> routes and resources</figcaption>
 </figure>
-
-Now that we have an intuition of how basic routes look like, let’s check out a less trivial problem: `01_dummy.json`.
 
 We see that in a lot of cases a resource is used by consecutive sections and shared by adjacent routes. This corresponds to the fact that trains typically need a wave of several “green signals” ahead of them.
 
