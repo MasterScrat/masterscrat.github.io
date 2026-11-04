@@ -1,6 +1,6 @@
 ---
 title: Chatistics
-summary: Python scripts to convert chat logs from various messaging platforms into Pandas DataFrames.
+summary: Python scripts to parse Messenger, Hangouts, WhatsApp and Telegram chat logs into DataFrames.
 image: /img/projects/chatistics.jpg
 links:
   - { label: GitHub, url: "https://github.com/MasterScrat/Chatistics" }
@@ -9,8 +9,59 @@ links:
   - { label: "Hacker News", url: "https://news.ycombinator.com/item?id=22069699" }
 ---
 
-**Python scripts to convert chat logs from various messaging platforms into Pandas DataFrames.**
+**💬 Python scripts to parse Messenger, Hangouts, WhatsApp and Telegram chat logs into DataFrames.**
 Can also generate histograms and word clouds from the chat logs.
+
+Chatistics can print the chat logs as raw text. It can also create histograms, showing how many messages each interlocutor sent, or generate word clouds based on word density and a base image.
+
+![](/img/projects/chatistics/histo.jpg)
+
+![](/img/projects/chatistics/densities.jpg)
+
+### Support Matrix
+
+|      Platform      | Direct Chat  | Group Chat |
+|:------------------:|:-----------: |:----------:|
+| Facebook Messenger |     ✔        |     ✘      |
+| Google Hangouts    |     ✔        |     ✘      |
+| Telegram           |     ✔        |     ✘      |
+| WhatsApp           |     ✔        |     ✔      |
+
+### Exported data
+
+Data exported for each message regardless of the platform:
+
+|          Column      |                                        Content                                       |
+|:--------------------:|:------------------------------------------------------------------------------------:|
+| timestamp            | UNIX timestamp (in seconds)                                                                       |
+| conversationId       | A conversation ID, unique by platform                                                |
+| conversationWithName | Name of the other people in a direct conversation, **or** name of the group conversation |
+| senderName           | Name of the sender                                                                   |
+| outgoing             | Boolean value whether the message is outgoing/coming from owner                      |
+| text                 | Text of the message                                                                  |
+| language             | Language of the conversation as inferred by [langdetect](https://pypi.python.org/pypi/langdetect) |
+| platform             | Platform (see support matrix above)                                                  |
+
+### Changelog
+
+**10 Jan 2020:** UPDATED *ALL* THE THINGS! Thanks to [mar-muel](https://github.com/mar-muel) and [manueth](https://github.com/manueth), pretty much everything has been updated and improved, and **WhatsApp** is now supported!
+
+**21 Oct 2018:** Updated Facebook Messenger and Google Hangouts parsers to make them work with the new exported file formats.
+
+**9 Feb 2018:** Telegram support added thanks to [bmwant](https://github.com/bmwant).
+
+**24 Oct 2016:** Initial release supporting Facebook Messenger and Google Hangouts.
+
+### Projects using Chatistics
+
+[Meet your Artificial Self: Generate text that sounds like you](https://github.com/mar-muel/artificial-self-AMLD-2020) workshop
+
+### Credits
+
+* Main contributors: [@MasterScrat](https://github.com/MasterScrat), [@mar-muel](https://github.com/mar-muel), [@manueth](https://github.com/manueth), [@bmwant](https://github.com/bmwant)
+* Word cloud generated using https://github.com/amueller/word_cloud
+* Stopwords from https://github.com/6/stopwords-json
+* Code under MIT license
 
 <!-- research
 
