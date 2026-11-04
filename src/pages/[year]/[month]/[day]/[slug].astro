@@ -13,12 +13,21 @@ const { post } = Astro.props as { post: Post };
 const { Content } = await render(post);
 // `?? []`: a dev server started before `links` existed has cached entries without it.
 const links = post.data.links ?? [];
+// "Originally published on Medium ↗" for posts first published elsewhere.
+const original = post.data.original;
+const SITES: Record<string, string> = { 'medium.com': 'Medium', 'hackernoon.com': 'HackerNoon' };
+const originalSite = original
+  ? (SITES[new URL(original).hostname.replace(/^www\./, '')] ?? new URL(original).hostname.replace(/^www\./, ''))
+  : undefined;
 ---
 <Base title={post.data.title} description={excerpt(post)} image={post.data.image}>
   <article class="page">
     <hgroup>
       <h1>{post.data.title}</h1>
       <p>{formatDate(post.data.date)}</p>
+      {original && (
+        <p class="page-origin">Originally published on <a href={original} {...linkAttrs(original)}>{originalSite} ↗</a></p>
+      )}
     </hgroup>
     {links.length > 0 && (
       <p class="page-links">

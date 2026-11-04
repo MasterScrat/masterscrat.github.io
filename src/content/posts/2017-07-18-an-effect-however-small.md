@@ -3,8 +3,7 @@ title: "An Effect However Small"
 date: 2017-07-18
 image: /img/posts/an-effect-however-small.jpg
 cover: false  # the images are in the text
-links:
-  - { label: "Medium (original)", url: "https://medium.com/hackernoon/an-effect-however-small-c66d9b15f720" }
+original: https://medium.com/hackernoon/an-effect-however-small-c66d9b15f720
 ---
 
 Six months ago I quit my job to dedicate myself fully to a **voice translation application**.

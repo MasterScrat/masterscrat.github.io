@@ -5,7 +5,7 @@ image: /img/posts/can-you-make-swiss-trains-even-more-punctual.jpg
 cover: false  # the images are in the text
 links:
   - { label: "Reddit (r/datascience)", url: "https://www.reddit.com/r/datascience/comments/9f77k7/" }
-  - { label: "Medium (original)", url: "https://medium.com/crowdai/can-you-make-swiss-trains-even-more-punctual-ec9aa73d6e35" }
+original: https://medium.com/crowdai/can-you-make-swiss-trains-even-more-punctual-ec9aa73d6e35
 ---
 
 **crowdAI is running a [data science challenge](https://www.crowdai.org/challenges/train-schedule-optimisation-challenge) in collaboration with [SBB](http://sbb.ch), the Swiss national railway company, to optimize the scheduling of their trains.**

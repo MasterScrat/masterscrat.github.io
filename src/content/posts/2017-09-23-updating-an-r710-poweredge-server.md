@@ -5,7 +5,7 @@ image: /img/posts/updating-an-r710-poweredge-server.jpg
 cover: false  # the images are in the text
 links:
   - { label: "Reddit (r/homelab)", url: "https://www.reddit.com/r/homelab/comments/71xi1z/" }
-  - { label: "Medium (original)", url: "https://medium.com/@florianlaurent/updating-an-r710-poweredge-server-3fa8e16ee5b5" }
+original: https://medium.com/@florianlaurent/updating-an-r710-poweredge-server-3fa8e16ee5b5
 ---
 
 ![](/img/posts/updating-an-r710-poweredge-server/1.jpg)

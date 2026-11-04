@@ -4,8 +4,8 @@ date: 2017-07-14
 image: /img/posts/zero-sales.jpg
 cover: false  # the screenshot is the first image in the text
 links:
-  - { label: "Medium (original)", url: "https://medium.com/art-marketing/making-0-in-sales-in-31-days-433b1622d0d1" }
   - { label: "Hacker News", url: "https://news.ycombinator.com/item?id=14769216" }
+original: https://medium.com/art-marketing/making-0-in-sales-in-31-days-433b1622d0d1
 ---
 
 ## Our plan was simple:

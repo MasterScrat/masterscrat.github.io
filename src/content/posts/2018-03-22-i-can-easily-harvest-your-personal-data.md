@@ -3,8 +3,7 @@ title: "I Can Easily Harvest Your Personal Data"
 date: 2018-03-22
 image: /img/posts/i-can-easily-harvest-your-personal-data.jpg
 cover: false  # the images are in the text
-links:
-  - { label: "Medium (original)", url: "https://medium.com/@florianlaurent/i-can-easily-harvest-your-personal-data-a1c662bd94c8" }
+original: https://medium.com/@florianlaurent/i-can-easily-harvest-your-personal-data-a1c662bd94c8
 ---
 
 > Millions of profiles of Facebook users have been harvested by a private company and used to influence them.
