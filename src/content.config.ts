@@ -11,7 +11,6 @@ const posts = defineCollection({
     links: z.array(z.object({ label: z.string(), url: z.string() })).default([]), // buttons under the title
     original: z.string().optional(), // where the post first appeared, e.g. a Medium URL
     summary: z.string().optional(), // tile text and link-preview description (default: start of the post)
-    notice: z.string().optional(), // highlighted box above the cover image; Markdown links allowed
     draft: z.boolean().default(false), // shown in `npm run dev` only, not on the live site
   }),
 });
