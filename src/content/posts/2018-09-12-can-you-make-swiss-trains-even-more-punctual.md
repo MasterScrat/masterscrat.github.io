@@ -10,9 +10,13 @@ links:
 original: https://medium.com/crowdai/can-you-make-swiss-trains-even-more-punctual-ec9aa73d6e35
 ---
 
-**crowdAI (since then renamed to AIcrowd) is running a [data science challenge](https://www.aicrowd.com/challenges/train-schedule-optimisation-challenge) in collaboration with [SBB](http://sbb.ch), the Swiss national railway company, to optimize the scheduling of their trains.**
+**crowdAI (now AIcrowd) is running a [data science challenge](https://www.aicrowd.com/challenges/train-schedule-optimisation-challenge) in collaboration with [SBB](http://sbb.ch), the Swiss national railway company, to optimize the scheduling of their trains.**
 
-> Ever complained about late or too infrequent trains? Now is your chance to improve things!
+<aside class="callout">
+
+Ever complained about late or too infrequent trains? Now is your chance to improve things!
+
+</aside>
 
 ![](/img/posts/can-you-make-swiss-trains-even-more-punctual/1.jpg)
 
@@ -171,4 +175,8 @@ One hint though: a possible starting point would be to express the problems as a
 
 Last but not least: there is no known solution for [problem 9](https://github.com/crowdAI/train-schedule-optimisation-challenge-starter-kit/blob/master/documentation/instance_description.md#the-official-nine-problem-instances) that doesn’t incur delays. It is probable that such a solution exists, but the solver used by SBB couldn’t find one yet.
 
-> **So if you DO find such a solution, you will have effectively improved the efficiency of Swiss train scheduling! *😎***
+<aside class="callout">
+
+**So if you DO find such a solution, you will have effectively improved the efficiency of Swiss train scheduling! *😎***
+
+</aside>
