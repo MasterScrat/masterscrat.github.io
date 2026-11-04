@@ -5,7 +5,7 @@ import { getProjects, projectUrl } from '../../lib/projects';
 
 const projects = await getProjects();
 ---
-<Base title="Projects">
+<Base title="Projects" heading="Projects" description="Projects by Florian Laurent.">
   <div class="tiles">
     {projects.map((p) => (
       <Tile draft={p.data.draft} kind={p.data.label} href={projectUrl(p)} title={p.data.title}

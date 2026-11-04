@@ -31,7 +31,26 @@ const tiles = entries.map((entry) =>
     : { draft: entry.data.draft, kind: 'Post', href: postUrl(entry), title: entry.data.title,
         meta: formatDate(entry.data.date), text: excerpt(entry), image: entry.data.image });
 ---
-<Base>
+<Base
+  heading="Florian Laurent"
+  description="Hey there! I'm Florian, a machine learning engineer and founding member of General Intuition, where we build models that act in video games and beyond."
+  jsonld={{
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Florian Laurent',
+    url: 'https://florianlau.rent/',
+    image: 'https://florianlau.rent/img/florian-laurent.jpg',
+    jobTitle: 'Machine Learning Engineer',
+    worksFor: { '@type': 'Organization', name: 'General Intuition', url: 'https://www.generalintuition.com/' },
+    sameAs: [
+      'https://github.com/MasterScrat',
+      'https://www.linkedin.com/in/florianlaurent/',
+      'https://twitter.com/MasterScrat',
+      'https://www.reddit.com/user/MasterScrat/',
+      'https://scholar.google.com/citations?user=0zZuohMAAAAJ',
+    ],
+  }}
+>
   <section class="intro">
     <a href="/about" class="avatar-link"><img src="/img/florian-laurent-avatar.jpg" alt="About Florian Laurent" class="avatar" /></a>
     <div>

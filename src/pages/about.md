@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/Page.astro
 title: About me
+description: "Hey there! I'm Florian, a machine learning engineer and founding member of General Intuition, where we build models that act in video games and beyond."
 image: /img/florian-laurent.jpg
 imageAlt: Florian Laurent
 ---

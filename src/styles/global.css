@@ -12,6 +12,16 @@
 
 * { box-sizing: border-box; }
 
+/* Readable by search engines and screen readers, not shown. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
 body {
   margin: 0;
   font: 17px/1.75 var(--body);

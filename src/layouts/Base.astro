@@ -8,13 +8,21 @@ import montserrat700 from '@fontsource/montserrat/files/montserrat-latin-700-nor
 import lato400 from '@fontsource/lato/files/lato-latin-400-normal.woff2?url';
 import lato700 from '@fontsource/lato/files/lato-latin-700-normal.woff2?url';
 import '../styles/global.css';
+import { canonicalPath } from '../lib/canonical.mjs';
 
-interface Props { title?: string; description?: string; image?: string }
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  heading?: string;      // page <h1>, visually hidden (for pages whose title is only in the nav)
+  jsonld?: object;       // structured data (schema.org) for search engines
+}
 const siteTitle = 'Florian Laurent';
-const { title, description = 'Personal website of Florian Laurent.', image = '/img/og.jpg' } = Astro.props;
+const { title, description = 'Personal website of Florian Laurent.', image = '/img/og.jpg', heading, jsonld } = Astro.props;
 // Link previews (Slack, LinkedIn, X, iMessage…): absolute URLs on the live domain.
 const pageTitle = title ? `${title} · ${siteTitle}` : siteTitle;
-const pageUrl = new URL(Astro.url.pathname, Astro.site);
+const pageUrl = new URL(canonicalPath(Astro.url.pathname), Astro.site);
+const isNotFound = Astro.url.pathname.startsWith('/404');
 const imageUrl = new URL(image, Astro.site);
 
 const nav = [
@@ -40,6 +48,8 @@ const isCurrent = (href: string) =>
     ))}
     <title>{pageTitle}</title>
     <meta name="description" content={description}>
+    {isNotFound ? <meta name="robots" content="noindex"> : <link rel="canonical" href={pageUrl}>}
+    {jsonld && <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonld)} />}
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -70,6 +80,7 @@ const isCurrent = (href: string) =>
     </header>
 
     <main class="wrap">
+      {heading && <h1 class="visually-hidden">{heading}</h1>}
       <slot />
     </main>
 
