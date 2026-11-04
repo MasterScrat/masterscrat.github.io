@@ -5,7 +5,7 @@ image: /img/florian-laurent.jpg
 imageAlt: Florian Laurent
 ---
 
-**Hey there! I'm Florian, a Machine Learning Engineer with an entrepreneurial bent, passionate about building systems that push the boundaries of applied AI. I'm based in French-speaking Switzerland.**
+**Hey there! I'm Florian, a machine learning engineer and founding member of General Intuition, where we build models that act in video games and beyond. Previously, I co-founded dreamlook.ai and worked on French language models and reinforcement learning for railway planning. I'm based in French-speaking Switzerland.**
 
 **General Intuition (2025 - current)** Founding member of [General Intuition](https://www.generalintuition.com/), the research lab dedicated to video games and beyond. 
 
