@@ -4,13 +4,11 @@ summary: Python scripts to parse Messenger, Hangouts, WhatsApp and Telegram chat
 image: /img/projects/chatistics.jpg
 links:
   - { label: GitHub, url: "https://github.com/MasterScrat/Chatistics" }
-  - { label: "Website", url: "https://masterscrat.github.io/Chatistics/" }
   - { label: "Reddit (r/MachineLearning)", url: "https://www.reddit.com/r/MachineLearning/comments/epi628/" }
   - { label: "Hacker News", url: "https://news.ycombinator.com/item?id=22069699" }
 ---
 
 **💬 Python scripts to parse Messenger, Hangouts, WhatsApp and Telegram chat logs into DataFrames.**
-Can also generate histograms and word clouds from the chat logs.
 
 Chatistics can print the chat logs as raw text. It can also create histograms, showing how many messages each interlocutor sent, or generate word clouds based on word density and a base image.
 
