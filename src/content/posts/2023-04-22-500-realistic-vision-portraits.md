@@ -12,7 +12,7 @@ draft: true
 [TODO write about the 500 faces project]
 
 <figure>
-  <video src="/img/posts/500-realistic-vision-portraits/500-portraits.mp4" poster="/img/posts/500-realistic-vision-portraits.jpg" width="584" height="720" controls muted playsinline preload="metadata"></video>
+  <video src="/img/posts/500-realistic-vision-portraits/500-portraits.mp4" poster="/img/posts/500-realistic-vision-portraits/poster.jpg" width="584" height="720" controls muted playsinline preload="metadata"></video>
 </figure>
 
 ## Workflow!
@@ -66,7 +66,7 @@ Florian's other comments in the Reddit thread (verbatim):
 
 Media:
   Self-hosted: /img/posts/500-realistic-vision-portraits/500-portraits.mp4 (Reddit video re-encoded, 584x720, 30 s, no audio);
-    tile image is a frame at 27 s.
+    video poster is a frame at 27 s (500-realistic-vision-portraits/poster.jpg); tile image is a 9x4 grid of 36 faces sampled evenly through the video.
   Originals saved outside the repo in ~/Projects/reddit-history-masterscrat/media/500-portraits/:
     hvobalvasfva1-720p.mp4 (Reddit original) and tweet-1649899260438036480-slomo-720x960.mp4 (slow-motion cut, with music).
 
