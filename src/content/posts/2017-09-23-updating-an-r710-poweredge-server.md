@@ -4,6 +4,7 @@ date: 2017-09-23
 image: /img/posts/updating-an-r710-poweredge-server.jpg
 cover: false  # the images are in the text
 links:
+  - { label: "Reddit (r/homelab)", url: "https://www.reddit.com/r/homelab/comments/71xi1z/" }
   - { label: "Medium (original)", url: "https://medium.com/@florianlaurent/updating-an-r710-poweredge-server-3fa8e16ee5b5" }
 ---
 
@@ -86,9 +87,7 @@ This Chrome extension can take care of this for you : [https://chrome.google.co
 
 You are not alone hoarding server hardware in your living room. Join us!
 
-![](/img/posts/updating-an-r710-poweredge-server/5.jpg)
+![](/img/posts/updating-an-r710-poweredge-server/5.gif)
 
 - [https://www.reddit.com/r/homelab/](https://www.reddit.com/r/homelab/)
 - [https://www.facebook.com/groups/ServerandHardware/](https://www.facebook.com/groups/ServerandHardware/)
-
-### If this guide was useful to you click the 👏 button to help others find it!

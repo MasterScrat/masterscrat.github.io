@@ -4,6 +4,7 @@ date: 2018-09-12
 image: /img/posts/can-you-make-swiss-trains-even-more-punctual.jpg
 cover: false  # the images are in the text
 links:
+  - { label: "Reddit (r/datascience)", url: "https://www.reddit.com/r/datascience/comments/9f77k7/" }
   - { label: "Medium (original)", url: "https://medium.com/crowdai/can-you-make-swiss-trains-even-more-punctual-ec9aa73d6e35" }
 ---
 
