@@ -65,6 +65,7 @@ img { max-width: 100%; }
 /* Images with a caption (e.g. Reddit gallery descriptions). */
 figure { margin: 2rem 0; }
 figure img { display: block; }
+figure video { display: block; max-width: 100%; height: auto; }
 figcaption { margin-top: 0.5rem; font-size: 14px; color: var(--muted); }
 
 /* Embedded videos: full width, 16:9, never wider than the screen. */
