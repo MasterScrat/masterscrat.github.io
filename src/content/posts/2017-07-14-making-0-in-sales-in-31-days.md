@@ -1,7 +1,6 @@
 ---
 title: "Making $0 In Sales In 31 Days"
 date: 2017-07-14
-draft: true  # Medium import, waiting for review
 image: /img/posts/zero-sales.jpg
 cover: false  # the screenshot is the first image in the text
 links:
@@ -89,8 +88,6 @@ Of course this is quite time consuming. If a vet says “no” we can reuse some
 But we had already invested a lot of work and hopes and dreams in this project, so **maybe this was the way to solve the chicken and egg problem for the first few websites**?
 
 So we started working on our first preemptively made websites.
-
-### To be continued…
 
 <!-- research
 
