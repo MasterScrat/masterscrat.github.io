@@ -31,7 +31,7 @@ Thought experiment: I want to make you vote for Donald Trump. <br>I will gather 
 
 How did Cambridge Analytica get hold of 50+ million profiles? It wasn’t a “data breach” as some publications keep repeating. They published an app and paid users a few bucks to install it. The app would then ask your permission to share data about yourself and all of your friends.
 
-(So ultimately if your data ended up in Analytica’s hand, it’s because one of your friends sold it for a few bucks. No hack involved, no stolen passwords: simple human greed.)
+(So ultimately if your data ended up in Analytica’s hands, it’s because one of your friends sold it for a few bucks. No hack involved, no stolen passwords: simple human greed.)
 
 **But the Facebook API was actually updated in the meantime.** The “friend permissions” that let developers suck out all the details about your friends is no longer available. Parakilas states that Cambridge Analytica’s app was “one of the very last to have access to friend permissions”.
 
@@ -39,7 +39,7 @@ How did Cambridge Analytica get hold of 50+ million profiles? It wasn’t a “d
 
 Instead I will make a simple **Chrome Extension** pretending to “gather social behavior data for research”, then pay people to use it. Cambridge Analytica used [Mechanical Turks](https://www.mturk.com/) to find willing users : this still sounds like a good plan.
 
-**From this Chrome Extension I can now siphon ALL of your friends data and even more, no problem!**
+**From this Chrome Extension I can now siphon ALL of your friends’ data and even more, no problem!**
 
 (relevant: [Browser Extensions Are a Privacy Nightmare](https://www.howtogeek.com/188346/why-browser-extensions-can-be-dangerous-and-how-to-protect-yourself/))
 
@@ -47,7 +47,7 @@ Instead I will make a simple **Chrome Extension** pretending to “gather social
 
 A dating website: is there a better place to find juicy, super personal info about you?
 
-Two years ago OkCupid [had a scandal of his own](https://www.vox.com/2016/5/12/11666116/70000-okcupid-users-data-release):
+Two years ago OkCupid [had a scandal of its own](https://www.vox.com/2016/5/12/11666116/70000-okcupid-users-data-release):
 
 > **Scott B. Weingart 🤹 on Twitter:**  
 > If your OkC username is one you've used anywhere else, I now know your sexual preferences &amp; kinks, your answers to thousands of questions.
@@ -97,4 +97,4 @@ A good tool for this would be [the open-source framework JGAAP](https://github.c
 
 My point is that all of these things are *easy*! Sure, I would encounter scaling problems, stylometry is far from being 100% accurate, people don’t always show their face on their dating profile…
 
-**But given how valuable this data is, do you really think no one else with proper funding, skilled researchers and lack or moral is doing this right now on a much larger scale?**
+**But given how valuable this data is, do you really think no one else with proper funding, skilled researchers and lack of morals is doing this right now on a much larger scale?**
