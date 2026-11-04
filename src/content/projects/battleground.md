@@ -5,6 +5,7 @@ image: /img/screenshot-demo1.png
 links:
   - { label: "Demo", url: "http://lumakey.net/labs/battleground/demo1/" }
   - { label: "Reddit (r/javascript)", url: "https://www.reddit.com/r/javascript/comments/13y0ad/" }
+  - { label: "Reddit (r/baldursgate)", url: "https://www.reddit.com/r/baldursgate/comments/1o3garo/webbased_baldurs_gate_renderer/" }
   - { label: "Reddit (r/isometric)", url: "https://www.reddit.com/r/isometric/comments/1nqrzn/early_demo_of_my_upcoming_isometric_html5_game/" }
 ---
 
@@ -66,5 +67,42 @@ Ultimately I plan on releasing it as an open source engine.
 I spent a bit of time on it through the years, it's kind of my "side-side-project". I'd love to find enough time to clean it up and open-source it at some point.
 
 In retrospect I should have pushed it much more back then when I was a student - this type of advanced web-based apps weren't so common at that point...
+
+## More Reddit material (from the 2026 backup)
+
+### 2025-10-10 · r/baldursgate · 52 pts, 11 comments
+Title: Web-based Baldur’s Gate renderer
+Thread: https://www.reddit.com/r/baldursgate/comments/1o3garo/
+Links to: https://lumakey.net/labs/battleground/demo1/
+
+## Your own comments in those threads
+
+### Your comments in "Web-based Baldur’s Gate renderer" (https://www.reddit.com/r/baldursgate/comments/1o3garo/)
+
+- 2025-10-10 · 20 pts:
+
+  This is a toy project I was working on as a student that I had mostly forgotten about. 
+  
+  I wrote conversion scripts from Infinity Engine file formats towards web formats, and a Javascript renderer implementing occlusion and pathfinding.
+  
+  Originally posted… 13 years ago 👴🏻
+  https://www.reddit.com/r/javascript/comments/13y0ad/very_early_demo_of_the_battleground_engine_3d/
+
+- 2025-10-11 · 7 pts:
+
+  Ah yeah someone had done that actually: https://personal-1094.web.app/gemrb.html
+  
+  But that’s less fun imo, I had a great time actually diving in the file formats and learning pathfinding
+
+- 2025-10-11 · 7 pts:
+
+  I’m well aware, I’ve been on your discord for a while!
+  
+  I had also given a shot at image enhancement, with the idea to integrate it in the web engine: 
+  https://www.reddit.com/r/GameUpscale/comments/aemhgo/my_attempt_at_scaling_up_baldurs_gate_assets/
+
+- 2025-10-11 · 1 pts:
+
+  I’d love to - just need to find some time
 
 -->

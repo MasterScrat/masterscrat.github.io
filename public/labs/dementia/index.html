@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<title>DEMENTIA</title>
+		
+		<style>
+		body {
+			background:     black;
+			font-family:	"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Verdana,Arial,sans-serif;
+			font-size:		11px;
+			
+		}
+		
+		canvas {
+		    margin:         15px;
+		}
+		
+		* {
+			font-size:	11px;
+			color:		white;
+		}
+		
+		a {
+			margin-left: 2px;
+		}
+		
+		a:hover {
+		}
+		
+		a.homelink {
+			background:transparent url(http://images.gravytea.com/favicon.ico) no-repeat scroll left center;
+			padding:0px 0px 2px 18px;
+		}
+		</style>
+	</head>
+	
+	<body>
+		<table align="center" style="height: 100%" cellpadding="50">
+			<tr>
+				<td align="center">
+				    <canvas id="normalMapCanvas" style="border: 1px solid #333333;"></canvas><br>
+				
+				    Thanks to <a href="http://29a.ch/2010/3/24/normal-mapping-with-javascript-and-canvas-tag">29a.ch</a> - 
+				    <a href="http://twitter.com/MasterScrat">Follow me on Twitter</a><br><br>
+				    <a href="../farandole/index.html">Next</a>
+				</td>
+			</tr>
+		</table>
+		
+		<script type="text/javascript" src="light.js"></script>
+		
+        <script type="text/javascript">
+        normalmap('normalMapCanvas', 'face.jpg', 'normals.jpg', 0.0, 250.0);
+        </script>
+
+	</body>
+</html>
+
+
+
+

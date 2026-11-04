@@ -10,6 +10,8 @@ Draft files already contain your original Reddit text verbatim, under a `[TODO a
 
 ## Writing: published pages
 
+Media saved from Reddit (videos, GIFs, images, too big for this repo) lives in `~/Projects/reddit-history-masterscrat/media/<item>/`; each item's research block lists what's there.
+
 Research (sources, reply analysis, full verbatim drafts) lives at the bottom of each file, in a `<!-- research … -->` block that never reaches the site.
 
 Project summaries (the `summary:` line, shown on tiles)
@@ -45,7 +47,16 @@ Project write-ups (page body, under the existing bio text)
 
 - [ ] **RL Insights** (https://masterscrat.github.io/rl-insights/): turn the few completed pages into blog posts, perhaps with a header explaining the overall RL-Insights project started when the COVID lockdown began.
 - [ ] **Top tweets** (https://twitter.com/MasterScrat): go through the most popular ones for projects or posts worth featuring.
-- [ ] **Old Medium articles**: bring the good ones over as blog posts (keep their original dates). Easiest source is Medium's export (Settings → Security and apps → Download your information), which gives every story as HTML with its images. Also listed in the old `drafts/2019-09-20-migrating-posts.md` (along with gravytea.com, lumakey.net and flaurent.com).
+- [x] **Old Medium articles**: all 5 from the RSS feed are now self-hosted posts (originals + images backed up in `~/Projects/medium-masterscrat/`). The feed only lists your latest stories, so check your Medium profile for any older ones.
+
+- [ ] **Dementia + Farandole** (canvas experiments, 2011–2012): make them a project or post. Code saved and self-hosted, working: `/labs/dementia/index.html` and `/labs/farandole/index.html` (each links to the other; originals at lumakey.net/labs/…, first hosted on gravytea.com, now a parked domain). Both credit Jonas Wagner (29a.ch).
+  - Dementia, "Blood Effect in <canvas>": https://www.reddit.com/r/javascript/comments/mb3dw/ (2011-11-13, 16 pts, 7 comments). Your explanation: "It's basically a texture with a normal map, where a light of increasing intensity is added. Except instead of regular color the light has negative green and blue components, so it kind of "sucks" every color except the red. I thought it gave a nice bloody effect." Based on 29a.ch's normal-mapping demo: http://29a.ch/2010/3/24/normal-mapping-with-javascript-and-canvas-tag
+  - Farandole, "Water Effect in <canvas>": https://www.reddit.com/r/javascript/comments/130vtr/ (2012-11-11, 6 comments). Your comment: "Based on the latest experiment from Jonas Wagner (http://29a.ch/2012/11/5/html-5-canvas-fluid-simulation); I couldn't resist playing with it!" Replies: "Looks like a lava lamp that someone forgot to turn the light on for", ~10 fps on Firefox ("much smoother on Chrome and Safari").
+  - Bubblator (2010) is lost (only the Wayback title page survives): not worth it.
+- [ ] **Reprocess the old timelapses (2013–2016) from the original RAWs**, now that tools and hardware are far better than in 2014: higher resolution (4K), proper deflicker, 10-bit video instead of 600px GIFs. Then use them for the Timelapses project.
+  - Scripted pipeline (Claude can build and run it): `exiftool` to read exposure per frame → RAW decode + grade with `darktable-cli` (XMP/style) or `rawpy` → interpolate 3–5 graded keyframes across the sequence (like LRTimelapse) → deflicker (smooth per-frame brightness, apply exposure correction) → `ffmpeg` to H.265 10-bit / ProRes (`hevc_videotoolbox` on Mac). Optional: `vidstab`, RIFE frame interpolation, Topaz Video AI upscaling.
+  - Alternative for holy-grail sequences (day↔night exposure changes): LRTimelapse + Lightroom, still the most polished.
+  - First step: find the original RAW folders (Nikon `DSC_*.NEF`), start with one Léman sunrise and compare against the old GIF in `~/Projects/reddit-history-masterscrat/media/timelapses/`.
 
 ## To review: projects on martinmuller.me/projects
 

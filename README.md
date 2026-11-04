@@ -12,6 +12,7 @@ npm run build    # static output in dist/ (fails if a [TODO] placeholder is on a
 - About: `src/pages/about.md`
 - Projects: `src/content/projects/<slug>.md` (served at `/projects/<slug>`)
 - Blog posts: `src/content/posts/YYYY-MM-DD-slug.md` (served at `/YYYY/MM/DD/slug.html`)
+- Cross-posts: `original: <url>` in a post's frontmatter shows "Originally published on Medium ↗" under the date
 - Research: anything inside an HTML comment, e.g. a `<!-- research … -->` block at the bottom of a post/project, stays in the file but never reaches the built site
 - Drafts: `draft: true` in a post or project's frontmatter shows it in `npm run dev` only, not on the live site. `npm run dev:published` hides drafts to preview the live site.
 - Progress: `progress: stub | sourced | writing | done` (default `done`) shows a colored badge on tiles in `npm run dev` only: stub = placeholder, sourced = material gathered (verbatim draft + notes), writing = being edited.
