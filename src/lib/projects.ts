@@ -13,7 +13,6 @@ const ORDER = [
   'this-food-does-not-exist',
   'cedille',
   'meet-your-artificial-self',
-  'baldurs-gate-maps',
   'flatland',
   'arbiter',
   'chatistics',

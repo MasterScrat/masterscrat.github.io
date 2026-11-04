@@ -1,6 +1,6 @@
 ---
 title: "Adding perspective to Baldur's Gate maps + upscaling them"
-summary: "Upscaling BG2's assets using Machine Learning"
+date: 2020-04-13
 draft: true
 links:
   - { label: "Reddit (r/baldursgate)", url: "https://www.reddit.com/r/baldursgate/comments/aemu8u/" }
