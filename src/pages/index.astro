@@ -14,8 +14,8 @@ const featured = [
   ['projects', 'dreamlook'],
   ['posts', '2018-09-12-can-you-make-swiss-trains-even-more-punctual'],
   ['projects', 'cedille'],
-  ['projects', 'chatistics'],
   ['posts', '2025-12-08-photogrammetry-game-maps'],
+  ['projects', 'chatistics'],
 ] as const;
 
 const entries = await Promise.all(featured.map(async ([collection, id]) => {
