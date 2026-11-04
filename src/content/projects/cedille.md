@@ -10,6 +10,7 @@ links:
   - { label: "Hugging Face", url: "https://huggingface.co/Cedille/fr-boris" }
   - { label: "Reddit (r/MachineLearning)", url: "https://www.reddit.com/r/MachineLearning/comments/qqzuh0/p_cedille_the_largest_french_language_model_6b/" }
   - { label: "Reddit (r/france)", url: "https://www.reddit.com/r/france/comments/qr1zxb/" }
+  - { label: "Hacker News", url: "https://news.ycombinator.com/item?id=29179429" }
 ---
 
 We trained and deployed [Cedille](https://github.com/coteries/cedille-ai), the largest language model for French at the time (6B), released under MIT license. We used TPUs (v3-128) through Google's TRC program. For a couple of months we were beating OpenAI's best model (GPT-3 `davinci`) on French benchmarks!
@@ -175,5 +176,47 @@ Bien vu, effectivement ça n'a plus de sens maintenant que le modèle est open s
 - Bilan: [Cedille veut révolutionner l'écriture basée sur le machine learning](https://www.bilan.ch/story/cedille-veut-revolutionner-lecriture-basee-sur-le-machine-learning-298273365868)
 - Startupticker: [Swiss startup launches milestone French language model](https://www.startupticker.ch/en/news/swiss-startup-launches-milestone-french-language-model)
 - SNGLR: [Cedille, the largest French AI language model, is actually from Switzerland](https://blog.snglr.group/cedille-the-largest-french-ai-language-model-is-actually-from-switzerland/)
+
+## Hacker News: Show HN: Cedille, the largest French language model, released in open source
+240 pts, 57 comments, 2021-11-10: https://news.ycombinator.com/item?id=29179429
+
+Your post (verbatim):
+
+We are excited to announce Cedille, the largest language model for French (6b parameters).
+
+Demo: https://cedille.ai
+
+Language models are general purpose AI systems that are able to solve a range of tasks by simply being prompted for it. It can be used for example to summarize text, do translations, or for idea generation & overcoming writer's block.
+
+You may know GPT-3, the humongous model from OpenAI. Cedille is a similar model targeting the French demographic - but smaller, as we don’t yet have $1b in the bank like they do. Although GPT-3 supports multiple languages including French, our model is competitive with GPT-3 on a range of French tasks! Plus, of course we’re open source while they keep their model closed and heavily restrict access to it.
+
+You can try it out right away from our playground: https://app.cedille.ai
+
+We are proponents of “open AI” and as such have released a checkpoint for the world to use (MIT license): https://github.com/coteries/cedille-ai
+
+One of the problems with large language models is the potentially toxic, sexist or in other ways unpleasant output. We tried our best to avoid this issue by doing extensive dataset filtering. As a result, our benchmark indicates that Cedille is indeed less toxic than GPT-3.
+
+Your comments (2, verbatim):
+
+- Some acknowledgements!
+  
+  - Cedille is based on GPT-J, a model developed by the grassroot EleutherAI team: https://arankomatsuzaki.wordpress.com/2021/06/04/gpt-j/
+  
+  - Cedille was also generously supported by the Google TRC program: https://sites.research.google/trc/about/
+- Yeah, this kind of toxic output sadly still can happen :-/
+  
+  We have fully analyzed the training dataset (1128 GB) using Detoxify (https://github.com/unitaryai/detoxify) to filter out problematic content. But of course detecting toxicity is a tough challenge in itself, so this process is imperfect at best.
+  
+  We are using the RealToxicityPrompt framework (https://realtoxicityprompts.apps.allenai.org/) to analyse how toxic our models are and to steer our efforts in this direction. This means we are generating thousands of completions and analysing them to see how "nasty" the model is. We plan to write more on this topic soon.
+  
+  But yeah, this is definitely far from being a solved problem, and our model (as well as all large language models) should be handled with care.
+
+What others said (analysis):
+
+- Mostly French speakers playing with the playground and posting generations: poetic or funny continuations of Renaud's song, Camus' L'Étranger, Hugo's "Demain, dès l'aube", a jazz-musician developer, recipes (tarte aux poireaux), Santa letters; grammar nerding (gender agreement of "pris/prise").
+- Training-data artefacts: generations drifting into forum boilerplate ("Posté le…", "Posté par Marie, 21 mai 2012") and recipe-blog comments.
+- Toxicity: a user got racist output → your reply about filtering the 1128 GB dataset with Detoxify; follow-up questions on how much was filtered and the thresholds; a parallel debate on whether models should be "sanitized" at all (bias, culture-dependent norms).
+- Questions: compute needed for GPT-3 scale, training data/tokens/hardware, whether French is harder than English.
+- One criticism: the "$1b in the bank" line read as sour grapes.
 
 -->

@@ -445,4 +445,72 @@ https://dreamlook.ai
 
   Yeah you can keep training from existing models, and you can also save multiple checkpoints per training run e.g. save every 1000 steps after the first 5000 (but you need to use the API for that for now)
 
+## Hacker News: Ask HN: Learning about fundraising as first-time tech founders
+126 pts, 46 comments, 2022-10-27: https://news.ycombinator.com/item?id=33354858
+
+Your post (verbatim):
+
+After working in the Generative AI space as consultant/freelance for a few years, a friend and I have decided to create a company around it.
+
+There seems to be increasing VC interest in the field and we are getting contacted by multiple investors (we do realize this doesn't mean they want to immediately cut us a cheque).
+
+We have deep technical expertise but limited fundraising knowledge.
+
+What are the best resources to learn the fundamentals? eg:
+
+- How much should we aim to raise and at what valuation?
+
+- How to show financial projections in a field that evolves at such a breakneck speed?
+
+- Should we prioritize local (Europe, Switzerland) investors or North-American ones?
+
+Your comments (2, verbatim):
+
+- FYI here's a demo of our tech (50% of pics are our own models, 50% are stable diffusion): https://nyx.gallery/
+  
+  We work on photorealistic image generation
+  
+  More info about our models (incl some open-source ones):
+  https://nyx-ai.github.io/stylegan2-flax-tpu/
+- Added some more details!
+  
+  Already discussed on HN:
+  
+  - Tech demo: https://news.ycombinator.com/item?id=33179730
+  
+  - Underlying tech: https://news.ycombinator.com/item?id=32167704 (no mention of Stable Diffusion there… as it wasn’t out yet)
+
+What others said (analysis):
+
+Ask HN for NyxAI/dreamlook, Oct 2022 (126 pts, 46 comments):
+- Resources: YC Startup School and Investor School, "Venture Deals" (Feld) and the Techstars course, lore.vc, the HN "How to Raise Investment" thread.
+- Accelerators: strongly recommended by some, "waste of months" for others; talk to other founders.
+- US vs Europe/Switzerland: several advise US/North-American VCs; a Swiss commenter says Swiss investors invest at much lower valuations.
+- VC basics: target billion-dollar markets, the lead investor prices the round, generative AI is the hot area.
+- A harsh take on nyx.gallery ("something a smart middle-schooler can do in a week") → you linked the TFDNE and nyx.gallery HN threads.
+
+## Hacker News: Nyx.gallery – AI-generated photography
+56 pts, 28 comments, 2022-10-12: https://news.ycombinator.com/item?id=33179730
+
+Your comments (3, verbatim):
+
+- Authors here!
+  
+  Stable Diffusion and DALL·E have made it simpler to create new images. But getting photorealistic results is still a challenge…
+  
+  This is a continuation of our work from 3 months ago on “This Food Does Not Exist”  (https://news.ycombinator.com/item?id=32167704). We are now using both Stable Diffusion and GANs depending on the subjects we want to render.
+- Models for the 256px food images were previously released here:
+  
+  https://github.com/nyx-ai/stylegan2-flax-tpu
+- It really depends on the subjects. For example cookies are quite forgiving - up to 30% of results are good. For things like coral or sushi we keep less than 1 in 10 (which is already much better than where we were at a few months ago!)
+  
+  For now we still keep a close manual look at the output, but the goal as we scale up is to fully automate this selection process. Right now we have a pipeline that ranks the outputs and we select from the top results.
+
+What others said (analysis):
+
+- Naming: "AI-generated photography" isn't photography → "fauxtography" became the thread's favourite word.
+- Flaws spotted: a six-legged gecko, warped dog faces, mountain reflections without snow, ladybugs without distinct spots.
+- Selection ratio question → your answer: cookies ≈30% good, coral or sushi under 1 in 10, a ranking pipeline with manual review, aiming to automate it.
+- Stock-photo industry (StockAI vs Getty banning AI images); an idea to trace which training images influenced an output.
+
 -->
