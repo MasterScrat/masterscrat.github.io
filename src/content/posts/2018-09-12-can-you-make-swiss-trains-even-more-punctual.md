@@ -78,7 +78,7 @@ Trains are subject to different kind of timing requirements:
 
 ## A Simple Scenario
 
-Let’s take a look at a sample problem: sample_scenario.json.
+Let’s take a look at a sample problem: `sample_scenario.json`.
 
 It contains two *service intentions*, which is a fancy name for “train including all its requirements”:
 
@@ -102,7 +102,7 @@ The other route paths are then “glued” on top of this first one using route_
 
 <figure>
   <img src="/img/posts/can-you-make-swiss-trains-even-more-punctual/6.jpg" alt="Route 111 from sample_scenario.json">
-  <figcaption>Route 111 from sample_scenario.json</figcaption>
+  <figcaption>Route 111 from <code>sample_scenario.json</code></figcaption>
 </figure>
 
 The red labels show the *section markers* that some sections bear. These are the markers referenced in the *section requirements* of each train. (The marker is shown attached to the end of the section it applies to.)
@@ -134,16 +134,16 @@ Resources are “locks” that prevent groups of sections from being used at the
 
 <figure>
   <img src="/img/posts/can-you-make-swiss-trains-even-more-punctual/10.jpg" alt="01_dummy.json routes and resources">
-  <figcaption>01_dummy.json routes and resources</figcaption>
+  <figcaption><code>01_dummy.json</code> routes and resources</figcaption>
 </figure>
 
-Now that we have an intuition of how basic routes look like, let’s check out a less trivial problem: 01_dummy.json.
+Now that we have an intuition of how basic routes look like, let’s check out a less trivial problem: `01_dummy.json`.
 
 We see that in a lot of cases a resource is used by consecutive sections and shared by adjacent routes. This corresponds to the fact that trains typically need a wave of several “green signals” ahead of them.
 
 <figure>
   <img src="/img/posts/can-you-make-swiss-trains-even-more-punctual/11.jpg" alt="01_dummy.json close-up">
-  <figcaption>01_dummy.json close-up</figcaption>
+  <figcaption><code>01_dummy.json</code> close-up</figcaption>
 </figure>
 
 ![](/img/posts/can-you-make-swiss-trains-even-more-punctual/12.jpg)
@@ -156,7 +156,7 @@ In the case above, we can recognize the tracks between the cities of Zürich, Zu
 
 ## Implementing your own solution
 
-To implement a concrete solution [follow this document](https://github.com/crowdAI/train-schedule-optimisation-challenge-starter-kit/blob/master/documentation/a_worked_example.md#building-a-solution) that will guide you through solving the sample_scenario.json problem by hand.
+To implement a concrete solution [follow this document](https://github.com/crowdAI/train-schedule-optimisation-challenge-starter-kit/blob/master/documentation/a_worked_example.md#building-a-solution) that will guide you through solving the `sample_scenario.json` problem by hand.
 
 <figure>
   <img src="/img/posts/can-you-make-swiss-trains-even-more-punctual/13.jpg" alt="The worked out solution">
