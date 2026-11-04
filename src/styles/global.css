@@ -41,6 +41,17 @@ a:hover { color: var(--black); }
 
 img { max-width: 100%; }
 
+/* Tables in posts and projects: thin row lines, small bold headers, scroll on narrow screens. */
+.prose table {
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 15px;
+}
+.prose th, .prose td { padding: 0.4rem 0.9rem; border-bottom: 1px solid var(--line); }
+.prose th { font: 700 12px var(--heading); text-transform: uppercase; letter-spacing: 1px; color: var(--black); border-bottom-color: var(--black); }
+
 /* Callout box in posts: <aside class="callout"> ... </aside> (Markdown inside, with blank lines). */
 .callout {
   margin: 2rem 0;

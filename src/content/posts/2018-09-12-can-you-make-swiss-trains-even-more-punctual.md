@@ -1,5 +1,5 @@
 ---
-title: "Can You Make Swiss Trains Even More Punctual?"
+title: "Can You Make Swiss Trains More Punctual?"
 date: 2018-09-12
 image: /img/posts/can-you-make-swiss-trains-even-more-punctual.jpg
 cover: false  # the images are in the text
