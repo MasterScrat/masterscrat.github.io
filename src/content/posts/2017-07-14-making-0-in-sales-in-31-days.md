@@ -23,7 +23,7 @@ So! let’s combine our super-powers and **make a business building websites for
 
 Vets are not very technical people so we can bring them real added value. We also know their business thanks to my girlfriend’s experience: we know their target customers, we can help the clinics write out their website content, etc. This should totally work!
 
-Before starting we still wanted to do some **serious** **market research:**
+Before starting we still wanted to do some **serious market research:**
 
 - We checked how many vets in a 200km area do not currently have a website: **around 100**.
 - We followed some *Lean Startup* stuff we read online and made a vitrine website to see if there was some interest: **indeed some people showed up on the site**.
@@ -32,22 +32,24 @@ So this was very positive feedback! (Or so we thought.)
 
 ## So how do we reach our clients?
 
-We had a nice vitrine website, SEO’d and all, some Adwords running, and were waiting to receive mails from people begging to give us money.
+We had a nice vitrine website, SEO’d and all, some AdWords running, and were waiting to receive mails from people begging to give us money.
 
 Surprisingly enough that never happened.
 
 Next step was to pick up the phone and **actually start calling people.**
 
-At this point I have to note that I always had a complicated relationship with phones, as many of my fellow geeks can relate. Phone was always the last mean of communication I would use because from my point of view **talking on the phone was effing awkward.**
+At this point I have to note that I always had a complicated relationship with phones, as many of my fellow geeks can relate. Phone was always the last means of communication I would use because from my point of view **talking on the phone was effing awkward.**
 
 So the first calls were difficult. We are lucky to be in a country where people are very nice by default so we didn’t get shouted at too much.
 
 ### Lessons learned from the trenches:
 
-- **Figure out who you are talking to.** If the assistant picks up the phone, it is **mostly a waste of time** to convince him of anything, because he won’t be the one making the decision. Your job then is to get the doctor on the line.<br>
-  If the person who picks up the phone is actually the doctor, probably you are talking to a **very small structure** (ie he’s working alone) which means you can go ahead and pitch him BUT probably he won’t have any budget for you.<br>
+- **Figure out who you are talking to.** If the assistant picks up the phone, it is **mostly a waste of time** to convince him of anything, because he won’t be the one making the decision. Your job then is to get the doctor on the line.
+
+  If the person who picks up the phone is actually the doctor, probably you are talking to a **very small structure** (i.e. he’s working alone) which means you can go ahead and pitch him BUT probably he won’t have any budget for you.
+
   So the best case is to get to the assistant and schedule a time to talk with the doctor himself.
-- **You need confidence and “alignment”.** By “alignment” I mean you need to actually believe what you are saying. One of the first advice a cold-call veteran gave me was to make myself sound bigger than life, pretend that I am managing a big website business etc. I do not think this is the right way to proceed, or at least not the right way for me. The most promising calls I had were the ones where I could convey that I know what I am doing, that I am actually interested in bringing value to the other party and that I am not a random sales rep.
+- **You need confidence and “alignment”.** By “alignment” I mean you need to actually believe what you are saying. One of the first pieces of advice a cold-call veteran gave me was to make myself sound bigger than life, pretend that I am managing a big website business etc. I do not think this is the right way to proceed, or at least not the right way for me. The most promising calls I had were the ones where I could convey that I know what I am doing, that I am actually interested in bringing value to the other party and that I am not a random sales rep.
 - **It’s a numbers game.** Every time someone you call questions your purpose in life and the value of your existence, you are getting one step closer to the elusive “yes”! Ok this is actually something I read on Reddit. No one ever said “yes” to us so maybe this is a myth and you could just keep calling forever, eroding your self-confidence until it is fully gone. But most probably not.
 
 ## So what happened?
@@ -63,7 +65,7 @@ How come vets without a website were not interested in getting one from us?
 
 > - (Assistant) The doctor doesn’t want to have anything to do with technology. We have tried to change his mind multiple times already but he won’t budge.  
 > - (Me) If I could talk to him directly maybe I could explain to him what a website could bring to your clinic?  
-> - (Assistant) You don’t understand. **He’s doesn’t let us use computers.** We have to use pen and paper for everything.  
+> - (Assistant) You don’t understand. **He doesn’t let us use computers.** We have to use pen and paper for everything.  
 > - (Me) …
 
 - **They already have too many clients** and have to turn down appointments because they are overworked, but they have no wish to develop their activity further. We legitimately can’t help them in this situation.
