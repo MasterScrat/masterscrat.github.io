@@ -5,7 +5,7 @@ import { getPosts, postUrl, formatDate, excerpt } from '../../lib/posts';
 
 const posts = await getPosts();
 ---
-<Base title="Blog">
+<Base title="Blog" heading="Blog" description="Blog posts by Florian Laurent.">
   <div class="tiles">
     {posts.map((post) => (
       <Tile draft={post.data.draft} kind="Post" href={postUrl(post)} title={post.data.title}

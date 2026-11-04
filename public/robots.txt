@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://florianlau.rent/sitemap-index.xml

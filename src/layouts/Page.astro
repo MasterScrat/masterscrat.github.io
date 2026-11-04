@@ -6,7 +6,7 @@ import Base from './Base.astro';
 // An optional `image` in the frontmatter is shown in a column on the right.
 const { frontmatter } = Astro.props;
 ---
-<Base title={frontmatter.title}>
+<Base title={frontmatter.title} heading={frontmatter.title} description={frontmatter.description}>
   {frontmatter.image ? (
     <div class="with-aside">
       <article><slot /></article>
