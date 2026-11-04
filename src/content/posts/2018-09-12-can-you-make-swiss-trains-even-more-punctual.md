@@ -5,11 +5,12 @@ draft: true  # Medium import, waiting for review
 image: /img/posts/can-you-make-swiss-trains-even-more-punctual.jpg
 cover: false  # the images are in the text
 links:
+  - { label: "Challenge (AIcrowd)", url: "https://www.aicrowd.com/challenges/train-schedule-optimisation-challenge" }
   - { label: "Reddit (r/datascience)", url: "https://www.reddit.com/r/datascience/comments/9f77k7/" }
 original: https://medium.com/crowdai/can-you-make-swiss-trains-even-more-punctual-ec9aa73d6e35
 ---
 
-**crowdAI is running a [data science challenge](https://www.crowdai.org/challenges/train-schedule-optimisation-challenge) in collaboration with [SBB](http://sbb.ch), the Swiss national railway company, to optimize the scheduling of their trains.**
+**crowdAI is running a [data science challenge](https://www.aicrowd.com/challenges/train-schedule-optimisation-challenge) in collaboration with [SBB](http://sbb.ch), the Swiss national railway company, to optimize the scheduling of their trains.**
 
 > Ever complained about late or too infrequent trains? Now is your chance to improve things!
 
@@ -25,7 +26,7 @@ Your goal is to come up with ingenious ways to tackle this problem. Can you find
 
 **You are given nine problems of increasing complexity describing a railway system, a list of trains and functional requirements. You need to come up with a viable schedule for each of them.**
 
-You can find the full documentation in the [Starter Kit here](https://gitlab.crowdai.org/SBB/train-schedule-optimisation-challenge-starter-kit/tree/master). There’s a lot of information in there, but don’t get intimidated! We will start with an intuitive explanation of the problem, expose the requirements, and show how to submit a first simple submission.
+You can find the full documentation in the [Starter Kit here](https://github.com/crowdAI/train-schedule-optimisation-challenge-starter-kit/tree/master). There’s a lot of information in there, but don’t get intimidated! We will start with an intuitive explanation of the problem, expose the requirements, and show how to submit a first simple submission.
 
 <figure>
   <img src="/img/posts/can-you-make-swiss-trains-even-more-punctual/2.jpg" alt="By the end of this article you’ll be getting your first graded results">
@@ -43,11 +44,11 @@ Each problem comes with 4 inputs:
 
 **Your goal is to find a schedule for all of the trains that will comply with all of the constraints.** In some case it will be easy, in others it may be impossible.
 
-> **Isn’t this backward?**
+### Isn’t this backward?
 
-> It may be surprising to try to schedule trains while ***already*** having timing constraints. This is because we are considering cases where we want to make ***small modifications*** to a pre-existing schedule.
+It may be surprising to try to schedule trains while ***already*** having timing constraints. This is because we are considering cases where we want to make ***small modifications*** to a pre-existing schedule.
 
-> For example if a major football match starts at 20:00, it would make sense to modify the usual schedule to have a train arrive close to the stadium no later than 19:00. Similarly, the departure of the train that brings the spectators back should have an earliest departure of maybe 22:30.
+For example if a major football match starts at 20:00, it would make sense to modify the usual schedule to have a train arrive close to the stadium no later than 19:00. Similarly, the departure of the train that brings the spectators back should have an earliest departure of maybe 22:30.
 
 ### The Railway Network
 
@@ -75,11 +76,11 @@ It contains two *service intentions*, which is a fancy name for “train includi
 
 ![](/img/posts/can-you-make-swiss-trains-even-more-punctual/4.jpg)
 
-> The JSON files describing the problems get very large. An extension such as [JSONView](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc) can help you understand the simpler files. Beyond that a good way to visualise them is as tables: the one above was rendered using [http://json2table.com/](http://json2table.com/).
+The JSON files describing the problems get very large. An extension such as [JSONView](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc) can help you understand the simpler files. Beyond that a good way to visualise them is as tables: the one above was rendered using [http://json2table.com/](http://json2table.com/).
 
 Each train runs on a given *route* and must go through a number of *route sections*, referenced by their *section markers*. In this specific case there are no connections to deal with, but you can see examples of 3 other types of requirements: latest arrival time, earliest departure time and minimum stopping time.
 
-> Durations are expressed [per ISO_8601 standard](https://en.wikipedia.org/wiki/ISO_8601#Durations). The “P” in "PT3M" is the duration designator, which stands for *period.* The "T" stands for *time*, and "M" for *minutes*.
+Durations are expressed [per ISO_8601 standard](https://en.wikipedia.org/wiki/ISO_8601#Durations). The “P” in "PT3M" is the duration designator, which stands for *period.* The "T" stands for *time*, and "M" for *minutes*.
 
 Easy so far! Let’s look at the first route.
 
@@ -147,16 +148,16 @@ In the case above, we can recognize the tracks between the cities of Zürich, Zu
 
 ## Implementing your own solution
 
-To implement a concrete solution [follow this document](https://gitlab.crowdai.org/SBB/train-schedule-optimisation-challenge-starter-kit/blob/master/documentation/a_worked_example.md#building-a-solution) that will guide you through solving the sample_scenario.json problem by hand.
+To implement a concrete solution [follow this document](https://github.com/crowdAI/train-schedule-optimisation-challenge-starter-kit/blob/master/documentation/a_worked_example.md#building-a-solution) that will guide you through solving the sample_scenario.json problem by hand.
 
 <figure>
   <img src="/img/posts/can-you-make-swiss-trains-even-more-punctual/13.jpg" alt="The worked out solution">
   <figcaption>The worked out solution</figcaption>
 </figure>
 
-Note that there are a few extra rules you will need to read about that we omitted so far to focus on the big picture. The [*business rules* document](https://gitlab.crowdai.org/SBB/train-schedule-optimisation-challenge-starter-kit/blob/master/documentation/business_rules.md) contains an exhaustive list.
+Note that there are a few extra rules you will need to read about that we omitted so far to focus on the big picture. The [*business rules* document](https://github.com/crowdAI/train-schedule-optimisation-challenge-starter-kit/blob/master/documentation/business_rules.md) contains an exhaustive list.
 
-You don’t need to have solutions for all the problems in order to submit. <br>You will be penalized for missing solutions, but you can still check the correctness of your work so far. [Read here for details on how to submit.](https://gitlab.crowdai.org/SBB/train-schedule-optimisation-challenge-starter-kit/blob/master/documentation/what_to_submit.md)
+You don’t need to have solutions for all the problems in order to submit. <br>You will be penalized for missing solutions, but you can still check the correctness of your work so far. [Read here for details on how to submit.](https://github.com/crowdAI/train-schedule-optimisation-challenge-starter-kit/blob/master/documentation/what_to_submit.md)
 
 ### How should I approach the problem?
 
@@ -164,14 +165,12 @@ There are many ways to solve this challenge programmatically. We don’t want to
 
 One hint though: a possible starting point would be to express the problems as a [*mixed-integer programming problem (MILP)*](https://en.wikipedia.org/wiki/Integer_programming).
 
-Last but not least: there is no known solution for [problem 9](https://gitlab.crowdai.org/SBB/train-schedule-optimisation-challenge-starter-kit/blob/master/documentation/instance_description.md#the-official-nine-problem-instances) that doesn’t incur delays. It is probable that such a solution exists, but the solver used by SBB couldn’t find one yet.
+Last but not least: there is no known solution for [problem 9](https://github.com/crowdAI/train-schedule-optimisation-challenge-starter-kit/blob/master/documentation/instance_description.md#the-official-nine-problem-instances) that doesn’t incur delays. It is probable that such a solution exists, but the solver used by SBB couldn’t find one yet.
 
 > **So if you DO find such a solution, you will have effectively improved the efficiency of Swiss train scheduling! *😎***
 
-> **Challenge Links**
+## Challenge Links
 
-> Challenge page: [https://www.crowdai.org/challenges/train-schedule-optimisation-challenge](https://www.crowdai.org/challenges/train-schedule-optimisation-challenge)
-
-> Starter kit: [https://gitlab.crowdai.org/SBB/train-schedule-optimisation-challenge-starter-kit/](https://gitlab.crowdai.org/SBB/train-schedule-optimisation-challenge-starter-kit/)
-
-> Gitter channel: [https://gitter.im/crowdAI/sbb-challenges](https://gitter.im/crowdAI/sbb-challenges)
+- Challenge page: [https://www.aicrowd.com/challenges/train-schedule-optimisation-challenge](https://www.aicrowd.com/challenges/train-schedule-optimisation-challenge)
+- Starter kit: [https://github.com/crowdAI/train-schedule-optimisation-challenge-starter-kit/](https://github.com/crowdAI/train-schedule-optimisation-challenge-starter-kit/)
+- Gitter channel: [https://gitter.im/crowdAI/sbb-challenges](https://gitter.im/crowdAI/sbb-challenges)
