@@ -7,7 +7,6 @@ const posts = defineCollection({
     title: z.string(),
     date: z.coerce.date(),
     image: z.string().optional(), // path under public/, shown on the tile and at the top of the post
-    imageAnimated: z.string().optional(), // animated version of `image` for the tile (still image kept for reduced motion and social previews)
     cover: z.boolean().default(true), // false: don't repeat the image at the top of the post
     links: z.array(z.object({ label: z.string(), url: z.string() })).default([]), // buttons under the title
     original: z.string().optional(), // where the post first appeared, e.g. a Medium URL
@@ -23,7 +22,6 @@ const projects = defineCollection({
     role: z.string().optional(),
     links: z.array(z.object({ label: z.string(), url: z.string() })).default([]),
     image: z.string().optional(),    // path under public/, shown on the tile and at the top of the page
-    imageAnimated: z.string().optional(), // animated version of `image` for the tile (still image kept for reduced motion and social previews)
     cover: z.boolean().default(true), // false: don't repeat the image at the top of the page
     label: z.string().default('Project'), // tile tag, e.g. "Work" for an employer
     draft: z.boolean().default(false), // shown in `npm run dev` only, not on the live site

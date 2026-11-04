@@ -2,7 +2,6 @@
 title: "500 Realistic Vision portraits, eyes aligned, sorted by happiness"
 date: 2023-04-22
 image: /img/posts/500-realistic-vision-portraits.jpg
-imageAnimated: /img/posts/500-realistic-vision-portraits.webp
 cover: false
 links:
   - { label: "Reddit (r/StableDiffusion)", url: "https://www.reddit.com/r/StableDiffusion/comments/12v6af7/" }

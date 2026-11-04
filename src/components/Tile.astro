@@ -6,20 +6,14 @@ interface Props {
   meta?: string; // e.g. a post's date, shown inline after the kind tag
   text: string;
   image?: string;
-  animated?: string; // animated version of `image`, skipped when the visitor prefers reduced motion
   draft?: boolean; // shown with a striped background (dev only, drafts aren't published)
 }
-const { kind = 'Project', href, title, meta, text, image, animated, draft = false } = Astro.props;
+const { kind = 'Project', href, title, meta, text, image, draft = false } = Astro.props;
 // Draft badge, only in `npm run dev` (drafts aren't published).
 const showStatus = import.meta.env.DEV && draft;
 ---
 <article class:list={["tile", { "tile-draft": draft }]}>
-  {image && (animated ? (
-    <picture>
-      <source srcset={animated} type="image/webp" media="(prefers-reduced-motion: no-preference)" />
-      <img src={image} alt="" loading="lazy" />
-    </picture>
-  ) : <img src={image} alt="" loading="lazy" />)}
+  {image && <img src={image} alt="" loading="lazy" />}
   <p class={`tile-kind tile-kind-${kind.toLowerCase()}`}>{kind}{meta && <span class="tile-meta"> · {meta}</span>}</p>
   <h3><a href={href}>{title}</a></h3>
   <p class="tile-text">{text}</p>
