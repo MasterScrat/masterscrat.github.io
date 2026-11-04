@@ -7,7 +7,15 @@ cover: false  # the images are in the text
 original: https://medium.com/@florianlaurent/i-can-easily-harvest-your-personal-data-a1c662bd94c8
 ---
 
-> Millions of profiles of Facebook users have been harvested by a private company and used to influence them.
+<aside class="callout">
+
+*Update, 2026. Rereading this eight years later: the "tying it all together" step, is now the easy part. This year, [an LLM agent re-identified](https://arxiv.org/abs/2602.16800) pseudonymous Hacker News users from their posts alone, which would require hours of human investigator work. No stylometry framework needed!*
+
+</aside>
+
+> “We exploited Facebook to harvest millions of people’s profiles. And built models to exploit what we knew about them and target their inner demons. That was the basis the entire company was built on.”
+>
+> — Christopher Wylie, Cambridge Analytica whistleblower, [to the Observer](https://www.theguardian.com/news/2018/mar/17/cambridge-analytica-facebook-influence-us-election), March 2018
 
 ![](/img/posts/i-can-easily-harvest-your-personal-data/1.jpg)
 
@@ -27,7 +35,7 @@ Thought experiment: I want to make you vote for Donald Trump. <br>I will gather 
 
 How did Cambridge Analytica get hold of 50+ million profiles? It wasn’t a “data breach” as some publications keep repeating. They published an app and paid users a few bucks to install it. The app would then ask your permission to share data about yourself and all of your friends.
 
-(So ultimately if your data ended up in Analytica’s hand, it’s because one of your friends sold it for a few bucks. No hack involved, no stolen passwords: simple human greed.)
+(So ultimately if your data ended up in Analytica’s hands, it’s because one of your friends sold it for a few bucks. No hack involved, no stolen passwords: simple human greed.)
 
 **But the Facebook API was actually updated in the meantime.** The “friend permissions” that let developers suck out all the details about your friends is no longer available. Parakilas states that Cambridge Analytica’s app was “one of the very last to have access to friend permissions”.
 
@@ -35,7 +43,7 @@ How did Cambridge Analytica get hold of 50+ million profiles? It wasn’t a “d
 
 Instead I will make a simple **Chrome Extension** pretending to “gather social behavior data for research”, then pay people to use it. Cambridge Analytica used [Mechanical Turks](https://www.mturk.com/) to find willing users : this still sounds like a good plan.
 
-**From this Chrome Extension I can now siphon ALL of your friends data and even more, no problem!**
+**From this Chrome Extension I can now siphon ALL of your friends’ data and even more, no problem!**
 
 (relevant: [Browser Extensions Are a Privacy Nightmare](https://www.howtogeek.com/188346/why-browser-extensions-can-be-dangerous-and-how-to-protect-yourself/))
 
@@ -43,7 +51,7 @@ Instead I will make a simple **Chrome Extension** pretending to “gather social
 
 A dating website: is there a better place to find juicy, super personal info about you?
 
-Two years ago OkCupid [had a scandal of his own](https://www.vox.com/2016/5/12/11666116/70000-okcupid-users-data-release):
+Two years ago OkCupid [had a scandal of its own](https://www.vox.com/2016/5/12/11666116/70000-okcupid-users-data-release):
 
 > **Scott B. Weingart 🤹 on Twitter:**  
 > If your OkC username is one you've used anywhere else, I now know your sexual preferences &amp; kinks, your answers to thousands of questions.
@@ -70,7 +78,7 @@ Well that is good on principle, but it won’t save you. There are lots of ways 
 
 If this doesn’t work I can take out the big guns and [use machine learning](https://github.com/ageitgey/face_recognition) to recognize your face from one site to another:
 
-```
+```python
 import face_recognition
 face_a = face_recognition.face_encodings(person_a)[0]
 face_b = face_recognition.face_encodings(person_b)[0]
@@ -81,7 +89,11 @@ Here! 4 lines of python code to run a model with [a 99.38% accuracy](https://git
 
 **Another elegant solution would be *stylometry.***
 
-> Stylometry: The statistical analysis of variations in literary style between one writer or genre and another.
+<aside class="callout">
+
+Stylometry: The statistical analysis of variations in literary style between one writer or genre and another.
+
+</aside>
 
 By looking at your Reddit comments, and at the charming prose on your OkCupid profile, I am able to recognize your writing style and therefore to link your accounts together.
 
@@ -89,4 +101,4 @@ A good tool for this would be [the open-source framework JGAAP](https://github.c
 
 My point is that all of these things are *easy*! Sure, I would encounter scaling problems, stylometry is far from being 100% accurate, people don’t always show their face on their dating profile…
 
-**But given how valuable this data is, do you really think no one else with proper funding, skilled researchers and lack or moral is doing this right now on a much larger scale?**
+**But given how valuable this data is, do you really think no one else with proper funding, skilled researchers and lack of morals is doing this right now on a much larger scale?**

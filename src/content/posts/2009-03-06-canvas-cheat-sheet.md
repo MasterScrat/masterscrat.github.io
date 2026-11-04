@@ -2,9 +2,11 @@
 title: "Canvas Cheat Sheet"
 date: "2009-03-06"
 image: /img/posts/canvas-cheat-sheet.jpg
+cover: false  # the cheat sheet image is in the text
+draft: true
 ---
 
-Good news for everyone having fun with HTLM5 _canvas_ element: the prolific [Jacob Seidelin](https://github.com/jseidelin) (from Nihilogic) has put together a very nice cheat sheet:
+Good news for everyone having fun with HTML5 _canvas_ element: the prolific [Jacob Seidelin](https://github.com/jseidelin) (from Nihilogic) has put together a very nice cheat sheet:
 
 [![Canvas cheat sheet](/img/canvas-sheet1.png)](http://www.cheat-sheets.org/saved-copy/HTML5_Canvas_Cheat_Sheet.pdf)
 
