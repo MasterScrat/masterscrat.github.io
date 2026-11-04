@@ -20,7 +20,6 @@ const ORDER = [
   'cern-atlas',
   'timelapses',
   'battleground',
-  'ariane',
   'xkcd-r',
 ];
 
