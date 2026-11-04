@@ -1,8 +1,7 @@
 ---
-title: "Can You Make Swiss Trains Even More Punctual?"
+title: "Can You Make Swiss Trains More Punctual?"
 date: 2018-09-12
-image: /img/posts/can-you-make-swiss-trains-even-more-punctual.jpg
-cover: false  # the images are in the text
+image: /img/posts/can-you-make-swiss-trains-even-more-punctual/11.jpg
 links:
   - { label: "Challenge (AIcrowd)", url: "https://www.aicrowd.com/challenges/train-schedule-optimisation-challenge" }
   - { label: "Reddit (r/datascience)", url: "https://www.reddit.com/r/datascience/comments/9f77k7/" }

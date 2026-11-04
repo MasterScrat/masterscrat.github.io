@@ -1,6 +1,6 @@
 ---
 title: Chatistics
-summary: Python 3 scripts to convert chat logs from various messaging platforms into Pandas DataFrames.
+summary: Python scripts to convert chat logs from various messaging platforms into Pandas DataFrames.
 image: /img/projects/chatistics.jpg
 links:
   - { label: GitHub, url: "https://github.com/MasterScrat/Chatistics" }
@@ -9,7 +9,7 @@ links:
   - { label: "Hacker News", url: "https://news.ycombinator.com/item?id=22069699" }
 ---
 
-**Python 3 scripts to convert chat logs from various messaging platforms into Pandas DataFrames.**
+**Python scripts to convert chat logs from various messaging platforms into Pandas DataFrames.**
 Can also generate histograms and word clouds from the chat logs.
 
 <!-- research
