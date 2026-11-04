@@ -4,12 +4,9 @@ summary: "The largest language model for French at the time (6B), released under
 image: /img/projects/cedille.jpg
 role: ML engineer at Coteries
 links:
-  - { label: "Playground", url: "https://app.cedille.ai/" }
   - { label: "Paper (arXiv)", url: "https://arxiv.org/abs/2202.03371" }
   - { label: GitHub, url: "https://github.com/coteries/cedille-ai" }
-  - { label: "Hugging Face", url: "https://huggingface.co/Cedille/fr-boris" }
   - { label: "Reddit (r/MachineLearning)", url: "https://www.reddit.com/r/MachineLearning/comments/qqzuh0/p_cedille_the_largest_french_language_model_6b/" }
-  - { label: "Reddit (r/france)", url: "https://www.reddit.com/r/france/comments/qr1zxb/" }
   - { label: "Hacker News", url: "https://news.ycombinator.com/item?id=29179429" }
 ---
 
