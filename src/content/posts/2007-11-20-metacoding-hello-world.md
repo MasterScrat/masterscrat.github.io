@@ -8,7 +8,7 @@ summary: "A year ago a friend came up with a brilliant idea: making an online ID
 
 <aside class="callout">
 
-Unfortunately this project has been [aborted](http://lumakey.net/labs/metacoding/). You can still see a [limited demo of our work here](http://lumakey.net/labs/metacoding/Editor/Demo.htm). Don't hesitate to contact us if you have any interest.
+Unfortunately this project has been [shelved](http://lumakey.net/labs/metacoding/). You can still see a [limited demo of our work here](http://lumakey.net/labs/metacoding/Editor/Demo.htm). Don't hesitate to contact us if you have any interest.
 
 </aside>
 
