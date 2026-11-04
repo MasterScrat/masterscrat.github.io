@@ -223,7 +223,6 @@ hr { border: 0; border-top: 1px solid var(--line); margin: 3rem 0; }
 .page hgroup { margin-bottom: 1.5rem; }
 .page hgroup h1 { margin-bottom: 0.5rem; }
 .page hgroup p { margin: 0; color: var(--muted); }
-.page hgroup .page-origin { margin-top: 0.25rem; font-size: 15px; }
 .page-links { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 0 0 2rem; }
 .page-cover {
   display: block;
