@@ -7,7 +7,11 @@ cover: false  # the images are in the text
 original: https://medium.com/@florianlaurent/i-can-easily-harvest-your-personal-data-a1c662bd94c8
 ---
 
-> Millions of profiles of Facebook users have been harvested by a private company and used to influence them.
+<aside class="callout">
+
+Millions of profiles of Facebook users have been harvested by a private company and used to influence them.
+
+</aside>
 
 ![](/img/posts/i-can-easily-harvest-your-personal-data/1.jpg)
 
@@ -70,7 +74,7 @@ Well that is good on principle, but it won’t save you. There are lots of ways 
 
 If this doesn’t work I can take out the big guns and [use machine learning](https://github.com/ageitgey/face_recognition) to recognize your face from one site to another:
 
-```
+```python
 import face_recognition
 face_a = face_recognition.face_encodings(person_a)[0]
 face_b = face_recognition.face_encodings(person_b)[0]
@@ -81,7 +85,11 @@ Here! 4 lines of python code to run a model with [a 99.38% accuracy](https://git
 
 **Another elegant solution would be *stylometry.***
 
-> Stylometry: The statistical analysis of variations in literary style between one writer or genre and another.
+<aside class="callout">
+
+Stylometry: The statistical analysis of variations in literary style between one writer or genre and another.
+
+</aside>
 
 By looking at your Reddit comments, and at the charming prose on your OkCupid profile, I am able to recognize your writing style and therefore to link your accounts together.
 
